@@ -1,0 +1,183 @@
+{
+  "common": {
+    "title": "Read To Me",
+    "description": "Turn text to speech in seconds for free",
+    "upload": "Upload Photo",
+    "uploadUrl": "Upload from URL",
+    "add": "Add",
+    "generate": "Generate",
+    "options": "Hairstyle Options",
+    "examples": "Hairstyle Examples",
+    "generated": "Your New Hairstyles",
+    "useExample": "Try This Style",
+    "loading": "Styling your hair...",
+    "error": "Error",
+    "success": "Looking great!",
+    "exampleLoaded": "Hairstyle preset loaded",
+    "exampleError": "Failed to load hairstyle",
+    "table": {
+      "photos": "Your Photos",
+      "style": "Hairstyle",
+      "length": "Hair Length",
+      "color": "Hair Color",
+      "actions": "Actions"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "gallery": "Style Gallery",
+    "blog": "Blog"
+  },
+  "form": {
+    "hairLength": "Hair Length",
+    "hairStyle": "Hairstyle Type",
+    "hairColor": "Hair Color",
+    "faceShape": "Face Shape",
+    "gender": "Gender",
+    "numOutputs": "Style Variations",
+    "preset": "Popular Haircuts",
+    "customStyle": "Custom Style"
+  },
+  "hero": {
+    "tagline": "Your Personal Text Reader",
+    "title": "Read to Me: Text to Natural Speech",
+    "description": "Transform any text into natural-sounding speech with our AI voice technology. Perfect for learning, accessibility, and content consumption on the go."
+  },
+  "benefits": {
+    "title": "Why Choose Read to Me",
+    "items": {
+      "quality": {
+        "title": "Natural Voices",
+        "description": "Lifelike speech with natural intonation and rhythm"
+      },
+      "styles": {
+        "title": "Multiple Languages",
+        "description": "Support for over 50 languages and accents"
+      },
+      "speed": {
+        "title": "Instant Conversion",
+        "description": "Convert text to speech in seconds"
+      },
+      "batch": {
+        "title": "Accessibility First",
+        "description": "Make content accessible to everyone"
+      }
+    }
+  },
+  "features": {
+    "title": "Read To Me Features",
+    "items": {
+      "styleTransfer": {
+        "title": "Voice Customization",
+        "description": "Adjust speed, pitch, and emotion to match your needs"
+      },
+      "customPrompts": {
+        "title": "Document Support",
+        "description": "Convert PDF, Word, and other document formats"
+      },
+      "batchProcessing": {
+        "title": "Batch Processing",
+        "description": "Convert multiple documents at once"
+      },
+      "highResolution": {
+        "title": "Audio Export",
+        "description": "Download in MP3, WAV, or other formats"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How to Convert Text to Speech",
+    "steps": {
+      "upload": {
+        "number": "01",
+        "title": "Input Your Text",
+        "description": "Paste text"
+      },
+      "style": {
+        "number": "02",
+        "title": "Choose Voice",
+        "description": "Select language and voice settings"
+      },
+      "generate": {
+        "number": "03",
+        "title": "Generate Audio",
+        "description": "Convert text to speech instantly"
+      },
+      "download": {
+        "number": "04",
+        "title": "Save & Share",
+        "description": "Download or share your audio file"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Users Say About Read to Me",
+    "items": [
+      {
+        "name": "Sarah Johnson",
+        "role": "Teacher",
+        "quote": "Perfect for creating accessible learning materials for my students.",
+        "image": "/testimonials/bc.jpeg"
+      },
+      {
+        "name": "James Chen",
+        "role": "Content Creator",
+        "quote": "The natural-sounding voices are perfect for my podcast and videos.",
+        "image": "/testimonials/t5.jpeg"
+      },
+      {
+        "name": "Lisa Thompson",
+        "role": "Student",
+        "quote": "Helps me learn while commuting. The multiple language support is amazing!",
+        "image": "/testimonials/t3.jpeg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Read To Me FAQs",
+    "items": [
+      {
+        "question": "How does the text to speech work?",
+        "answer": "Our AI technology converts text into natural-sounding speech using advanced neural networks."
+      },
+      {
+        "question": "What languages are supported?",
+        "answer": "We support over 50 languages with multiple accent options for major languages."
+      },
+      {
+        "question": "Is the service free?",
+        "answer": "Yes, basic text-to-speech features are free to use with limited duration."
+      },
+      {
+        "question": "What file formats can I upload?",
+        "answer": "We support TXT, PDF, DOC, DOCX, and other common document formats."
+      },
+      {
+        "question": "Can I download the audio files?",
+        "answer": "Yes, you can download audio in MP3, WAV, and other popular formats."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Give Your Text a Voice?",
+    "description": "Convert your text to natural speech with our AI technology",
+    "button": "Start Converting Now"
+  },
+  "footer": {
+    "product": "Product",
+    "community": "Community",
+    "features": "Features",
+    "examples": "Examples",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "contact": "Contact",
+    "community": "Community",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "cookies": "Cookie Policy",
+    "rights": "All rights reserved."
+  }
+}

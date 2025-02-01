@@ -1,0 +1,183 @@
+{
+  "common": {
+    "title": "为我朗读",
+    "description": "免费即时将文字转换为语音",
+    "upload": "上传照片",
+    "uploadUrl": "通过URL上传",
+    "add": "添加",
+    "generate": "生成",
+    "options": "语音选项",
+    "examples": "语音示例",
+    "generated": "您的音频文件",
+    "useExample": "试试这个语音",
+    "loading": "正在转换语音...",
+    "error": "错误",
+    "success": "转换成功！",
+    "exampleLoaded": "语音预设已加载",
+    "exampleError": "加载语音失败",
+    "table": {
+      "photos": "您的文档",
+      "style": "语音风格",
+      "length": "语音长度",
+      "color": "语音特点",
+      "actions": "操作"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "gallery": "音频库",
+    "blog": "博客"
+  },
+  "form": {
+    "hairLength": "语音长度",
+    "hairStyle": "语音类型",
+    "hairColor": "语音音色",
+    "faceShape": "语气",
+    "gender": "性别",
+    "numOutputs": "语音变体",
+    "preset": "热门语音",
+    "customStyle": "自定义语音"
+  },
+  "hero": {
+    "tagline": "您的私人朗读助手",
+    "title": "为我朗读：文字转自然语音",
+    "description": "使用我们的AI语音技术将任何文本转换为自然语音。适用于学习、无障碍访问和随时随地的内容消费。"
+  },
+  "benefits": {
+    "title": "为什么选择为我朗读",
+    "items": {
+      "quality": {
+        "title": "自然语音",
+        "description": "具有自然语调和节奏的逼真语音"
+      },
+      "styles": {
+        "title": "多语言支持",
+        "description": "支持超过50种语言和口音"
+      },
+      "speed": {
+        "title": "即时转换",
+        "description": "几秒钟内完成文本转语音"
+      },
+      "batch": {
+        "title": "无障碍优先",
+        "description": "让所有人都能访问内容"
+      }
+    }
+  },
+  "features": {
+    "title": "为我朗读功能",
+    "items": {
+      "styleTransfer": {
+        "title": "语音定制",
+        "description": "调整速度、音调和情感以满足您的需求"
+      },
+      "customPrompts": {
+        "title": "文档支持",
+        "description": "转换PDF、Word和其他文档格式"
+      },
+      "batchProcessing": {
+        "title": "批量处理",
+        "description": "同时转换多个文档"
+      },
+      "highResolution": {
+        "title": "音频导出",
+        "description": "下载MP3、WAV等格式"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "如何转换文字为语音",
+    "steps": {
+      "upload": {
+        "number": "01",
+        "title": "输入文本",
+        "description": "粘贴文本"
+      },
+      "style": {
+        "number": "02",
+        "title": "选择语音",
+        "description": "选择语言和语音设置"
+      },
+      "generate": {
+        "number": "03",
+        "title": "生成音频",
+        "description": "即时转换文本为语音"
+      },
+      "download": {
+        "number": "04",
+        "title": "保存与分享",
+        "description": "下载或分享您的音频文件"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "用户对为我朗读的评价",
+    "items": [
+      {
+        "name": "张老师",
+        "role": "教师",
+        "quote": "非常适合为我的学生创建无障碍学习材料。",
+        "image": "/testimonials/bc.jpeg"
+      },
+      {
+        "name": "陈明",
+        "role": "内容创作者",
+        "quote": "自然的语音效果非常适合我的播客和视频。",
+        "image": "/testimonials/t5.jpeg"
+      },
+      {
+        "name": "李小华",
+        "role": "学生",
+        "quote": "帮助我在通勤时学习。多语言支持太棒了！",
+        "image": "/testimonials/t3.jpeg"
+      }
+    ]
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "文字转语音是如何工作的？",
+        "answer": "我们的AI技术使用先进的神经网络将文本转换为自然语音。"
+      },
+      {
+        "question": "支持哪些语言？",
+        "answer": "我们支持超过50种语言，主要语言还提供多种口音选择。"
+      },
+      {
+        "question": "服务是免费的吗？",
+        "answer": "是的，基本的文本转语音功能是免费的，但有时长限制。"
+      },
+      {
+        "question": "支持哪些文件格式？",
+        "answer": "我们支持TXT、PDF、DOC、DOCX等常见文档格式。"
+      },
+      {
+        "question": "可以下载音频文件吗？",
+        "answer": "是的，您可以下载MP3、WAV等常用格式的音频文件。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "准备为您的文本配音了吗？",
+    "description": "使用我们的AI技术将文本转换为自然语音",
+    "button": "立即开始转换"
+  },
+  "footer": {
+    "product": "产品",
+    "community": "社区",
+    "features": "功能",
+    "examples": "示例",
+    "blog": "博客",
+    "pricing": "定价",
+    "support": "支持",
+    "helpCenter": "帮助中心",
+    "contact": "联系我们",
+    "community": "社区",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "cookies": "Cookie政策",
+    "rights": "版权所有"
+  }
+}
