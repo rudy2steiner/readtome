@@ -78,3 +78,10 @@ const nextConfig = {
 };
 
 module.exports = withNextIntl(nextConfig);
+
+// Enable the Cloudflare Workers bindings/runtime during `next dev`.
+// See https://opennext.js.org/cloudflare
+if (process.env.NODE_ENV === 'development') {
+  const { initOpenNextCloudflareForDev } = require('@opennextjs/cloudflare');
+  initOpenNextCloudflareForDev();
+}
