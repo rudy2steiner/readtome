@@ -1,6 +1,8 @@
 import { and, desc, eq, gt, isNotNull } from 'drizzle-orm';
 import { db, schema } from '@/lib/db';
+import type { PlanId } from '@/lib/tts/engine';
 import { findProduct } from './products';
+import { PLAN_QUOTA_SECONDS, TRIAL_PERIOD_START, TRIAL_SECONDS } from './quota';
 
 export const ADMIN_USER_PAGE_SIZES = [20, 50] as const;
 export type AdminUserSort = 'used' | 'remaining' | 'created';
@@ -45,6 +47,42 @@ function sortDir(value: unknown): AdminUserDir {
   return value === 'asc' ? 'asc' : 'desc';
 }
 
+function calendarPeriodStart(now: Date): Date {
+  return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
+}
+
+function periodStartMs(value: Date | number): number {
+  return value instanceof Date ? value.getTime() : value;
+}
+
+/** Current-cycle plan/trial plus unexpired packs — not the latest-touched usage row. */
+export function adminUserBalance(input: {
+  subscribed: boolean;
+  plan: PlanId;
+  periodStart: Date;
+  now?: Date;
+  usageRows: { periodStart: Date | number; periodEnd?: Date | number; usedSeconds: number; quotaSeconds: number }[];
+  packRemainingSeconds: number;
+}): { usedSeconds: number; remainingSeconds: number; quotaSeconds: number } {
+  const startMs = (input.subscribed ? input.periodStart : TRIAL_PERIOD_START).getTime();
+  const nowMs = (input.now ?? new Date()).getTime();
+  const row =
+    input.usageRows.find((item) => periodStartMs(item.periodStart) === startMs) ??
+    input.usageRows.find((item) => {
+      if (!input.subscribed || item.periodEnd == null) return false;
+      return periodStartMs(item.periodStart) <= nowMs && nowMs < periodStartMs(item.periodEnd);
+    });
+  const quotaSeconds = row?.quotaSeconds ?? (input.subscribed ? PLAN_QUOTA_SECONDS[input.plan] : TRIAL_SECONDS);
+  const usedSeconds = row?.usedSeconds ?? 0;
+  const planRemaining = Math.max(quotaSeconds - usedSeconds, 0);
+  const packRemaining = input.subscribed ? Math.max(0, input.packRemainingSeconds) : 0;
+  return {
+    usedSeconds,
+    remainingSeconds: planRemaining + packRemaining,
+    quotaSeconds,
+  };
+}
+
 export async function listAdminUsers(query: {
   page?: unknown;
   size?: unknown;
@@ -56,7 +94,7 @@ export async function listAdminUsers(query: {
   if (!database) return null;
   const now = query.now ?? new Date();
 
-  const [people, usageRows, liveOrders] = await Promise.all([
+  const [people, usageRows, liveOrders, livePacks] = await Promise.all([
     database.select().from(schema.users),
     database.select().from(schema.usage),
     database
@@ -64,6 +102,13 @@ export async function listAdminUsers(query: {
       .from(schema.orders)
       .where(and(eq(schema.orders.status, 'paid'), isNotNull(schema.orders.periodEnd), gt(schema.orders.periodEnd, now)))
       .orderBy(desc(schema.orders.createdAt)),
+    database
+      .select({
+        userUuid: schema.packs.userUuid,
+        remainingSeconds: schema.packs.remainingSeconds,
+      })
+      .from(schema.packs)
+      .where(and(gt(schema.packs.expiresAt, now), gt(schema.packs.remainingSeconds, 0))),
   ]);
 
   const usageByUser = new Map<string, typeof usageRows>();
@@ -73,33 +118,44 @@ export async function listAdminUsers(query: {
     usageByUser.set(row.userUuid, list);
   }
 
-  const planByUser = new Map<string, string>();
+  const liveByUser = new Map<string, { plan: Exclude<PlanId, 'free'>; periodStart: Date }>();
   for (const order of liveOrders) {
-    if (planByUser.has(order.userUuid)) continue;
+    if (liveByUser.has(order.userUuid)) continue;
     const plan = findProduct(order.productId)?.plan;
-    if (plan && plan !== 'free') planByUser.set(order.userUuid, plan);
+    if (plan && plan !== 'free') {
+      liveByUser.set(order.userUuid, {
+        plan,
+        periodStart: order.periodStart ?? calendarPeriodStart(now),
+      });
+    }
+  }
+
+  const packLeftByUser = new Map<string, number>();
+  for (const pack of livePacks) {
+    packLeftByUser.set(pack.userUuid, (packLeftByUser.get(pack.userUuid) ?? 0) + pack.remainingSeconds);
   }
 
   const rows: AdminUserRow[] = people.map((user) => {
-    const periods = usageByUser.get(user.uuid) ?? [];
-    const current = periods.reduce<((typeof periods)[number] | undefined)>(
-      (latest, row) => (!latest || row.updatedAt > latest.updatedAt ? row : latest),
-      undefined,
-    );
-    const usedSeconds = periods.reduce((sum, row) => sum + row.usedSeconds, 0);
-    const quotaSeconds = current?.quotaSeconds ?? 0;
-    const remainingSeconds = current ? Math.max(current.quotaSeconds - current.usedSeconds, 0) : 0;
-    const plan = planByUser.get(user.uuid) ?? 'free';
+    const live = liveByUser.get(user.uuid);
+    const plan = live?.plan ?? 'free';
+    const subscribed = Boolean(live);
+    const balance = adminUserBalance({
+      subscribed,
+      plan,
+      periodStart: live?.periodStart ?? TRIAL_PERIOD_START,
+      usageRows: usageByUser.get(user.uuid) ?? [],
+      packRemainingSeconds: packLeftByUser.get(user.uuid) ?? 0,
+    });
     return {
       uuid: user.uuid,
       email: user.email,
       name: user.name,
       image: user.image,
       plan,
-      subscribed: plan !== 'free',
-      usedSeconds,
-      remainingSeconds,
-      quotaSeconds,
+      subscribed,
+      usedSeconds: balance.usedSeconds,
+      remainingSeconds: balance.remainingSeconds,
+      quotaSeconds: balance.quotaSeconds,
       createdAt: user.createdAt.toISOString(),
     };
   });

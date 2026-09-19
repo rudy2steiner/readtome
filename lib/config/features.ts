@@ -7,5 +7,5 @@ export const isBillingEnabled = process.env.NEXT_PUBLIC_BILLING_ENABLED === 'tru
 /** Client-visible auth entry. Server still refuses Google unless AUTH_* secrets exist. */
 export const isAuthUiEnabled = process.env.NEXT_PUBLIC_AUTH_ENABLED === 'true';
 
-/** Paid checkout. Off until Stripe is live; plan CTAs then say coming soon. */
+/** Paid checkout. Off = plan CTAs say coming soon; on = Stripe Checkout / upgrade. */
 export const isCheckoutEnabled = process.env.NEXT_PUBLIC_CHECKOUT_ENABLED === 'true';

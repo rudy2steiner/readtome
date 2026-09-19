@@ -10,8 +10,10 @@
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "deploy:dev": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --env dev",
+    "deploy:test": "node scripts/run-with-env.mjs .env.test -- npx opennextjs-cloudflare build && node scripts/run-with-env.mjs .env.test -- npx opennextjs-cloudflare deploy --env test",
     "secrets": "node scripts/secret-bulk.mjs",
     "secrets:dev": "node scripts/secret-bulk.mjs --env dev",
+    "secrets:test": "node scripts/secret-bulk.mjs --env test --file .env.test",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "db:migrate:local": "wrangler d1 execute readtome --local --file=./drizzle/0001_init.sql && wrangler d1 execute readtome --local --file=./drizzle/0002_drop_trials.sql && wrangler d1 execute readtome --local --file=./drizzle/0003_listens.sql && wrangler d1 execute readtome --local --file=./drizzle/0004_listen_parts.sql && wrangler d1 execute readtome --local --file=./drizzle/0005_pricing_clicks.sql",
     "db:migrate": "wrangler d1 execute readtome --remote --file=./drizzle/0001_init.sql && wrangler d1 execute readtome --remote --file=./drizzle/0002_drop_trials.sql && wrangler d1 execute readtome --remote --file=./drizzle/0003_listens.sql && wrangler d1 execute readtome --remote --file=./drizzle/0004_listen_parts.sql && wrangler d1 execute readtome --remote --file=./drizzle/0005_pricing_clicks.sql"

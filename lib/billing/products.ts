@@ -56,3 +56,15 @@ export function packSecondsFor(product: CheckoutProduct): number {
 export function planQuota(plan: PlanId) {
   return PLAN_QUOTA_SECONDS[plan];
 }
+
+/** Plus monthly < Plus yearly < Pro monthly < Pro yearly. Packs are not ranked. */
+export function productRank(product: CheckoutProduct): number {
+  const plan = product.plan === 'pro' ? 2 : product.plan === 'plus' ? 1 : 0;
+  const interval = product.interval === 'year' ? 1 : 0;
+  return plan * 10 + interval;
+}
+
+export function isPlanUpgrade(from: CheckoutProduct, to: CheckoutProduct): boolean {
+  if (!from.plan || !to.plan) return false;
+  return productRank(to) > productRank(from);
+}

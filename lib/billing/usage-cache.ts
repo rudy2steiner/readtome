@@ -6,7 +6,7 @@ export type CachedUsage = {
   periodStart: string;
   periodEnd: string;
   pools: { engine: string; quotaSeconds: number; usedSeconds: number; remainingSeconds: number }[];
-  packs: { engine: string; remainingSeconds: number; expiresAt: string }[];
+  packs: { engine: string; remainingSeconds: number; totalSeconds?: number; expiresAt: string }[];
   trial: { remainingSeconds: number; consumed: boolean };
   orders: { productId: string; status: string; amountCents: number; createdAt: string }[];
   clips: { items: unknown[]; total: number; page: number; size: number; pages: number };

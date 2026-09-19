@@ -15,10 +15,13 @@ const SECRET_KEYS = [
 const args = process.argv.slice(2);
 const envFlag = args.includes('--env') ? args[args.indexOf('--env') + 1] : undefined;
 const fileFlag = args.includes('--file') ? args[args.indexOf('--file') + 1] : undefined;
-const source = fileFlag || ['.env.local', '.dev.vars'].find((path) => existsSync(path));
+const envFile = envFlag ? `.env.${envFlag}` : undefined;
+const source =
+  fileFlag ||
+  [envFile, '.env.local', '.dev.vars'].filter(Boolean).find((path) => existsSync(path));
 
 if (!source) {
-  console.error('No .env.local or .dev.vars found. Pass --file <path>.');
+  console.error('No env file found. Looked for .env.<env>, .env.local, .dev.vars. Pass --file <path>.');
   process.exit(1);
 }
 

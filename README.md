@@ -29,23 +29,32 @@ npx wrangler login
 # staging: workers.dev  →  https://read-to-me-dev.<account>.workers.dev
 npm run deploy:dev
 
+# Stripe test Worker  →  https://read-to-me-test.<account>.workers.dev
+npm run deploy:test
+
 # production Worker `read-to-me`
 npm run deploy
 ```
 
-`deploy:dev` / `deploy` run `opennextjs-cloudflare build` then deploy. OpenNext inlines
-`.env.local` at build time. After the first `deploy:dev`, push secrets from `.env.local` in one shot:
+`deploy:test` reads `.env.test` (copy from `.env.test.example`, Stripe `sk_test_`). `deploy:dev` / `deploy`
+inline `.env.local`. After the first deploy, push secrets:
 
 ```bash
 npm run secrets:dev    # Worker `read-to-me-dev`
-npm run secrets        # production Worker `read-to-me`
+npm run secrets:test   # Worker `read-to-me-test` (from `.env.test`)
+npm run secrets        # production Worker `read-to-me` (use sk_live_ keys)
 ```
 
-Only `AUTH_*` (except `AUTH_TRUST_HOST`), Stripe, and `ATLASCLOUD_API_KEY` are uploaded. Empty keys and `NEXT_PUBLIC_*` are skipped.
+Only `AUTH_*` (except `AUTH_TRUST_HOST`), Stripe, Atlas, and `ADMIN_EMAILS` are uploaded. Empty keys and `NEXT_PUBLIC_*` are skipped.
 
-Google OAuth redirect for the staging Worker:
+Google OAuth redirects:
 
-`https://read-to-me-dev.<account>.workers.dev/api/auth/callback/google`
+`https://read-to-me-dev.<account>.workers.dev/api/auth/callback/google`  
+`https://read-to-me-test.<account>.workers.dev/api/auth/callback/google`
+
+Stripe webhook for the test Worker:
+
+`https://read-to-me-test.<account>.workers.dev/api/stripe/webhook`
 
 ## Configuration
 
@@ -57,11 +66,13 @@ Google OAuth redirect for the staging Worker:
 ### Environment variables / secrets
 
 Copy `.env.example` to `.env.local` for `next dev`. For `npm run preview`, copy
-`.dev.vars.example` to `.dev.vars` (gitignored). Upload Worker secrets from `.env.local`:
+`.dev.vars.example` to `.dev.vars` (gitignored). Stripe test keys go in `.env.test`.
+Upload Worker secrets:
 
 ```bash
-npm run secrets:dev
-npm run secrets
+npm run secrets:dev    # from `.env.local`
+npm run secrets:test   # from `.env.test`
+npm run secrets        # from `.env.local` → production
 ```
 
 | Variable / binding | Used for |
@@ -69,6 +80,7 @@ npm run secrets
 | `NEXT_PUBLIC_BILLING_ENABLED=true` | Pricing, cloud voices, `/api/tts/speak` |
 | `NEXT_PUBLIC_AUTH_ENABLED=true` | Sign-in button in the nav |
 | `NEXT_PUBLIC_CHECKOUT_ENABLED=true` | Stripe checkout for Plus/Pro/packs; off shows “Coming soon” |
+| `NEXT_PUBLIC_WEB_URL` | Checkout success/cancel and portal return (defaults to the request origin) |
 | `NEXT_PUBLIC_TRIAL_MINUTES=10` | Cloud minutes granted on first sign-in (new users only) |
 | `AUTH_SECRET`, `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET` | Google login (`/auth/signin`) |
 | `ADMIN_EMAILS` | Comma-separated Google emails that see the Admin tab |
@@ -77,21 +89,23 @@ npm run secrets
 | `ATLASCLOUD_API_KEY` | Cloud TTS via Atlas (`xai/tts-v1`) |
 
 Auth, billing and cloud TTS all stay dormant when their keys are missing: the free browser reader
-keeps working. After Google + Stripe exist, create the matching Stripe products
-(`readtome-plus-monthly` / `yearly`, `readtome-pro-monthly` / `yearly`,
-`readtome-pack-10h`) and point the webhook at
-`/api/stripe/webhook`. Apply the D1 schema with `npm run db:migrate:local` (dev) and
-`npm run db:migrate` (remote).
+keeps working. After Stripe keys exist, the first checkout creates Prices with those
+lookup keys and the webhook at `/api/stripe/webhook` marks orders paid. Apply the D1
+schema with `npm run db:migrate:local` (dev) and `npm run db:migrate` (remote).
 
 ## Official launch
 
-Ship with checkout **off** until Stripe is live. `npm run deploy` bakes `.env.local`
-into the Worker, so that file must look like production before you build:
+`npm run deploy` bakes `.env.local` into the Worker. Checkout return URLs ignore a
+localhost `NEXT_PUBLIC_WEB_URL` when the request is on `https://www.read-to-me.org`.
+
+Local Stripe keys are **test** (`sk_test_…`). Live charges need `sk_live_…` and a
+Dashboard webhook secret for the production endpoint before you run `npm run secrets`.
 
 ```
 NEXT_PUBLIC_BILLING_ENABLED=true
 NEXT_PUBLIC_AUTH_ENABLED=true
-NEXT_PUBLIC_CHECKOUT_ENABLED=false
+NEXT_PUBLIC_CHECKOUT_ENABLED=true
+NEXT_PUBLIC_WEB_URL=https://www.read-to-me.org
 NEXT_PUBLIC_TRIAL_MINUTES=10
 ```
 
@@ -100,11 +114,15 @@ NEXT_PUBLIC_TRIAL_MINUTES=10
    - `https://read-to-me.org`
    - `https://www.read-to-me.org/api/auth/callback/google`
    - `https://read-to-me.org/api/auth/callback/google`
-2. Apply remote D1 (idempotent): `npm run db:migrate`
-3. Push secrets (includes `ADMIN_EMAILS`): `npm run secrets`
-4. In Cloudflare, point `read-to-me.org` / `www` at Worker `read-to-me`
-5. Deploy: `npm run deploy`
-6. Smoke: home, `/reader`, `/pricing` (CTA records a click and says coming soon), Google sign-in, `/account` usage + Admin
-
-Turn checkout on later by setting `NEXT_PUBLIC_CHECKOUT_ENABLED=true`, adding Stripe
-products + webhook `https://www.read-to-me.org/api/stripe/webhook`, then rebuild and deploy.
+2. In Stripe **live** mode, put `STRIPE_SECRET_KEY` + `STRIPE_WEBHOOK_SECRET` in
+   `.env.local`, with a webhook at `https://www.read-to-me.org/api/stripe/webhook`
+   for `checkout.session.completed`, `invoice.paid`,
+   `customer.subscription.updated`, `customer.subscription.deleted`.
+   First live checkout creates Prices with lookup keys `readtome-plus-monthly` /
+   `yearly`, `readtome-pro-monthly` / `yearly`, `readtome-pack-10h`.
+3. Apply remote D1 (idempotent): `npm run db:migrate`
+4. Push secrets (Stripe + Auth + `ADMIN_EMAILS`): `npm run secrets`
+5. In Cloudflare, point `read-to-me.org` / `www` at Worker `read-to-me`
+6. Deploy: `npm run deploy`
+7. Smoke: home, `/reader`, Google sign-in, `/pricing` → Stripe Checkout,
+   `/account` usage (plan + pack expiry) + billing + Admin

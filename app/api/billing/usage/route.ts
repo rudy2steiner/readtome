@@ -57,15 +57,21 @@ export const GET = withApiLog('billing.usage', async (req) => {
     packs: packs.map((pack) => ({
       engine: pack.engine,
       remainingSeconds: pack.remainingSeconds,
+      totalSeconds: pack.totalSeconds,
       expiresAt: pack.expiresAt.toISOString(),
     })),
     trial: entitlement.subscribed
       ? { remainingSeconds: 0, consumed: true }
       : { remainingSeconds, consumed: remainingSeconds <= 0 },
     orders: orders.map((order) => ({
+      id: order.uuid,
       productId: order.productId,
       status: order.status,
       amountCents: order.amountCents,
+      currency: order.currency,
+      interval: order.interval,
+      periodStart: order.periodStart ? order.periodStart.toISOString() : null,
+      periodEnd: order.periodEnd ? order.periodEnd.toISOString() : null,
       createdAt: order.createdAt.toISOString(),
     })),
     clips: await listUserListens(uuid, {

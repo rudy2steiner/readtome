@@ -14,7 +14,12 @@
     "enabled": true
   },
   "vars": {
-    "AUTH_TRUST_HOST": "true"
+    "AUTH_TRUST_HOST": "true",
+    "NEXT_PUBLIC_WEB_URL": "https://www.read-to-me.org",
+    "NEXT_PUBLIC_BILLING_ENABLED": "true",
+    "NEXT_PUBLIC_AUTH_ENABLED": "true",
+    "NEXT_PUBLIC_CHECKOUT_ENABLED": "true",
+    "NEXT_PUBLIC_TRIAL_MINUTES": "10"
   },
   // Content-addressed store for synthesized audio. Cache hits cost nothing, so they are also
   // the only way a re-listen can start instantly instead of waiting on the supplier again.
@@ -38,7 +43,38 @@
       "workers_dev": true,
       "preview_urls": true,
       "vars": {
-        "AUTH_TRUST_HOST": "true"
+        "AUTH_TRUST_HOST": "true",
+        "NEXT_PUBLIC_BILLING_ENABLED": "true",
+        "NEXT_PUBLIC_AUTH_ENABLED": "true",
+        "NEXT_PUBLIC_CHECKOUT_ENABLED": "true",
+        "NEXT_PUBLIC_TRIAL_MINUTES": "10"
+      },
+      "r2_buckets": [
+        {
+          "binding": "AUDIO_CACHE",
+          "bucket_name": "readtome"
+        }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "readtome",
+          "database_id": "07fc56e5-99a0-4ca3-9a02-d1652dc82a10"
+        }
+      ]
+    },
+    // Stripe test-mode Worker. Bindings are not inherited — repeat them here.
+    "test": {
+      "name": "read-to-me-test",
+      "workers_dev": true,
+      "preview_urls": true,
+      "vars": {
+        "AUTH_TRUST_HOST": "true",
+        "NEXT_PUBLIC_WEB_URL": "https://read-to-me-test.rudy-steiner.workers.dev",
+        "NEXT_PUBLIC_BILLING_ENABLED": "true",
+        "NEXT_PUBLIC_AUTH_ENABLED": "true",
+        "NEXT_PUBLIC_CHECKOUT_ENABLED": "true",
+        "NEXT_PUBLIC_TRIAL_MINUTES": "10"
       },
       "r2_buckets": [
         {

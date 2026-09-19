@@ -1,6 +1,5 @@
 import { sessionFromRequest } from '@/lib/auth/from-request';
 import { isBillingConfigured } from '@/lib/billing/config';
-import { getEntitlement } from '@/lib/billing/entitlement';
 import { createPortalUrl } from '@/lib/billing/stripe';
 import { isBillingEnabled } from '@/lib/config/features';
 import { json, jsonError } from '@/lib/api/respond';
@@ -12,12 +11,15 @@ export const POST = withApiLog('billing.portal', async (req) => {
 
   const session = await sessionFromRequest(req);
   const uuid = session?.user?.uuid;
-  if (!uuid) return jsonError('unauthenticated', 401);
+  const email = session?.user?.email;
+  if (!uuid || !email) return jsonError('unauthenticated', 401);
 
-  const entitlement = await getEntitlement(uuid);
-  if (!entitlement.stripeCustomerId) return jsonError('no_customer', 400);
-
-  const origin = new URL(req.url).origin;
-  const url = await createPortalUrl(entitlement.stripeCustomerId, origin);
-  return json({ url });
+  try {
+    const origin = new URL(req.url).origin;
+    const url = await createPortalUrl({ userUuid: uuid, email, origin });
+    return json({ url });
+  } catch (error) {
+    console.error('portal failed', error);
+    return jsonError('no_customer', 400);
+  }
 });

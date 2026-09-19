@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useSession } from 'next-auth/react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { loadAdminCache, loadUsageCache, saveAdminCache, saveUsageCache } from '@/lib/billing/usage-cache';
+import { findProduct } from '@/lib/billing/products';
 import { loggedFetch } from '@/lib/log/call';
 import { signInWithGoogle } from '@/lib/auth/google-sign-in';
 
@@ -49,6 +50,18 @@ type AdminPayload = {
   };
 };
 
+type OrderRow = {
+  id?: string;
+  productId: string;
+  status: string;
+  amountCents: number;
+  currency?: string;
+  interval?: string | null;
+  periodStart?: string | null;
+  periodEnd?: string | null;
+  createdAt: string;
+};
+
 type UsagePayload = {
   admin?: boolean;
   plan: string;
@@ -56,9 +69,9 @@ type UsagePayload = {
   periodStart: string;
   periodEnd: string;
   pools: { engine: string; quotaSeconds: number; usedSeconds: number; remainingSeconds: number }[];
-  packs: { engine: string; remainingSeconds: number; expiresAt: string }[];
+  packs: { engine: string; remainingSeconds: number; totalSeconds?: number; expiresAt: string }[];
   trial: { remainingSeconds: number; consumed: boolean };
-  orders: { productId: string; status: string; amountCents: number; createdAt: string }[];
+  orders: OrderRow[];
   clips: { items: Clip[]; total: number; page: number; size: number; pages: number };
 };
 
@@ -96,6 +109,12 @@ export function AccountPage() {
   const [adminDir, setAdminDir] = useState<AdminPayload['dir']>('desc');
 
   const cacheUser = session?.user?.uuid || session?.user?.email || '';
+
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('checkout') === 'success') {
+      setTab('billing');
+    }
+  }, []);
 
   useEffect(() => {
     if (status !== 'authenticated' || !cacheUser) return;
@@ -293,7 +312,7 @@ function UsagePanel({
           const pct = pool.quotaSeconds > 0 ? Math.min(100, (pool.usedSeconds / pool.quotaSeconds) * 100) : 0;
           return (
             <div key={pool.engine} className="rounded-xl bg-muted/50 p-4">
-              <p className="text-sm font-semibold">{t('cloud')}</p>
+              <p className="text-sm font-semibold">{t('planPool')}</p>
               <p className="mt-2 text-lg tabular-nums">
                 {formatClipTime(pool.usedSeconds, t)} / {formatClipTime(pool.quotaSeconds, t)}
               </p>
@@ -302,23 +321,33 @@ function UsagePanel({
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 {t('remaining')} {formatClipTime(pool.remainingSeconds, t)}
+                {usage.subscribed ? ` · ${t('resets')} ${new Date(usage.periodEnd).toLocaleDateString()}` : ''}
+              </p>
+            </div>
+          );
+        })}
+        {usage.packs.map((pack) => {
+          const total = pack.totalSeconds ?? pack.remainingSeconds;
+          const used = Math.max(0, total - pack.remainingSeconds);
+          const pct = total > 0 ? Math.min(100, (used / total) * 100) : 0;
+          return (
+            <div key={`${pack.engine}-${pack.expiresAt}`} className="rounded-xl bg-muted/50 p-4">
+              <p className="text-sm font-semibold">{t('packs')}</p>
+              <p className="mt-2 text-lg tabular-nums">
+                {formatClipTime(used, t)} / {formatClipTime(total, t)}
+              </p>
+              <div className="mt-3 h-2 overflow-hidden rounded-full bg-background">
+                <div className="h-full rounded-full bg-primary" style={{ width: `${pct}%` }} />
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">
+                {t('remaining')} {formatClipTime(pack.remainingSeconds, t)}
+                {' · '}
+                {t('packValid', { date: new Date(pack.expiresAt).toLocaleDateString() })}
               </p>
             </div>
           );
         })}
       </div>
-      {usage.packs.length > 0 && (
-        <div className="mt-6">
-          <h3 className="font-semibold">{t('packs')}</h3>
-          <ul className="mt-3 space-y-2 text-sm">
-            {usage.packs.map((pack) => (
-              <li key={`${pack.engine}-${pack.expiresAt}`}>
-                {t('cloud')}: {formatClipTime(pack.remainingSeconds, t)} · {t('expires')} {new Date(pack.expiresAt).toLocaleDateString()}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
       {!usage.subscribed && (
         <p className="mt-4 text-sm text-muted-foreground">
           {t('trialLeft')} {formatClipTime(usage.trial.remainingSeconds, t)}
@@ -681,19 +710,102 @@ function AdminStat({ label, value }: { label: string; value: string }) {
   );
 }
 
+function orderProductLabel(productId: string, t: ReturnType<typeof useTranslations>): string {
+  const product = findProduct(productId);
+  if (!product) return productId;
+  if (product.plan === 'plus') return t('orderPlus');
+  if (product.plan === 'pro') return t('orderPro');
+  if (product.packSeconds) return t('orderPack', { hours: Math.round(product.packSeconds / 3600) });
+  return product.name;
+}
+
+function orderIntervalLabel(interval: string | null | undefined, t: ReturnType<typeof useTranslations>): string | null {
+  if (interval === 'month') return t('orderMonthly');
+  if (interval === 'year') return t('orderYearly');
+  if (interval === 'once') return t('orderOnce');
+  return null;
+}
+
+function orderStatusLabel(status: string, t: ReturnType<typeof useTranslations>): string {
+  if (status === 'paid' || status === 'complete' || status === 'active' || status === 'trialing') return t('orderPaid');
+  if (status === 'canceled' || status === 'unpaid') return t('orderCanceled');
+  if (status === 'created' || status === 'incomplete' || status === 'open') return t('orderPending');
+  return status;
+}
+
+function formatOrderMoney(cents: number, currency: string | undefined, locale: string): string {
+  try {
+    return new Intl.NumberFormat(locale === 'zh' ? 'zh-CN' : locale, {
+      style: 'currency',
+      currency: (currency || 'usd').toUpperCase(),
+    }).format(cents / 100);
+  } catch {
+    return `$${(cents / 100).toFixed(2)}`;
+  }
+}
+
+function formatOrderTime(value: string, locale: string): string {
+  return new Date(value).toLocaleString(locale === 'zh' ? 'zh-CN' : locale, {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+}
+
 function BillingPanel({ usage, t }: { usage: UsagePayload; t: ReturnType<typeof useTranslations> }) {
+  const locale = useLocale();
+  const orders = usage.orders.filter((order) => {
+    const status = order.status;
+    return status !== 'created' && status !== 'incomplete' && status !== 'open';
+  });
   return (
     <section className="rounded-2xl border p-6 text-left">
       <h2 className="font-semibold">{t('orders')}</h2>
-      {usage.orders.length === 0 ? (
+      {orders.length === 0 ? (
         <p className="mt-2 text-sm text-muted-foreground">{t('noOrders')}</p>
       ) : (
-        <ul className="mt-3 space-y-2 text-sm">
-          {usage.orders.map((order) => (
-            <li key={`${order.productId}-${order.createdAt}`}>
-              {order.productId} · ${(order.amountCents / 100).toFixed(2)} · {order.status}
-            </li>
-          ))}
+        <ul className="mt-4 space-y-3">
+          {orders.map((order) => {
+            const interval = orderIntervalLabel(order.interval ?? findProduct(order.productId)?.interval, t);
+            const period =
+              order.periodStart && order.periodEnd
+                ? `${new Date(order.periodStart).toLocaleDateString(locale === 'zh' ? 'zh-CN' : locale)} – ${new Date(order.periodEnd).toLocaleDateString(locale === 'zh' ? 'zh-CN' : locale)}`
+                : null;
+            return (
+              <li key={order.id ?? `${order.productId}-${order.createdAt}`} className="rounded-xl bg-muted/50 p-4">
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <p className="font-semibold">
+                      {orderProductLabel(order.productId, t)}
+                      {interval ? <span className="font-normal text-muted-foreground"> · {interval}</span> : null}
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-muted-foreground">{orderStatusLabel(order.status, t)}</p>
+                  </div>
+                  <p className="text-base font-semibold tabular-nums">{formatOrderMoney(order.amountCents, order.currency, locale)}</p>
+                </div>
+                <dl className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+                  {order.id ? (
+                    <div>
+                      <dt className="text-xs text-muted-foreground">{t('orderId')}</dt>
+                      <dd className="mt-0.5 break-all font-mono text-xs tabular-nums">{order.id}</dd>
+                    </div>
+                  ) : null}
+                  <div>
+                    <dt className="text-xs text-muted-foreground">{t('orderTime')}</dt>
+                    <dd className="mt-0.5 tabular-nums">{formatOrderTime(order.createdAt, locale)}</dd>
+                  </div>
+                  {period ? (
+                    <div className="sm:col-span-2">
+                      <dt className="text-xs text-muted-foreground">{t('orderPeriod')}</dt>
+                      <dd className="mt-0.5 tabular-nums">{period}</dd>
+                    </div>
+                  ) : null}
+                </dl>
+              </li>
+            );
+          })}
         </ul>
       )}
       {usage.subscribed && (

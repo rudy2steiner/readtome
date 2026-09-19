@@ -53,7 +53,11 @@ export function PricingPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ product_id: productId }),
       });
-      const data = (await response.json()) as { url?: string; error?: string };
+      const data = (await response.json()) as { url?: string; upgraded?: boolean; error?: string };
+      if (data.upgraded) {
+        window.location.href = '/account?checkout=success';
+        return;
+      }
       if (data.url) {
         window.location.href = data.url;
         return;
@@ -62,9 +66,11 @@ export function PricingPage() {
         description:
           data.error === 'need_plan'
             ? t('packs.needPlan')
-            : data.error === 'stripe_not_configured' || data.error === 'billing_disabled'
-              ? t('comingSoon')
-              : t('checkoutFailed'),
+            : data.error === 'downgrade_not_allowed'
+              ? t('downgradeDisabled')
+              : data.error === 'stripe_not_configured' || data.error === 'billing_disabled'
+                ? t('comingSoon')
+                : t('checkoutFailed'),
       });
     } catch {
       toast({ description: t('checkoutFailed') });
