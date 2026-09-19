@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">ReadToMe waveform R</title>
+  <desc id="desc">An uppercase R built entirely from vertical audio waveform bars</desc>
+  <defs>
+    <clipPath id="r-shape">
+      <path clip-rule="evenodd" d="M8 5h31c18 0 29 10 29 26 0 11-5.5 19-16 23l19 21H51L36 57H27v18H8V5Zm19 16v21h12c7 0 11-4 11-10.5S46 21 39 21H27Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#r-shape)" fill="#6c4cf1">
+    <rect x="6" y="2" width="7" height="76" rx="3.5"/>
+    <rect x="16" y="9" width="7" height="62" rx="3.5"/>
+    <rect x="26" y="4" width="7" height="72" rx="3.5"/>
+    <rect x="36" y="12" width="7" height="59" rx="3.5"/>
+    <rect x="46" y="6" width="7" height="71" rx="3.5"/>
+    <rect x="56" y="15" width="7" height="59" rx="3.5"/>
+    <rect x="66" y="22" width="7" height="54" rx="3.5"/>
+  </g>
+</svg>

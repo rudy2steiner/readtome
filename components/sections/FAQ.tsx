@@ -1,35 +1,37 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 
 interface FAQItem {
   question: string;
   answer: string;
 }
 
+const FAQ_NOTES: Record<number, 'todayUpload' | 'todayExport'> = {
+  3: 'todayUpload',
+  4: 'todayExport',
+};
+
 export function FAQ() {
-  const t = useTranslations('faq');
-  
-  const faqItems = t.raw('items') as FAQItem[];
+  const t = useTranslations();
+  const faqItems = t.raw('faq.items') as FAQItem[];
 
   return (
-    <section className="py-12 bg-background">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-bold text-center mb-12">{t('title')}</h2>
-        <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
+    <section className="lp-band lp-band-alt" id="faq">
+      <div className="lp-wrap">
+        <header className="lp-band-head">
+          <span className="lp-eyebrow">{t('ui.faq')}</span>
+          <h2>{t('faq.title')}</h2>
+        </header>
+        <div className="faq-list">
           {faqItems.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
-            </AccordionItem>
+            <details key={faq.question} className="faq" open={index === 0}>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+              {FAQ_NOTES[index] && <p className="faq-note">{t(`ui.${FAQ_NOTES[index]}`)}</p>}
+            </details>
           ))}
-        </Accordion>
+        </div>
       </div>
     </section>
   );

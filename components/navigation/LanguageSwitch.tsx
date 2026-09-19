@@ -19,16 +19,16 @@ export function LanguageSwitch() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="ghost" 
+        <Button
+          variant="ghost"
           size="sm"
-          className="h-9 px-3 gap-2"
+          className="lang-btn gap-2 shadow-none"
         >
           <Globe className="h-4 w-4" />
           <span>{currentLanguage?.nativeName}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[150px]">
+      <DropdownMenuContent align="end" className="w-[180px]">
         {languageConfig.map((lang) => (
           <DropdownMenuItem
             key={lang.code}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadToMe · Mimi Mascot</title>
+<style>
+  :root { --paper:#f6f5f1; --cream:#fffdf6; --ink:#16161b; --muted:#74747c; --line:#e1ded6; --coral:#f0563a; --pink:#ff9b87; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); background:var(--paper); font:14px/1.55 ui-rounded,"SF Pro Rounded","Arial Rounded MT Bold",ui-sans-serif,system-ui,sans-serif; }
+  main { width:min(1120px,calc(100% - 40px)); margin:auto; padding:52px 0 76px; }
+  header { display:flex; align-items:end; justify-content:space-between; gap:32px; margin-bottom:30px; }
+  .kicker { color:var(--coral); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+  h1 { margin:7px 0 0; font-size:clamp(34px,5vw,54px); line-height:1; letter-spacing:-.045em; }
+  header p { max-width:390px; margin:0; color:var(--muted); }
+  .board { display:grid; grid-template-columns:1.55fr 1fr 1fr; grid-template-rows:350px 255px; gap:14px; }
+  .tile { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:22px; background:var(--cream); }
+  .label { position:absolute; left:20px; bottom:17px; color:var(--muted); font-size:10px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+  .hero { grid-column:span 2; display:grid; place-items:center; background:var(--coral); }
+  .hero-lockup { display:flex; align-items:center; gap:20px; color:var(--cream); }
+  .hero-lockup img { width:112px; filter:drop-shadow(0 9px 0 rgba(126,35,18,.16)); }
+  .wordmark { font-size:clamp(48px,7vw,78px); font-weight:850; line-height:.9; letter-spacing:-.075em; }
+  .wordmark span { color:var(--ink); }
+  .hero .label { color:rgba(255,253,246,.72); }
+  .app { display:grid; place-items:center; background:#e9e6de; }
+  .app img { width:155px; filter:drop-shadow(0 18px 24px rgba(22,22,27,.16)); }
+  .states { display:flex; align-items:center; justify-content:center; gap:38px; padding:28px; }
+  .state { display:grid; justify-items:center; gap:11px; color:var(--muted); font-size:11px; font-weight:700; }
+  .state img { height:105px; max-width:132px; }
+  .nav-demo { grid-column:span 2; background:#fff; }
+  .nav { height:68px; padding:0 22px; display:flex; align-items:center; border-bottom:1px solid var(--line); }
+  .nav-logo { display:flex; align-items:center; gap:9px; font-size:24px; font-weight:850; letter-spacing:-.06em; }
+  .nav-logo img { width:39px; height:39px; }
+  .nav-logo b { color:var(--coral); }
+  .links { margin-left:auto; display:flex; align-items:center; gap:22px; color:var(--muted); font:12px ui-sans-serif,system-ui,sans-serif; }
+  .button { padding:8px 13px; color:#fff; background:var(--ink); border-radius:9px; font-weight:700; }
+  .reader { padding:32px 28px 0; }
+  .reader strong { font-size:24px; letter-spacing:-.035em; }
+  .reader p { margin:5px 0 0; color:var(--muted); font:13px ui-sans-serif,system-ui,sans-serif; }
+  .story { display:grid; grid-template-columns:repeat(3,1fr); margin-top:20px; border-block:1px solid var(--line); }
+  .story div { padding:20px 23px; border-right:1px solid var(--line); }
+  .story div:last-child { border:0; }
+  .story b { display:block; margin-bottom:3px; font-size:12px; }
+  .story span { color:var(--muted); font:11px ui-sans-serif,system-ui,sans-serif; }
+  @media(max-width:800px) {
+    header { flex-direction:column; align-items:start; }
+    .board { grid-template-columns:1fr; grid-template-rows:290px 245px 230px 250px; }
+    .hero,.nav-demo { grid-column:auto; }
+    .hero-lockup img { width:78px; }
+    .wordmark { font-size:48px; }
+    .links span { display:none; }
+    .story { grid-template-columns:1fr; }
+    .story div { border-right:0; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <span class="kicker">Concept 05 · Meet Mimi</span>
+      <h1>文字开口说话了</h1>
+    </div>
+    <p>Mimi 的脸由一对引号构成：它既是等待被朗读的文字，也是会回应你的伙伴。形象圆润、有表情，适合贯穿播放、空状态与新手引导。</p>
+  </header>
+
+  <section class="board">
+    <article class="tile hero">
+      <div class="hero-lockup">
+        <img src="../public/brand/mimi-idle.svg" alt="Mimi 吉祥物">
+        <div class="wordmark">readto<span>me</span></div>
+      </div>
+      <span class="label">Primary logo</span>
+    </article>
+
+    <article class="tile app">
+      <img src="../public/brand/mimi-app-icon.svg" alt="ReadToMe App 图标">
+      <span class="label">App icon</span>
+    </article>
+
+    <article class="tile states">
+      <div class="state">
+        <img src="../public/brand/mimi-idle.svg" alt="">
+        <span>READY</span>
+      </div>
+      <div class="state">
+        <img src="../public/brand/mimi-speaking.svg" alt="">
+        <span>SPEAKING</span>
+      </div>
+      <span class="label">Character states</span>
+    </article>
+
+    <article class="tile nav-demo">
+      <div class="nav">
+        <div class="nav-logo"><img src="../public/brand/mimi-idle.svg" alt=""><span>readto<b>me</b></span></div>
+        <div class="links"><span>Reader</span><span>Features</span><span>Pricing</span><b class="button">Start reading</b></div>
+      </div>
+      <div class="reader">
+        <strong>Hey! What should we read today?</strong>
+        <p>真实导航尺寸与产品语气示例</p>
+      </div>
+      <span class="label">In product</span>
+    </article>
+  </section>
+
+  <section class="story">
+    <div><b>双引号造型</b><span>直接来自文字，但不是常规文档或气泡图标。</span></div>
+    <div><b>珊瑚红主色</b><span>延续播放器颜色，比 AI 产品常见蓝色更有温度。</span></div>
+    <div><b>可成长的角色</b><span>可增加倾听、思考、完成、错误等产品状态。</span></div>
+  </section>
+</main>
+</body>
+</html>

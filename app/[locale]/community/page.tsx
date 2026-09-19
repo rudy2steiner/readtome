@@ -17,7 +17,7 @@ export default function CommunityPage({ params: { locale } }: Props) {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Join Our Community</h2>
             <p className="text-muted-foreground mb-4">
-              Connect with other PhotoMaker users, share your creations, and learn from
+              Connect with other Read To Me users, share your creations, and learn from
               the community. Join discussions, get inspiration, and stay updated on the
               latest features and techniques.
             </p>
@@ -39,7 +39,7 @@ export default function CommunityPage({ params: { locale } }: Props) {
               <div className="p-6 bg-muted rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">Share Your Work</h3>
                 <p className="text-muted-foreground">
-                  Show off your best PhotoMaker creations and get feedback from the community.
+                  Show off your best Read To Me creations and get feedback from the community.
                 </p>
               </div>
               <div className="p-6 bg-muted rounded-lg">

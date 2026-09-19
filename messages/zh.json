@@ -1,42 +1,38 @@
 {
+  "meta": {
+    "title": "为我朗读：几秒将文字转换为语音 | 免费在线",
+    "description": "免费即时将文字转换为语音。无论是学习、多任务处理还是让内容更易获取，为我朗读都能用逼真的语音把您的文档转成清晰的音频，支持超过 50 种语言！",
+    "readTitle": "文字转语音朗读器 — 为我朗读",
+    "readDescription": "粘贴文章或上传文档即可收听朗读，朗读时当前句子会高亮显示。"
+  },
   "common": {
     "title": "为我朗读",
     "description": "免费即时将文字转换为语音",
-    "upload": "上传照片",
-    "uploadUrl": "通过URL上传",
-    "add": "添加",
-    "generate": "生成",
-    "options": "语音选项",
-    "examples": "语音示例",
-    "generated": "您的音频文件",
-    "useExample": "试试这个语音",
-    "loading": "正在转换语音...",
-    "error": "错误",
-    "success": "转换成功！",
-    "exampleLoaded": "语音预设已加载",
-    "exampleError": "加载语音失败",
-    "table": {
-      "photos": "您的文档",
-      "style": "语音风格",
-      "length": "语音长度",
-      "color": "语音特点",
-      "actions": "操作"
-    }
+    "error": "错误"
   },
   "nav": {
     "home": "首页",
-    "gallery": "音频库",
-    "blog": "博客"
+    "reader": "朗读器",
+    "features": "功能",
+    "faq": "常见问题",
+    "pricing": "定价",
+    "blog": "博客",
+    "start": "开始朗读",
+    "themeDark": "切换到深色",
+    "themeLight": "切换到浅色"
   },
-  "form": {
-    "hairLength": "语音长度",
-    "hairStyle": "语音类型",
-    "hairColor": "语音音色",
-    "faceShape": "语气",
-    "gender": "性别",
-    "numOutputs": "语音变体",
-    "preset": "热门语音",
-    "customStyle": "自定义语音"
+  "ui": {
+    "benefits": "核心优势",
+    "features": "功能能力",
+    "how": "使用流程",
+    "faq": "常见疑问",
+    "noSignup": "无需注册，点开就听",
+    "factVoices": "浏览器可用 {n} 个音色",
+    "factFree": "免费，不限用量",
+    "planned": "规划中",
+    "todayUpload": "可上传 TXT、MD、HTML、PDF、DOCX、ODT、EPUB。旧版 .doc 请先另存为 .docx。",
+    "todayExport": "当前：仅支持朗读播放，音频导出规划中。",
+    "step": "步骤"
   },
   "hero": {
     "tagline": "您的私人朗读助手",
@@ -91,7 +87,7 @@
       "upload": {
         "number": "01",
         "title": "输入文本",
-        "description": "粘贴文本"
+        "description": "粘贴文本，或上传 TXT、MD、HTML、PDF、DOCX 等"
       },
       "style": {
         "number": "02",
@@ -110,29 +106,6 @@
       }
     }
   },
-  "testimonials": {
-    "title": "用户对为我朗读的评价",
-    "items": [
-      {
-        "name": "张老师",
-        "role": "教师",
-        "quote": "非常适合为我的学生创建无障碍学习材料。",
-        "image": "/testimonials/bc.jpeg"
-      },
-      {
-        "name": "陈明",
-        "role": "内容创作者",
-        "quote": "自然的语音效果非常适合我的播客和视频。",
-        "image": "/testimonials/t5.jpeg"
-      },
-      {
-        "name": "李小华",
-        "role": "学生",
-        "quote": "帮助我在通勤时学习。多语言支持太棒了！",
-        "image": "/testimonials/t3.jpeg"
-      }
-    ]
-  },
   "faq": {
     "title": "常见问题",
     "items": [
@@ -150,7 +123,7 @@
       },
       {
         "question": "支持哪些文件格式？",
-        "answer": "我们支持TXT、PDF、DOC、DOCX等常见文档格式。"
+        "answer": "可以粘贴文本，或上传 TXT、Markdown、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB。旧版 .doc 请先另存为 .docx。"
       },
       {
         "question": "可以下载音频文件吗？",
@@ -173,11 +146,263 @@
     "support": "支持",
     "helpCenter": "帮助中心",
     "contact": "联系我们",
-    "community": "社区",
     "legal": "法律",
     "privacy": "隐私政策",
     "terms": "使用条款",
-    "cookies": "Cookie政策",
-    "rights": "版权所有"
+    "cookies": "Cookie 政策",
+    "rights": "版权所有",
+    "engines": "免费音色：浏览器自带 · 付费音色：云端 AI",
+    "languages": "语言："
+  },
+  "reader": {
+    "heading": "朗读器",
+    "sub": "粘贴文本、选择音色，边听边跟读。文本与播放位置会记在本浏览器中。",
+    "placeholder": "粘贴文本，或上传 TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB…",
+    "clear": "清空文本",
+    "upload": "上传文档",
+    "uploadHint": "支持 TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB",
+    "loadDemo": "加载示例文本",
+    "demoLoaded": "已加载示例文本",
+    "smaller": "缩小字号",
+    "bigger": "放大字号",
+    "play": "播放",
+    "pause": "暂停",
+    "preparing": "正在生成语音…",
+    "stop": "停止",
+    "speed": "播放速度",
+    "openFull": "打开完整朗读器 →",
+    "tabPlayback": "播放",
+    "language": "朗读语言",
+    "voiceSelection": "音色选择",
+    "filterAll": "全部",
+    "filterFree": "免费",
+    "filterPro": "高级",
+    "allLanguages": "全部语言",
+    "multilingual": "多语言",
+    "genderAll": "全部性别",
+    "genderFemale": "女声",
+    "genderMale": "男声",
+    "voiceSearch": "搜索音色",
+    "groupCloud": "云端音色",
+    "groupNatural": "云端音色",
+    "groupBrowser": "浏览器音色",
+    "seePlans": "查看方案 →",
+    "systemVoice": "系统语音",
+    "note": "免费音色来自您的浏览器，不限用量。云端音色需要套餐。",
+    "words": "词",
+    "characters": "字符",
+    "noVoices": "没有符合该筛选的音色。",
+    "needText": "请先输入文本——粘贴一篇文章或上传文档。",
+    "needVoice": "此浏览器暂时没有可用的语音。",
+    "needTxt": "不支持该文件类型。请使用 TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT 或 EPUB。",
+    "needFormat": "不支持该文件类型。请使用 TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT 或 EPUB。",
+    "needDocx": "不支持旧版 .doc，请另存为 .docx 后再试。",
+    "emptyFile": "这个文件里没有可读文本。扫描版 PDF 会在浏览器里识别，失败的话请再试一次。",
+    "tooLarge": "文件太大（上限 15 MB）。",
+    "parseFailed": "无法读取该文件。",
+    "readingFile": "正在读取文件…",
+    "ocrStart": "这是扫描版 PDF，正在浏览器里识别 {total} 页…",
+    "ocrProgress": "正在识别扫描件 {page}/{total}…",
+    "loaded": "已载入",
+    "noSpeech": "此浏览器不支持 Web Speech——文本编辑仍可使用。",
+    "premiumSignIn": "云端音色需要付费套餐，请先登录，再到定价页选择方案。",
+    "premiumUpgrade": "云端音色需要付费套餐，详见定价页。",
+    "degradeNatural": "云端时长已用完。",
+    "degradeTrial": "一次性云端试听已用完。",
+    "degradeCloud": "云端音色暂时不可用。"
+  },
+  "samples": {
+    "heroLabel": "云端音色的真实合成片段 —— 点头像试听",
+    "cta": "订阅 Plus 使用云端音色",
+    "ctaPrice": "年付低至 $7/月",
+    "natural": "自然",
+    "playLabel": "试听 {name} 音色",
+    "playFailed": "浏览器拦截了音频播放，请再点一次。"
+  },
+  "auth": {
+    "signIn": "登录",
+    "signOut": "退出登录",
+    "continueGoogle": "使用 Google 继续",
+    "signInTitle": "登录为我朗读",
+    "signInSubtitle": "登录后可解锁云端 AI 音色，并在多设备同步您的阅读内容。",
+    "backHome": "← 返回首页",
+    "googleUnavailable": "此服务器尚未配置 Google 登录。",
+    "account": "账户",
+    "usage": "用量"
+  },
+  "sample": "欢迎使用「为我朗读」。\n\n点击播放，这段文字就会用自然的语音、按您选择的语速念给您听。\n\n想听什么都可以：粘贴一篇文章、上传一份文档，或者写下自己的笔记。\n\n朗读时，当前这句会高亮显示，方便您跟着一起看。\n\n在下方播放器里试试不同的音色和语速吧。",
+  "pricing": {
+    "metaTitle": "定价 — 为我朗读",
+    "eyebrow": "定价",
+    "title": "为收听时长付费，而不是为软件付费",
+    "subtitle": "浏览器自带的音色永久免费。付费套餐增加云端 AI 音色，按可收听的小时数计量。",
+    "yearly": "年付",
+    "monthly": "月付",
+    "save": "省 22%",
+    "perMonth": "/ 月",
+    "billedYearly": "按 {amount} 每年一次性收取",
+    "billedMonthly": "按月收取，可随时取消",
+    "popular": "最受欢迎",
+    "checkoutFailed": "结账尚未配置。登录仍然可用；付款需要 Stripe 密钥。",
+    "comingSoon": "即将推出",
+    "free": {
+      "name": "免费版",
+      "tagline": "无需注册即可开始",
+      "forever": "永久免费",
+      "cta": "开始朗读",
+      "f1": "浏览器音色，无限使用",
+      "f2": "云端音色 {minutes} 分钟，仅一次",
+      "f3": "逐句高亮，并记住上次听到哪里",
+      "f4": "粘贴文本或上传文档"
+    },
+    "plus": {
+      "name": "Plus",
+      "tagline": "适合日常的收听习惯",
+      "cta": "选择 Plus",
+      "f1": "云端 AI 音色每月 8 小时",
+      "f2": "可按语言和性别筛选",
+      "f3": "包含免费版全部功能",
+      "f4": "重听永远不消耗额度"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "适合长篇书籍与高强度收听",
+      "cta": "选择 Pro",
+      "f1": "包含 Plus 全部权益",
+      "f2": "每月 16 小时，时长是 Plus 的两倍",
+      "f3": "合成优先队列"
+    },
+    "voices": {
+      "title": "两种音色",
+      "subtitle": "各档的差别在于包含多少云端语音，而不是朗读器能做什么。",
+      "basicT": "Basic",
+      "basicD": "您设备上已有的音色。永久免费，无需账号，没有上限。",
+      "naturalT": "Natural",
+      "naturalD": "用于日常收听的云端 AI 音色——长文章和整本书。"
+    },
+    "packs": {
+      "title": "月中就用完了？",
+      "subtitle": "一份 +10 小时加油包，补的是 Plus / Pro 共用的那份 AI 时长。",
+      "hours": "AI 音色 +10 小时",
+      "natural": "AI 音色 +10 小时",
+      "expressive": "AI 音色 +10 小时",
+      "buy": "加入套餐",
+      "rule": "需要有效套餐 · 仅在月度额度用尽后消耗 · 12 个月内有效",
+      "needPlan": "加油包需要有效套餐——请先订阅。"
+    },
+    "notes": {
+      "title": "需要知道的几件事",
+      "n1": "月度时长每个计费周期重置，未用完的部分不结转。",
+      "n2": "听 1 小时扣 1 小时额度，任何语言下可听时长相同。",
+      "n3": "音频导出仍在规划中，尚未包含在任何套餐里。",
+      "n4": "云端音色需要登录。缓存命中不消耗分钟数。"
+    }
+  },
+  "account": {
+    "title": "用量与账单",
+    "tabUsage": "用量",
+    "tabBilling": "账单",
+    "tabAdmin": "管理",
+    "adminUsers": "用户",
+    "adminSiteUsed": "全站已用",
+    "adminSiteLeft": "全站剩余",
+    "adminEmpty": "还没有用户。",
+    "adminColUser": "用户",
+    "adminColPlan": "套餐",
+    "adminColUsed": "已用",
+    "adminColLeft": "剩余",
+    "adminColJoined": "注册",
+    "adminSortAsc": "从少到多",
+    "adminSortDesc": "从多到少",
+    "adminForbidden": "仅配置的管理邮箱可查看此页。",
+    "adminClicks": "定价点击",
+    "adminClicksEmpty": "还没有定价页点击。",
+    "adminAnonymous": "未登录",
+    "loading": "加载中…",
+    "needSignIn": "登录后可查看用量和订单。",
+    "signIn": "登录",
+    "signedInAs": "当前登录",
+    "unavailable": "尚未配置数据库，暂时无法显示用量。",
+    "loadFailed": "用量加载失败。",
+    "plan": "当前套餐",
+    "resets": "重置日期",
+    "cloud": "AI 时长",
+    "remaining": "剩余",
+    "trialLeft": "云端试听剩余：",
+    "packs": "加油包",
+    "expires": "到期",
+    "orders": "订单",
+    "noOrders": "还没有订单。",
+    "manage": "管理订阅",
+    "clips": "阅读记录",
+    "clipsEmpty": "在阅读器里用云端音色朗读后，这里会列出文本、音频和时长。",
+    "clipsCharged": "扣 {time}",
+    "clipsNoCharge": "未扣时长",
+    "clipsReplayHint": "重听不另扣时长",
+    "clipsTotal": "全程 {time}",
+    "clipsParts": "{count} 段",
+    "clipsExpand": "展开全文",
+    "clipsCollapse": "收起",
+    "clipsScroll": "内容较长，可滚动查看",
+    "clipsPlays": "播放 {count} 次",
+    "clipUnavailable": "这段音频已经无法播放。",
+    "clipsPageSize": "每页",
+    "clipsPage": "{page} / {pages}",
+    "clipsPrev": "上一页",
+    "clipsNext": "下一页",
+    "clipsRange": "{from}–{to} / {total}",
+    "sec": "{n}秒",
+    "minSec": "{m}分{s}秒"
+  },
+  "error": {
+    "title": "出了点问题",
+    "description": "发生了意外错误，可以再试一次。",
+    "tryAgain": "再试一次",
+    "notFound": {
+      "title": "页面不存在",
+      "description": "这个页面不存在，或已经搬家了。",
+      "returnHome": "返回首页"
+    }
+  },
+  "support": {
+    "contact": {
+      "title": "联系我们",
+      "email": {
+        "title": "邮件",
+        "description": "一般一个工作日内回复。",
+        "button": "发送邮件"
+      },
+      "chat": {
+        "title": "在线咨询",
+        "description": "朗读时遇到问题可以直接问。",
+        "button": "打开对话"
+      },
+      "phone": {
+        "title": "电话",
+        "description": "账单和账户问题用这个渠道。",
+        "button": "查看时间"
+      }
+    },
+    "resources": {
+      "title": "资源",
+      "docs": {
+        "title": "帮助文档",
+        "description": "粘贴、上传和收听的用法。"
+      },
+      "status": {
+        "title": "服务状态",
+        "description": "云端音色和结账是否可用。"
+      },
+      "community": {
+        "title": "社区",
+        "description": "分享音色和收听方式。"
+      }
+    },
+    "enterprise": {
+      "title": "团队",
+      "subtitle": "需要团队方案？",
+      "description": "告诉我们有多少人要听，我们帮你选套餐。",
+      "button": "联系销售"
+    }
   }
 }

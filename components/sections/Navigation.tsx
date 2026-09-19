@@ -1,43 +1,97 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Camera } from 'lucide-react';
-import { Link } from '@/lib/navigation';
-import { NavItem } from '@/components/navigation/NavItem';
+import Image from 'next/image';
+
+import { Link, usePathname } from '@/lib/navigation';
 import { LanguageSwitch } from '@/components/navigation/LanguageSwitch';
-import { navigationConfig } from '@/lib/config/navigation';
-import Image from "next/image";
+import { ThemeSwitch } from '@/components/navigation/ThemeSwitch';
+import { AuthButton } from '@/components/auth/AuthButton';
+import { isBillingEnabled } from '@/lib/config/features';
+import { cn } from '@/lib/utils';
+
+function navPath(pathname: string) {
+  return pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+}
 
 export function Navigation() {
   const t = useTranslations();
+  const pathname = navPath(usePathname());
+  const [hash, setHash] = useState('');
+
+  useEffect(() => {
+    const sync = () => setHash(window.location.hash);
+    sync();
+    window.addEventListener('hashchange', sync);
+    return () => window.removeEventListener('hashchange', sync);
+  }, [pathname]);
+
+  const onHome = pathname === '/' && hash !== '#features' && hash !== '#faq';
 
   return (
-    <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-14 flex items-center">
-        {/* Logo - Left */}
-        <div className="flex-none">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image className="h-8 w-auto" src="/maker.png" alt="photo maker" width={6} height={6}/>
-            <span className="font-bold text-xl">{t('common.title')}</span>
+    <nav className="site-nav">
+      <div className="lp-wrap site-nav-inner">
+        <Link
+          href="/"
+          className="brand"
+          onClick={() => {
+            if (pathname === '/' && hash) {
+              window.history.replaceState(null, '', window.location.pathname + window.location.search);
+              setHash('');
+            }
+          }}
+        >
+          <Image
+            className="brand-mark"
+            src="/brand/readtome-pulse-mark.svg"
+            alt=""
+            width={40}
+            height={30}
+            priority
+          />
+          <span className="brand-name">{t('common.title')}</span>
+        </Link>
+
+        <div className="site-nav-links">
+          <Link
+            href="/"
+            className={cn('site-nav-link', onHome && 'is-active')}
+            onClick={() => {
+              if (pathname === '/' && hash) {
+                window.history.replaceState(null, '', window.location.pathname + window.location.search);
+                setHash('');
+              }
+            }}
+          >
+            {t('nav.home')}
           </Link>
-        </div>
-
-        {/* Navigation - Center */}
-        <div className="flex-1 flex justify-center">
-          <div className="hidden md:flex items-center space-x-1">
-            {navigationConfig.mainNav.map((item) => (
-              <NavItem
-                key={item.href}
-                href={item.href}
-                label={t(item.label)}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Language Selector - Right */}
-        <div className="flex-none">
+          <Link href="/reader" className={cn('site-nav-link', pathname === '/reader' && 'is-active')}>
+            {t('nav.reader')}
+          </Link>
+          <Link
+            href="/#features"
+            className={cn('site-nav-link site-nav-hash', pathname === '/' && hash === '#features' && 'is-active')}
+            onClick={() => setHash('#features')}
+          >
+            {t('nav.features')}
+          </Link>
+          <Link
+            href="/#faq"
+            className={cn('site-nav-link site-nav-hash', pathname === '/' && hash === '#faq' && 'is-active')}
+            onClick={() => setHash('#faq')}
+          >
+            {t('nav.faq')}
+          </Link>
+          {isBillingEnabled && (
+            <Link href="/pricing" className={cn('site-nav-link', pathname === '/pricing' && 'is-active')}>
+              {t('nav.pricing')}
+            </Link>
+          )}
+          <span className="site-nav-div" />
+          <ThemeSwitch />
           <LanguageSwitch />
+          <AuthButton />
         </div>
       </div>
     </nav>

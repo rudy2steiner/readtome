@@ -33,6 +33,9 @@ yarn-error.log*
 cloudflare-env.d.ts
 .dev.vars
 
+# generated tts audio samples
+/prototypes/bakeoff/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

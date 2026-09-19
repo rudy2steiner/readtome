@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">ReadToMe speech and waveform logo</title>
+  <desc id="desc">A friendly speech bubble containing an audio waveform</desc>
+  <path d="M9.5 7.5h29a5 5 0 0 1 5 5v19a5 5 0 0 1-5 5H23l-9.5 6v-6h-4a5 5 0 0 1-5-5v-19a5 5 0 0 1 5-5Z" fill="#fffdf6" stroke="#16161b" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M11.5 22h3m3.5-5v10m4-14v18m4-11v4m4-8v12m4-8v4m4-2h-1" fill="none" stroke="#2f56e0" stroke-width="2.8" stroke-linecap="round"/>
+</svg>

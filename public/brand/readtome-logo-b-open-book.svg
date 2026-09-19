@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">ReadToMe open book and voice logo</title>
+  <desc id="desc">An open book with a rising audio waveform at its center</desc>
+  <path d="M5.5 11.5c6.8-2 12.8-.8 18.5 3.5v27c-5.7-4.3-11.7-5.5-18.5-3.5v-27Z" fill="#fffdf6" stroke="#16161b" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M42.5 11.5c-6.8-2-12.8-.8-18.5 3.5v27c5.7-4.3 11.7-5.5 18.5-3.5v-27Z" fill="#fffdf6" stroke="#16161b" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M11.5 17.5c2.7-.2 5 .4 7 1.7M11.5 23c2.7-.2 5 .4 7 1.7M36.5 17.5c-2.7-.2-5 .4-7 1.7M36.5 23c-2.7-.2-5 .4-7 1.7" fill="none" stroke="#16161b" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M17 33v2m3.5-5v8m3.5-11v14m3.5-11v8m3.5-5v2" fill="none" stroke="#2f56e0" stroke-width="2.7" stroke-linecap="round"/>
+</svg>

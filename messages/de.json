@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "title": "Read To Me: Text in Sekunden vorlesen lassen | Kostenlos",
+    "description": "Verwandeln Sie beliebigen Text in natürliche Stimme. Artikel einfügen oder Dokument hochladen und zuhören.",
+    "readTitle": "Text-zu-Sprache-Reader — Read To Me",
+    "readDescription": "Artikel einfügen oder Dokument hochladen und vorlesen lassen, der aktuelle Satz wird markiert."
+  },
+  "common": {
+    "title": "Read To Me",
+    "description": "Text in Sekunden vorlesen lassen — kostenlos",
+    "error": "Fehler"
+  },
+  "nav": {
+    "home": "Start",
+    "reader": "Reader",
+    "features": "Funktionen",
+    "faq": "FAQ",
+    "pricing": "Preise",
+    "blog": "Blog",
+    "start": "Lesen starten",
+    "themeDark": "Dunkelmodus",
+    "themeLight": "Hellmodus"
+  },
+  "ui": {
+    "benefits": "Vorteile",
+    "features": "Fähigkeiten",
+    "how": "So funktioniert’s",
+    "faq": "Fragen",
+    "noSignup": "Ohne Anmeldung — einfach Play",
+    "factVoices": "{n} Stimmen in Ihrem Browser",
+    "factFree": "Kostenlos, ohne Nutzungslimit",
+    "planned": "Geplant",
+    "todayUpload": "TXT, MD, HTML, PDF, DOCX, ODT oder EPUB. Alte .doc-Dateien als .docx speichern.",
+    "todayExport": "Heute: nur Wiedergabe. Audio-Export ist geplant.",
+    "step": "Schritt"
+  },
+  "hero": {
+    "tagline": "Ihr persönlicher Text-Vorleser",
+    "title": "Read to Me: Text als natürliche Stimme",
+    "description": "Verwandeln Sie Text mit unserer KI in natürliche Sprache. Ideal zum Lernen, für Barrierefreiheit und unterwegs."
+  },
+  "benefits": {
+    "title": "Warum Read to Me",
+    "items": {
+      "quality": { "title": "Natürliche Stimmen", "description": "Lebendige Sprache mit natürlicher Intonation" },
+      "styles": { "title": "Viele Sprachen", "description": "Über 50 Sprachen und Akzente" },
+      "speed": { "title": "Sofort umwandeln", "description": "Text in Sekunden vorlesen" },
+      "batch": { "title": "Barrierefreiheit zuerst", "description": "Inhalte für alle zugänglich machen" }
+    }
+  },
+  "features": {
+    "title": "Funktionen von Read To Me",
+    "items": {
+      "styleTransfer": { "title": "Stimme anpassen", "description": "Tempo, Tonhöhe und Ausdruck einstellen" },
+      "customPrompts": { "title": "Dokumente", "description": "PDF, Word und weitere Formate" },
+      "batchProcessing": { "title": "Stapelverarbeitung", "description": "Mehrere Dokumente auf einmal" },
+      "highResolution": { "title": "Audio-Export", "description": "Download als MP3, WAV und mehr" }
+    }
+  },
+  "howItWorks": {
+    "title": "So wird Text vorgelesen",
+    "steps": {
+      "upload": { "number": "01", "title": "Text eingeben", "description": "Text einfügen oder TXT, MD, HTML, PDF, DOCX u. a. hochladen" },
+      "style": { "number": "02", "title": "Stimme wählen", "description": "Sprache und Stimme festlegen" },
+      "generate": { "number": "03", "title": "Audio erzeugen", "description": "Text sofort umwandeln" },
+      "download": { "number": "04", "title": "Speichern & teilen", "description": "Datei herunterladen oder teilen" }
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      { "question": "Wie funktioniert Text-zu-Sprache?", "answer": "Unsere KI wandelt Text mit neuronalen Netzen in natürliche Sprache um." },
+      { "question": "Welche Sprachen gibt es?", "answer": "Über 50 Sprachen, bei den großen mit mehreren Akzenten." },
+      { "question": "Ist der Dienst kostenlos?", "answer": "Ja, Browserstimmen sind kostenlos und unbegrenzt. Cloud-Stimmen haben eine Testzeit." },
+      { "question": "Welche Dateien kann ich hochladen?", "answer": "Text einfügen oder TXT, Markdown, HTML, RTF, CSV, PDF, DOCX, ODT und EPUB. Alte .doc als .docx speichern." },
+      { "question": "Kann ich das Audio herunterladen?", "answer": "Audio-Export ist geplant; heute hören Sie im Reader." }
+    ]
+  },
+  "cta": {
+    "title": "Text eine Stimme geben?",
+    "description": "Wandeln Sie Text mit unserer KI in natürliche Sprache um",
+    "button": "Jetzt starten"
+  },
+  "footer": {
+    "product": "Produkt",
+    "community": "Community",
+    "features": "Funktionen",
+    "examples": "Beispiele",
+    "blog": "Blog",
+    "pricing": "Preise",
+    "support": "Support",
+    "helpCenter": "Hilfe",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "rights": "Alle Rechte vorbehalten.",
+    "engines": "Gratisstimmen: Ihr Browser · Bezahlte Stimmen: Cloud-KI",
+    "languages": "Sprachen:"
+  },
+  "reader": {
+    "heading": "Reader",
+    "sub": "Text einfügen, Stimme wählen, mitlesen. Text und Position bleiben in diesem Browser.",
+    "placeholder": "Text einfügen oder TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT oder EPUB…",
+    "clear": "Text löschen",
+    "upload": "Dokument hochladen",
+    "uploadHint": "TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, EPUB",
+    "loadDemo": "Beispieltext laden",
+    "demoLoaded": "Beispieltext geladen",
+    "smaller": "Kleinerer Text",
+    "bigger": "Größerer Text",
+    "play": "Play",
+    "pause": "Pause",
+    "preparing": "Stimme wird vorbereitet…",
+    "stop": "Stopp",
+    "speed": "Tempo",
+    "openFull": "Ganzen Reader öffnen →",
+    "tabPlayback": "Wiedergabe",
+    "language": "Vorlesesprache",
+    "voiceSelection": "Stimmenwahl",
+    "filterAll": "Alle",
+    "filterFree": "Gratis",
+    "filterPro": "Premium",
+    "allLanguages": "Alle Sprachen",
+    "multilingual": "Mehrsprachig",
+    "genderAll": "Alle Geschlechter",
+    "genderFemale": "Weiblich",
+    "genderMale": "Männlich",
+    "voiceSearch": "Stimmen suchen",
+    "groupCloud": "Cloud-Stimmen",
+    "groupNatural": "Cloud-Stimmen",
+    "groupBrowser": "Browserstimmen",
+    "seePlans": "Pläne ansehen →",
+    "systemVoice": "Systemstimme",
+    "note": "Gratisstimmen kommen aus dem Browser und haben kein Limit. Cloud-Stimmen brauchen einen Plan.",
+    "words": "Wörter",
+    "characters": "Zeichen",
+    "noVoices": "Keine Stimme passt zu diesem Filter.",
+    "needText": "Zuerst Text hinzufügen — Artikel einfügen oder Dokument hochladen.",
+    "needVoice": "In diesem Browser ist noch keine Vorlesestimme da.",
+    "needTxt": "Dieser Dateityp wird nicht unterstützt. TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT oder EPUB.",
+    "needFormat": "Dieser Dateityp wird nicht unterstützt. TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT oder EPUB.",
+    "needDocx": "Alte .doc-Dateien gehen nicht — als .docx speichern und erneut versuchen.",
+    "emptyFile": "Kein lesbarer Text in dieser Datei. Gescannte PDFs werden im Browser erkannt.",
+    "tooLarge": "Datei zu groß (max. 15 MB).",
+    "parseFailed": "Datei konnte nicht gelesen werden.",
+    "readingFile": "Datei wird gelesen…",
+    "ocrStart": "Dieses PDF ist ein Scan. {total} Seiten werden im Browser erkannt…",
+    "ocrProgress": "Scan {page}/{total} wird erkannt…",
+    "loaded": "Geladen",
+    "noSpeech": "Dieser Browser hat kein Web Speech — Text bearbeiten geht trotzdem.",
+    "premiumSignIn": "Cloud-Stimmen brauchen einen Plan. Bitte anmelden, dann Preise.",
+    "premiumUpgrade": "Cloud-Stimmen brauchen einen Plan — siehe Preise.",
+    "degradeNatural": "Die Cloud-Minuten sind aufgebraucht.",
+    "degradeTrial": "Ihr einmaliges Cloud-Testkontingent ist aufgebraucht.",
+    "degradeCloud": "Cloud-Stimmen sind gerade nicht verfügbar."
+  },
+  "samples": {
+    "heroLabel": "Echte Clips unserer Cloud-Stimmen — antippen zum Anhören",
+    "cta": "Cloud-Stimmen mit Plus",
+    "ctaPrice": "ab 7 $/Monat, jährlich abgerechnet",
+    "natural": "Natürlich",
+    "playLabel": "Beispiel von {name} abspielen",
+    "playFailed": "Der Browser hat Audio blockiert. Stimme erneut antippen."
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "continueGoogle": "Weiter mit Google",
+    "signInTitle": "Bei Read to Me anmelden",
+    "signInSubtitle": "Anmelden, um KI-Stimmen freizuschalten und Ihre Bibliothek zu behalten.",
+    "backHome": "← Zurück zur Startseite",
+    "googleUnavailable": "Google-Anmeldung ist auf diesem Server nicht eingerichtet.",
+    "account": "Konto",
+    "usage": "Nutzung"
+  },
+  "sample": "Willkommen bei Read to Me.\n\nDrücken Sie Play — dieser Text wird vorgelesen, mit der Stimme und dem Tempo, das Sie wählen.\n\nBringen Sie mit, was Sie hören möchten: Artikel einfügen, Dokument hochladen oder eigene Notizen schreiben.\n\nBeim Vorlesen wird der aktuelle Satz markiert, damit Sie mitlesen können.\n\nProbieren Sie unten im Player verschiedene Stimmen und Tempi.",
+  "pricing": {
+    "metaTitle": "Preise — Read To Me",
+    "eyebrow": "Preise",
+    "title": "Fürs Zuhören zahlen, nicht für die Software",
+    "subtitle": "Die Stimmen Ihres Browsers bleiben für immer gratis. Bezahlte Pläne bringen Cloud-KI-Stimmen, gemessen in Hörstunden.",
+    "yearly": "Jährlich",
+    "monthly": "Monatlich",
+    "save": "22 % sparen",
+    "perMonth": "/ Monat",
+    "billedYearly": "einmal im Jahr {amount}",
+    "billedMonthly": "monatlich, jederzeit kündbar",
+    "popular": "Am beliebtesten",
+    "checkoutFailed": "Checkout ist noch nicht eingerichtet. Anmelden geht; für Zahlung braucht es Stripe.",
+    "comingSoon": "Demnächst",
+    "free": {
+      "name": "Gratis",
+      "tagline": "Kein Konto zum Start",
+      "forever": "Für immer gratis",
+      "cta": "Lesen starten",
+      "f1": "Browserstimmen, unbegrenzt",
+      "f2": "{minutes, plural, one {# Minute} other {# Minuten}} Cloud-Stimmen, einmalig",
+      "f3": "Satzmarkierung und dort weitermachen, wo Sie aufgehört haben",
+      "f4": "Text einfügen oder Dokument hochladen"
+    },
+    "plus": {
+      "name": "Plus",
+      "tagline": "Fürs regelmäßige Lesen",
+      "cta": "Plus wählen",
+      "f1": "8 Stunden KI-Stimmen pro Monat",
+      "f2": "Filter nach Sprache und Geschlecht",
+      "f3": "Alles aus Gratis",
+      "f4": "Nochmal hören verbraucht kein Kontingent"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Für lange Bücher und volle Wochen",
+      "cta": "Pro wählen",
+      "f1": "Alles aus Plus",
+      "f2": "16 Stunden im Monat — doppelt so viel wie Plus",
+      "f3": "Bevorzugte Synthese-Warteschlange"
+    },
+    "voices": {
+      "title": "Zwei Arten von Stimmen",
+      "subtitle": "Pläne unterscheiden sich in den Cloud-Stunden, nicht in dem, was der Reader kann.",
+      "basicT": "Basis",
+      "basicD": "Die Stimmen auf Ihrem Gerät. Für immer gratis, ohne Konto, ohne Limit.",
+      "naturalT": "Natürlich",
+      "naturalD": "Cloud-KI für den Alltag — lange Artikel und ganze Bücher."
+    },
+    "packs": {
+      "title": "Mitte des Monats leer?",
+      "subtitle": "Ein +10-Stunden-Paket gibt dieselben KI-Stunden, die Plus und Pro schon teilen.",
+      "hours": "KI-Stimmen +10 Stunden",
+      "natural": "KI-Stimmen +10 Stunden",
+      "expressive": "KI-Stimmen +10 Stunden",
+      "buy": "Zum Plan hinzufügen",
+      "rule": "Aktiver Plan nötig · erst nach dem Monatskontingent · 12 Monate gültig",
+      "needPlan": "Pakete brauchen einen aktiven Plan — zuerst abonnieren."
+    },
+    "notes": {
+      "title": "Gut zu wissen",
+      "n1": "Monatliches Zeitkontingent setzt sich jede Periode zurück; Rest verfällt.",
+      "n2": "Eine Hörstunde ist in jeder Sprache eine Stunde Kontingent.",
+      "n3": "Audio-Export ist geplant und noch in keinem Plan enthalten.",
+      "n4": "Cloud-Stimmen brauchen ein Konto. Cache-Treffer verbrauchen keine Minuten."
+    }
+  },
+  "account": {
+    "title": "Nutzung & Abrechnung",
+    "tabUsage": "Nutzung",
+    "tabBilling": "Abrechnung",
+    "tabAdmin": "Admin",
+    "adminUsers": "Nutzer",
+    "adminSiteUsed": "Auf der Seite genutzt",
+    "adminSiteLeft": "Auf der Seite übrig",
+    "adminEmpty": "Noch keine Nutzer.",
+    "adminColUser": "Nutzer",
+    "adminColPlan": "Plan",
+    "adminColUsed": "Genutzt",
+    "adminColLeft": "Übrig",
+    "adminColJoined": "Beigetreten",
+    "adminSortAsc": "Aufsteigend",
+    "adminSortDesc": "Absteigend",
+    "adminForbidden": "Dieser Tab ist nur für konfigurierte Admin-E-Mails.",
+    "adminClicks": "Preis-Klicks",
+    "adminClicksEmpty": "Noch keine Preis-Klicks.",
+    "adminAnonymous": "abgemeldet",
+    "loading": "Laden…",
+    "needSignIn": "Melden Sie sich an, um Nutzung und Bestellungen zu sehen.",
+    "signIn": "Anmelden",
+    "signedInAs": "Angemeldet als",
+    "unavailable": "Nutzung ist erst nach Datenbank-Setup sichtbar.",
+    "loadFailed": "Nutzung konnte nicht geladen werden.",
+    "plan": "Aktueller Plan",
+    "resets": "Zurücksetzung",
+    "cloud": "KI-Stunden",
+    "remaining": "Übrig",
+    "trialLeft": "Cloud-Test übrig:",
+    "packs": "Pakete",
+    "expires": "läuft ab",
+    "orders": "Bestellungen",
+    "noOrders": "Noch keine Bestellungen.",
+    "manage": "Abo verwalten",
+    "clips": "Lesehistorie",
+    "clipsEmpty": "Mit einer Cloud-Stimme lesen — Text, Audio und Zeit erscheinen hier.",
+    "clipsCharged": "{time} genutzt",
+    "clipsNoCharge": "Keine Zeit genutzt",
+    "clipsReplayHint": "Nochmal · keine Extra-Zeit",
+    "clipsTotal": "{time} gesamt",
+    "clipsParts": "{count} Teile",
+    "clipsExpand": "Ganzen Text zeigen",
+    "clipsCollapse": "Text ausblenden",
+    "clipsScroll": "Weiterlesen durch Scrollen",
+    "clipsPlays": "{count} Wiedergaben",
+    "clipUnavailable": "Dieses Audio ist nicht mehr verfügbar.",
+    "clipsPageSize": "Pro Seite",
+    "clipsPage": "{page} / {pages}",
+    "clipsPrev": "Zurück",
+    "clipsNext": "Weiter",
+    "clipsRange": "{from}–{to} von {total}",
+    "sec": "{n}s",
+    "minSec": "{m}m {s}s"
+  },
+  "error": {
+    "title": "Etwas ist schiefgelaufen",
+    "description": "Ein unerwarteter Fehler. Sie können es erneut versuchen.",
+    "tryAgain": "Erneut versuchen",
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "description": "Diese Seite gibt es nicht oder sie wurde verschoben.",
+      "returnHome": "Zur Startseite"
+    }
+  },
+  "support": {
+    "contact": {
+      "title": "Kontakt",
+      "email": { "title": "E-Mail", "description": "Antwort meist innerhalb eines Werktags.", "button": "E-Mail senden" },
+      "chat": { "title": "Chat", "description": "Kurze Frage aus dem Reader.", "button": "Chat öffnen" },
+      "phone": { "title": "Telefon", "description": "Für Abrechnung und Konto.", "button": "Zeiten ansehen" }
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "docs": { "title": "Hilfe", "description": "Einfügen, hochladen, zuhören." },
+      "status": { "title": "Status", "description": "Verfügbarkeit von Cloud-Stimmen und Checkout." },
+      "community": { "title": "Community", "description": "Stimmen und Lese-Setups teilen." }
+    },
+    "enterprise": {
+      "title": "Teams",
+      "subtitle": "Brauchen Sie einen Team-Plan?",
+      "description": "Sagen Sie uns, wie viele Leute zuhören sollen — wir helfen bei der Wahl.",
+      "button": "Vertrieb kontaktieren"
+    }
+  }
+}

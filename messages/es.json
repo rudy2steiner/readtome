@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "title": "Read To Me: convierte texto en voz en segundos | Gratis",
+    "description": "Convierte cualquier texto en voz natural en segundos. Pega un artículo o sube un documento y escúchalo con voces realistas.",
+    "readTitle": "Lector de texto a voz — Read To Me",
+    "readDescription": "Pega un artículo o sube un documento y escúchalo en voz alta, con la frase actual resaltada."
+  },
+  "common": {
+    "title": "Read To Me",
+    "description": "Convierte texto en voz en segundos, gratis",
+    "error": "Error"
+  },
+  "nav": {
+    "home": "Inicio",
+    "reader": "Lector",
+    "features": "Funciones",
+    "faq": "Preguntas",
+    "pricing": "Precios",
+    "blog": "Blog",
+    "start": "Empezar a leer",
+    "themeDark": "Cambiar a oscuro",
+    "themeLight": "Cambiar a claro"
+  },
+  "ui": {
+    "benefits": "Ventajas",
+    "features": "Capacidades",
+    "how": "Cómo funciona",
+    "faq": "Preguntas",
+    "noSignup": "Sin registro: solo pulsa reproducir",
+    "factVoices": "{n} voces en tu navegador",
+    "factFree": "Gratis y sin límite de uso",
+    "planned": "En preparación",
+    "todayUpload": "Sube TXT, MD, HTML, PDF, DOCX, ODT o EPUB. Los .doc antiguos hay que guardarlos como .docx.",
+    "todayExport": "Hoy: solo reproducción. La exportación de audio está prevista.",
+    "step": "Paso"
+  },
+  "hero": {
+    "tagline": "Tu lector de texto personal",
+    "title": "Read to Me: de texto a voz natural",
+    "description": "Convierte cualquier texto en voz natural con nuestra tecnología de IA. Ideal para aprender, acceder al contenido y escucharlo en cualquier sitio."
+  },
+  "benefits": {
+    "title": "Por qué elegir Read to Me",
+    "items": {
+      "quality": { "title": "Voces naturales", "description": "Habla realista, con entonación y ritmo naturales" },
+      "styles": { "title": "Varios idiomas", "description": "Más de 50 idiomas y acentos" },
+      "speed": { "title": "Conversión instantánea", "description": "De texto a voz en segundos" },
+      "batch": { "title": "Accesibilidad primero", "description": "Haz el contenido accesible para todos" }
+    }
+  },
+  "features": {
+    "title": "Funciones de Read To Me",
+    "items": {
+      "styleTransfer": { "title": "Personalizar la voz", "description": "Ajusta velocidad, tono y emoción" },
+      "customPrompts": { "title": "Documentos", "description": "Convierte PDF, Word y otros formatos" },
+      "batchProcessing": { "title": "Por lotes", "description": "Convierte varios documentos a la vez" },
+      "highResolution": { "title": "Exportar audio", "description": "Descarga en MP3, WAV u otros formatos" }
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo convertir texto en voz",
+    "steps": {
+      "upload": { "number": "01", "title": "Introduce el texto", "description": "Pega texto o sube TXT, MD, HTML, PDF, DOCX y más" },
+      "style": { "number": "02", "title": "Elige la voz", "description": "Selecciona idioma y voz" },
+      "generate": { "number": "03", "title": "Genera el audio", "description": "Convierte el texto al instante" },
+      "download": { "number": "04", "title": "Guarda y comparte", "description": "Descarga o comparte el archivo" }
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      { "question": "¿Cómo funciona el texto a voz?", "answer": "Nuestra IA convierte el texto en voz natural con redes neuronales avanzadas." },
+      { "question": "¿Qué idiomas hay?", "answer": "Más de 50 idiomas, con varios acentos en los principales." },
+      { "question": "¿Es gratis?", "answer": "Sí, las voces del navegador son gratis y sin límite. Las voces en la nube tienen un tiempo de prueba." },
+      { "question": "¿Qué archivos puedo subir?", "answer": "Puedes pegar texto o subir TXT, Markdown, HTML, RTF, CSV, PDF, DOCX, ODT y EPUB. Los .doc antiguos hay que guardarlos como .docx." },
+      { "question": "¿Puedo descargar el audio?", "answer": "La exportación de audio está prevista; hoy puedes escuchar en el lector." }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para dar voz a tu texto?",
+    "description": "Convierte tu texto en voz natural con nuestra IA",
+    "button": "Empezar ahora"
+  },
+  "footer": {
+    "product": "Producto",
+    "community": "Comunidad",
+    "features": "Funciones",
+    "examples": "Ejemplos",
+    "blog": "Blog",
+    "pricing": "Precios",
+    "support": "Soporte",
+    "helpCenter": "Centro de ayuda",
+    "contact": "Contacto",
+    "legal": "Legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "cookies": "Política de cookies",
+    "rights": "Todos los derechos reservados.",
+    "engines": "Voces gratis: tu navegador · Voces de pago: IA en la nube",
+    "languages": "Idiomas:"
+  },
+  "reader": {
+    "heading": "Lector",
+    "sub": "Pega texto, elige una voz y sigue la lectura. El texto y la posición se recuerdan en este navegador.",
+    "placeholder": "Pega texto o sube TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT o EPUB…",
+    "clear": "Borrar texto",
+    "upload": "Subir un documento",
+    "uploadHint": "TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, EPUB",
+    "loadDemo": "Cargar texto de ejemplo",
+    "demoLoaded": "Texto de ejemplo cargado",
+    "smaller": "Texto más pequeño",
+    "bigger": "Texto más grande",
+    "play": "Reproducir",
+    "pause": "Pausa",
+    "preparing": "Preparando la voz…",
+    "stop": "Parar",
+    "speed": "Velocidad",
+    "openFull": "Abrir lector completo →",
+    "tabPlayback": "Reproducción",
+    "language": "Idioma de lectura",
+    "voiceSelection": "Elección de voz",
+    "filterAll": "Todas",
+    "filterFree": "Gratis",
+    "filterPro": "Premium",
+    "allLanguages": "Todos los idiomas",
+    "multilingual": "Multilingüe",
+    "genderAll": "Todos los géneros",
+    "genderFemale": "Mujer",
+    "genderMale": "Hombre",
+    "voiceSearch": "Buscar voces",
+    "groupCloud": "Voces en la nube",
+    "groupNatural": "Voces en la nube",
+    "groupBrowser": "Voces del navegador",
+    "seePlans": "Ver planes →",
+    "systemVoice": "Voz del sistema",
+    "note": "Las voces gratis vienen del navegador y no tienen límite. Las de la nube necesitan un plan.",
+    "words": "palabras",
+    "characters": "caracteres",
+    "noVoices": "Ninguna voz coincide con este filtro.",
+    "needText": "Añade texto primero: pega un artículo o sube un documento.",
+    "needVoice": "Este navegador aún no tiene voz de lectura.",
+    "needTxt": "Este tipo de archivo no se admite. Usa TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT o EPUB.",
+    "needFormat": "Este tipo de archivo no se admite. Usa TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT o EPUB.",
+    "needDocx": "Los .doc antiguos no se admiten: guárdalos como .docx e inténtalo de nuevo.",
+    "emptyFile": "No hay texto legible en ese archivo. Los PDF escaneados se reconocen en el navegador.",
+    "tooLarge": "Ese archivo es demasiado grande (máx. 15 MB).",
+    "parseFailed": "No se pudo leer ese archivo.",
+    "readingFile": "Leyendo archivo…",
+    "ocrStart": "Este PDF es un escaneo. Reconociendo {total} páginas en el navegador…",
+    "ocrProgress": "Reconociendo escaneo {page}/{total}…",
+    "loaded": "Cargado",
+    "noSpeech": "Este navegador no tiene Web Speech; aún puedes editar el texto.",
+    "premiumSignIn": "Las voces en la nube necesitan un plan. Inicia sesión y ve a Precios.",
+    "premiumUpgrade": "Las voces en la nube necesitan un plan: ve a Precios.",
+    "degradeNatural": "Se han agotado los minutos en la nube.",
+    "degradeTrial": "La prueba de voces en la nube se ha agotado.",
+    "degradeCloud": "Las voces en la nube no están disponibles ahora."
+  },
+  "samples": {
+    "heroLabel": "Clips reales de nuestras voces en la nube: pulsa uno para escuchar",
+    "cta": "Voces en la nube con Plus",
+    "ctaPrice": "desde 7 $/mes, facturado al año",
+    "natural": "Natural",
+    "playLabel": "Reproducir la muestra de {name}",
+    "playFailed": "El navegador bloqueó el audio. Vuelve a pulsar la voz."
+  },
+  "auth": {
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "continueGoogle": "Continuar con Google",
+    "signInTitle": "Inicia sesión en Read to Me",
+    "signInSubtitle": "Inicia sesión para desbloquear voces de IA y guardar tu biblioteca.",
+    "backHome": "← Volver al inicio",
+    "googleUnavailable": "El inicio con Google no está configurado en este servidor.",
+    "account": "Cuenta",
+    "usage": "Uso"
+  },
+  "sample": "Bienvenido a Read to Me.\n\nPulsa reproducir y este texto se leerá en voz alta, con la voz y la velocidad que elijas.\n\nTrae lo que quieras oír: pega un artículo, sube un documento o escribe tus notas.\n\nMientras lee, la frase actual se resalta para que puedas seguirla.\n\nPrueba distintas voces y velocidades en el reproductor de abajo.",
+  "pricing": {
+    "metaTitle": "Precios — Read To Me",
+    "eyebrow": "Precios",
+    "title": "Paga por escuchar, no por el software",
+    "subtitle": "Las voces de tu navegador son gratis para siempre. Los planes de pago añaden voces de IA, medidas en horas de escucha.",
+    "yearly": "Anual",
+    "monthly": "Mensual",
+    "save": "Ahorra 22%",
+    "perMonth": "/ mes",
+    "billedYearly": "se factura {amount} una vez al año",
+    "billedMonthly": "facturación mensual, cancela cuando quieras",
+    "popular": "Más popular",
+    "checkoutFailed": "El pago aún no está configurado. Puedes iniciar sesión; Stripe hace falta para pagar.",
+    "comingSoon": "Próximamente",
+    "free": {
+      "name": "Gratis",
+      "tagline": "Sin cuenta para empezar",
+      "forever": "Gratis para siempre",
+      "cta": "Empezar a leer",
+      "f1": "Voces del navegador, ilimitadas",
+      "f2": "{minutes, plural, one {# minuto} other {# minutos}} de voces en la nube, una vez",
+      "f3": "Resalte de frases y retoma donde lo dejaste",
+      "f4": "Pega texto o sube un documento"
+    },
+    "plus": {
+      "name": "Plus",
+      "tagline": "Para el hábito de leer a diario",
+      "cta": "Elegir Plus",
+      "f1": "8 horas al mes de voces de IA",
+      "f2": "Filtros de idioma y género",
+      "f3": "Todo lo de Gratis",
+      "f4": "Volver a escuchar no gasta tu cuota"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Para libros largos y semanas intensas",
+      "cta": "Elegir Pro",
+      "f1": "Todo lo de Plus",
+      "f2": "16 horas al mes: el doble que Plus",
+      "f3": "Cola de síntesis prioritaria"
+    },
+    "voices": {
+      "title": "Dos tipos de voz",
+      "subtitle": "Los planes cambian las horas en la nube, no lo que puede hacer el lector.",
+      "basicT": "Básica",
+      "basicD": "Las voces de tu dispositivo. Gratis para siempre, sin cuenta ni límite.",
+      "naturalT": "Natural",
+      "naturalD": "Voces de IA para el día a día: artículos largos y libros enteros."
+    },
+    "packs": {
+      "title": "¿Se te acaba a mitad de mes?",
+      "subtitle": "Un paquete de +10 horas suma las mismas horas de IA que ya comparten Plus y Pro.",
+      "hours": "Voces de IA +10 horas",
+      "natural": "Voces de IA +10 horas",
+      "expressive": "Voces de IA +10 horas",
+      "buy": "Añadir al plan",
+      "rule": "Requiere un plan activo · se gasta solo al acabar la cuota mensual · válido 12 meses",
+      "needPlan": "Los paquetes extra necesitan un plan activo: suscríbete primero."
+    },
+    "notes": {
+      "title": "Conviene saber",
+      "n1": "El tiempo mensual se reinicia cada periodo; lo no usado no se acumula.",
+      "n2": "Una hora de escucha es una hora de cuota en cualquier idioma.",
+      "n3": "La exportación de audio está prevista y aún no entra en ningún plan.",
+      "n4": "Las voces en la nube necesitan una cuenta. Los aciertos de caché no gastan minutos."
+    }
+  },
+  "account": {
+    "title": "Uso y facturación",
+    "tabUsage": "Uso",
+    "tabBilling": "Facturación",
+    "tabAdmin": "Admin",
+    "adminUsers": "Usuarios",
+    "adminSiteUsed": "Usado en el sitio",
+    "adminSiteLeft": "Restante en el sitio",
+    "adminEmpty": "Aún no hay usuarios.",
+    "adminColUser": "Usuario",
+    "adminColPlan": "Plan",
+    "adminColUsed": "Usado",
+    "adminColLeft": "Restante",
+    "adminColJoined": "Alta",
+    "adminSortAsc": "De menor a mayor",
+    "adminSortDesc": "De mayor a menor",
+    "adminForbidden": "Esta pestaña es solo para los correos de administrador.",
+    "adminClicks": "Clics de precios",
+    "adminClicksEmpty": "Aún no hay clics de precios.",
+    "adminAnonymous": "sin sesión",
+    "loading": "Cargando…",
+    "needSignIn": "Inicia sesión para ver tu uso y tus pedidos.",
+    "signIn": "Iniciar sesión",
+    "signedInAs": "Sesión de",
+    "unavailable": "El uso no está disponible hasta configurar la base de datos.",
+    "loadFailed": "No se pudo cargar el uso.",
+    "plan": "Plan actual",
+    "resets": "Se reinicia",
+    "cloud": "Horas de IA",
+    "remaining": "Restante",
+    "trialLeft": "Prueba en la nube restante:",
+    "packs": "Paquetes extra",
+    "expires": "caduca",
+    "orders": "Pedidos",
+    "noOrders": "Aún no hay pedidos.",
+    "manage": "Gestionar suscripción",
+    "clips": "Historial de lectura",
+    "clipsEmpty": "Lee con una voz en la nube y aquí verás el texto, el audio y el tiempo.",
+    "clipsCharged": "Usado {time}",
+    "clipsNoCharge": "Sin tiempo usado",
+    "clipsReplayHint": "Repetir · sin tiempo extra",
+    "clipsTotal": "{time} en total",
+    "clipsParts": "{count} partes",
+    "clipsExpand": "Ver texto completo",
+    "clipsCollapse": "Ocultar texto",
+    "clipsScroll": "Desplázate para leer el resto",
+    "clipsPlays": "{count} reproducciones",
+    "clipUnavailable": "Este audio ya no está disponible.",
+    "clipsPageSize": "Por página",
+    "clipsPage": "{page} / {pages}",
+    "clipsPrev": "Anterior",
+    "clipsNext": "Siguiente",
+    "clipsRange": "{from}–{to} de {total}",
+    "sec": "{n}s",
+    "minSec": "{m}m {s}s"
+  },
+  "error": {
+    "title": "Algo ha fallado",
+    "description": "Ha ocurrido un error inesperado. Puedes intentarlo de nuevo.",
+    "tryAgain": "Reintentar",
+    "notFound": {
+      "title": "Página no encontrada",
+      "description": "Esa página no existe o se ha movido.",
+      "returnHome": "Volver al inicio"
+    }
+  },
+  "support": {
+    "contact": {
+      "title": "Contacto",
+      "email": { "title": "Correo", "description": "Solemos responder en un día laborable.", "button": "Enviar correo" },
+      "chat": { "title": "Chat", "description": "Haz una pregunta rápida desde el lector.", "button": "Abrir chat" },
+      "phone": { "title": "Teléfono", "description": "Para facturación y cuenta.", "button": "Ver horario" }
+    },
+    "resources": {
+      "title": "Recursos",
+      "docs": { "title": "Ayuda", "description": "Cómo pegar, subir y escuchar." },
+      "status": { "title": "Estado", "description": "Disponibilidad de voces en la nube y del pago." },
+      "community": { "title": "Comunidad", "description": "Comparte voces y formas de leer." }
+    },
+    "enterprise": {
+      "title": "Equipos",
+      "subtitle": "¿Necesitas un plan de equipo?",
+      "description": "Dinos cuánta gente necesita escuchar y te ayudamos a elegir.",
+      "button": "Hablar con ventas"
+    }
+  }
+}

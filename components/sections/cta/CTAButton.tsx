@@ -16,7 +16,7 @@ export function CTAButton({ label }: CTAButtonProps) {
       size="lg" 
       variant="secondary" 
       className="font-semibold"
-      onClick={() => scrollToElement('photo-maker')}
+      onClick={() => scrollToElement('reader')}
     >
       {label}
       <ArrowRight className="ml-2 h-4 w-4" />

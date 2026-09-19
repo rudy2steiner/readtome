@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="title desc">
+  <title id="title">Mimi, the ReadToMe mascot</title>
+  <desc id="desc">A friendly coral character shaped like a pair of quotation marks</desc>
+  <path d="M16 6h40c8 0 13 5.5 13 13v24c0 7.5-5.5 13-13 13h-6c1.8 4.5 5 7.4 9.5 8.8-8.8 1.2-15.4-1.9-19-8.8h-9c-3.6 6.9-10.2 10-19 8.8C17 63.4 20.2 60.5 22 56h-6C8.5 56 3 50.5 3 43V19C3 11.5 8.5 6 16 6Z" fill="#f0563a"/>
+  <path d="M27.5 19.5c-5.2 0-9 4-9 9.4 0 4.8 3 8.4 7.4 9.2-.7 3.6-2.4 6.2-5.2 8.2 6.7-.8 10.8-5.8 10.8-13.8v-3.6c0-5.4-1.9-9.4-4-9.4Zm17 0c-2.1 0-4 4-4 9.4v3.6c0 8 4.1 13 10.8 13.8-2.8-2-4.5-4.6-5.2-8.2 4.4-.8 7.4-4.4 7.4-9.2 0-5.4-3.8-9.4-9-9.4Z" fill="#fffdf6"/>
+  <circle cx="26" cy="28.5" r="3.4" fill="#16161b"/>
+  <circle cx="46" cy="28.5" r="3.4" fill="#16161b"/>
+  <circle cx="24.8" cy="27.2" r="1.1" fill="#fff"/>
+  <circle cx="44.8" cy="27.2" r="1.1" fill="#fff"/>
+  <path d="M29.5 45.5c3.8 3 9.2 3 13 0" fill="none" stroke="#16161b" stroke-width="3" stroke-linecap="round"/>
+</svg>

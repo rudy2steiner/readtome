@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read to me · Custom type</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .board-page { padding: 52px 0 80px; }
+  .kicker { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .board-page h1 { margin: 8px 0 10px; font-size: clamp(30px, 4vw, 46px); letter-spacing: -.04em; }
+  .lead { max-width: 520px; color: var(--muted); margin: 0 0 28px; }
+  .board { display: grid; grid-template-columns: 1.7fr 1fr; grid-template-rows: 320px 250px; gap: 14px; }
+  .tile { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+  .label { position: absolute; left: 20px; bottom: 16px; color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+  .hero, .mark, .dark { display: grid; place-items: center; }
+  .hero img { width: min(520px, 88%); }
+  .mark { background: #f1efe8; }
+  .mark img { width: 72px; }
+  .dark { background: var(--ink); }
+  .dark img { width: min(420px, 80%); filter: invert(1); }
+  .in-nav { background: #fff; }
+  .in-nav .nav { position: static; }
+  .notes { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 20px; border-block: 1px solid var(--line); }
+  .notes div { padding: 20px 22px; border-right: 1px solid var(--line); }
+  .notes div:last-child { border: 0; }
+  .notes b { display: block; margin-bottom: 4px; font-size: 13px; }
+  .notes span { color: var(--muted); font-size: 12px; }
+  @media (max-width: 760px) {
+    .board { grid-template-columns: 1fr; grid-template-rows: none; }
+    .notes { grid-template-columns: 1fr; }
+    .notes div { border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<main class="board-page">
+  <div class="container">
+    <span class="kicker">Wordmark only</span>
+    <h1>不解释声音，只把名字写清楚</h1>
+    <p class="lead">同一套圆头笔画写成 “read to me”。favicon 就是这个 r，不再另做符号。</p>
+
+    <section class="board">
+      <article class="tile hero">
+        <img src="../public/brand/readtome-type-wordmark.svg" alt="read to me">
+        <span class="label">Wordmark</span>
+      </article>
+      <article class="tile mark">
+        <img src="../public/brand/readtome-type-mark.svg" alt="r">
+        <span class="label">Favicon</span>
+      </article>
+      <article class="tile dark">
+        <img src="../public/brand/readtome-type-wordmark.svg" alt="read to me">
+        <span class="label">Reversed</span>
+      </article>
+      <article class="tile in-nav">
+        <div class="nav">
+          <div class="container nav-inner">
+            <a class="brand" href="landing.html">
+              <img src="../public/brand/readtome-type-wordmark.svg" alt="read to me" width="148" height="32">
+            </a>
+            <div class="nav-links">
+              <a href="landing.html">Home</a>
+              <a href="read.html">Reader</a>
+              <a class="btn btn-primary btn-sm nav-cta" href="read.html">Start reading</a>
+            </div>
+          </div>
+        </div>
+        <span class="label">In product</span>
+      </article>
+    </section>
+
+    <section class="notes">
+      <div><b>没有波形</b><span>声音留在播放器和跟读高亮里。</span></div>
+      <div><b>三个词</b><span>读起来像一句请求，不像工具名。</span></div>
+      <div><b>同源标记</b><span>小尺寸只用同一个 r。</span></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

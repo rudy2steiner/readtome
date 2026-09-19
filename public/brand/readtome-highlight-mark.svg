@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">ReadToMe favicon</title>
+  <desc id="desc">The rounded letter r with the same yellow reading rhythm as the ReadToMe wordmark</desc>
+  <text x="21" y="58" fill="#16161b" font-family="'Arial Rounded MT Bold', 'SF Pro Rounded', ui-rounded, sans-serif" font-size="58" font-weight="800">r</text>
+  <path d="M18 68c7-6 14 6 21 0s15-6 22 0" fill="none" stroke="#ffd95a" stroke-width="7" stroke-linecap="round"/>
+</svg>

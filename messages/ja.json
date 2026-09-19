@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "title": "Read To Me：テキストを数秒で音声に | 無料",
+    "description": "どんな文章も、数秒で自然な音声に。記事を貼るか文書をアップロードして、聞けます。",
+    "readTitle": "テキスト読み上げリーダー — Read To Me",
+    "readDescription": "記事を貼るか文書をアップロードすると、いま読んでいる文がハイライトされます。"
+  },
+  "common": {
+    "title": "Read To Me",
+    "description": "テキストを数秒で音声に、無料で",
+    "error": "エラー"
+  },
+  "nav": {
+    "home": "ホーム",
+    "reader": "リーダー",
+    "features": "機能",
+    "faq": "よくある質問",
+    "pricing": "料金",
+    "blog": "ブログ",
+    "start": "読み始める",
+    "themeDark": "ダークに切り替え",
+    "themeLight": "ライトに切り替え"
+  },
+  "ui": {
+    "benefits": "メリット",
+    "features": "できること",
+    "how": "使い方",
+    "faq": "質問",
+    "noSignup": "登録不要 — 再生するだけ",
+    "factVoices": "ブラウザ内の声 {n} 種類",
+    "factFree": "無料、回数制限なし",
+    "planned": "準備中",
+    "todayUpload": "TXT、MD、HTML、PDF、DOCX、ODT、EPUB に対応。古い .doc は .docx で保存してください。",
+    "todayExport": "現在は再生のみ。音声の書き出しは予定しています。",
+    "step": "ステップ"
+  },
+  "hero": {
+    "tagline": "あなた専用のテキストリーダー",
+    "title": "Read to Me：テキストを自然な声に",
+    "description": "AI で文章を自然な音声に。学習、アクセシビリティ、移動中の聴取に。"
+  },
+  "benefits": {
+    "title": "Read to Me を選ぶ理由",
+    "items": {
+      "quality": { "title": "自然な声", "description": "抑揚とリズムのある、生きた話し方" },
+      "styles": { "title": "多言語", "description": "50 以上の言語とアクセント" },
+      "speed": { "title": "すぐ変換", "description": "数秒でテキストを音声に" },
+      "batch": { "title": "アクセシビリティ優先", "description": "誰でも内容に触れられるように" }
+    }
+  },
+  "features": {
+    "title": "Read To Me の機能",
+    "items": {
+      "styleTransfer": { "title": "声の調整", "description": "速度、高さ、感情を合わせる" },
+      "customPrompts": { "title": "文書対応", "description": "PDF、Word など" },
+      "batchProcessing": { "title": "一括処理", "description": "複数の文書をまとめて" },
+      "highResolution": { "title": "音声書き出し", "description": "MP3、WAV などで保存" }
+    }
+  },
+  "howItWorks": {
+    "title": "テキストを音声にする手順",
+    "steps": {
+      "upload": { "number": "01", "title": "テキストを入れる", "description": "貼り付けるか、TXT、MD、HTML、PDF、DOCX などをアップロード" },
+      "style": { "number": "02", "title": "声を選ぶ", "description": "言語と声を設定" },
+      "generate": { "number": "03", "title": "音声を作る", "description": "すぐに変換" },
+      "download": { "number": "04", "title": "保存と共有", "description": "ダウンロードまたは共有" }
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "items": [
+      { "question": "テキスト読み上げはどう動きますか？", "answer": "ニューラルネットを使った AI が、文章を自然な音声にします。" },
+      { "question": "対応言語は？", "answer": "50 以上。主要な言語には複数のアクセントがあります。" },
+      { "question": "無料ですか？", "answer": "はい。ブラウザの声は無料で回数制限なし。クラウドの声にはお試し時間があります。" },
+      { "question": "どのファイルを上げられますか？", "answer": "テキストの貼り付け、または TXT、Markdown、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB。古い .doc は .docx にしてください。" },
+      { "question": "音声はダウンロードできますか？", "answer": "書き出しは予定中です。いまはリーダーで聴けます。" }
+    ]
+  },
+  "cta": {
+    "title": "テキストに声を与えませんか",
+    "description": "AI で文章を自然な音声に",
+    "button": "今すぐ始める"
+  },
+  "footer": {
+    "product": "プロダクト",
+    "community": "コミュニティ",
+    "features": "機能",
+    "examples": "例",
+    "blog": "ブログ",
+    "pricing": "料金",
+    "support": "サポート",
+    "helpCenter": "ヘルプ",
+    "contact": "お問い合わせ",
+    "legal": "法務",
+    "privacy": "プライバシー",
+    "terms": "利用規約",
+    "cookies": "Cookie ポリシー",
+    "rights": "無断転載を禁じます。",
+    "engines": "無料の声：ブラウザ · 有料の声：クラウド AI",
+    "languages": "言語："
+  },
+  "reader": {
+    "heading": "リーダー",
+    "sub": "テキストを貼り、声を選び、読み上げに合わせて目で追います。文章と位置はこのブラウザに残ります。",
+    "placeholder": "テキストを貼るか、TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB をアップロード…",
+    "clear": "テキストを消す",
+    "upload": "文書をアップロード",
+    "uploadHint": "TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, EPUB",
+    "loadDemo": "デモ文を読み込む",
+    "demoLoaded": "デモ文を読み込みました",
+    "smaller": "文字を小さく",
+    "bigger": "文字を大きく",
+    "play": "再生",
+    "pause": "一時停止",
+    "preparing": "声を準備しています…",
+    "stop": "停止",
+    "speed": "再生速度",
+    "openFull": "フルリーダーを開く →",
+    "tabPlayback": "再生",
+    "language": "読み上げ言語",
+    "voiceSelection": "声の選択",
+    "filterAll": "すべて",
+    "filterFree": "無料",
+    "filterPro": "プレミアム",
+    "allLanguages": "すべての言語",
+    "multilingual": "多言語",
+    "genderAll": "すべての性別",
+    "genderFemale": "女性",
+    "genderMale": "男性",
+    "voiceSearch": "声を検索",
+    "groupCloud": "クラウドの声",
+    "groupNatural": "クラウドの声",
+    "groupBrowser": "ブラウザの声",
+    "seePlans": "プランを見る →",
+    "systemVoice": "システムの声",
+    "note": "無料の声はブラウザのもので回数制限なし。クラウドの声にはプランが必要です。",
+    "words": "語",
+    "characters": "文字",
+    "noVoices": "この条件に合う声がありません。",
+    "needText": "先にテキストを入れてください。記事を貼るか文書をアップロード。",
+    "needVoice": "このブラウザにはまだ読み上げの声がありません。",
+    "needTxt": "この形式は非対応です。TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB を使ってください。",
+    "needFormat": "この形式は非対応です。TXT、MD、HTML、RTF、CSV、PDF、DOCX、ODT、EPUB を使ってください。",
+    "needDocx": "古い .doc は非対応です。.docx で保存してやり直してください。",
+    "emptyFile": "読める文字がありません。スキャン PDF はブラウザ内で認識します。",
+    "tooLarge": "ファイルが大きすぎます（最大 15 MB）。",
+    "parseFailed": "そのファイルを読めませんでした。",
+    "readingFile": "ファイルを読み込み中…",
+    "ocrStart": "この PDF はスキャンです。ブラウザで {total} ページを認識しています…",
+    "ocrProgress": "スキャン {page}/{total} を認識中…",
+    "loaded": "読み込み済み",
+    "noSpeech": "このブラウザは Web Speech 非対応です。テキスト編集はできます。",
+    "premiumSignIn": "クラウドの声にはプランが必要です。ログインして料金を見てください。",
+    "premiumUpgrade": "クラウドの声にはプランが必要です — 料金へ。",
+    "degradeNatural": "クラウドの分数を使い切りました。",
+    "degradeTrial": "一度きりのクラウドお試しを使い切りました。",
+    "degradeCloud": "いまクラウドの声は使えません。"
+  },
+  "samples": {
+    "heroLabel": "クラウドの声の実例 — タップして聞く",
+    "cta": "Plus でクラウドの声を",
+    "ctaPrice": "年払いなら月 7 ドルから",
+    "natural": "ナチュラル",
+    "playLabel": "{name} のサンプルを再生",
+    "playFailed": "ブラウザが音声を止めました。もう一度タップしてください。"
+  },
+  "auth": {
+    "signIn": "ログイン",
+    "signOut": "ログアウト",
+    "continueGoogle": "Google で続ける",
+    "signInTitle": "Read to Me にログイン",
+    "signInSubtitle": "ログインするとクラウド AI の声が使え、ライブラリを残せます。",
+    "backHome": "← ホームへ",
+    "googleUnavailable": "このサーバーでは Google ログインが設定されていません。",
+    "account": "アカウント",
+    "usage": "利用状況"
+  },
+  "sample": "「Read to Me」へようこそ。\n\n再生を押すと、選んだ声と速さで、この文章を読み上げます。\n\n聞きたいものは何でもどうぞ。記事を貼る、文書を入れる、自分のメモを書く。\n\n読んでいる文はハイライトされるので、目で追いながら聴けます。\n\n下のプレーヤーで、声と速さを試してみてください。",
+  "pricing": {
+    "metaTitle": "料金 — Read To Me",
+    "eyebrow": "料金",
+    "title": "ソフトではなく、聴いた分だけ",
+    "subtitle": "ブラウザの声はずっと無料。有料プランはクラウド AI の声で、聴いた時間で測ります。",
+    "yearly": "年払い",
+    "monthly": "月払い",
+    "save": "22% お得",
+    "perMonth": "/ 月",
+    "billedYearly": "年 1 回 {amount}",
+    "billedMonthly": "毎月請求、いつでも解約可",
+    "popular": "人気",
+    "checkoutFailed": "決済はまだ未設定です。ログインはできます。支払いは Stripe が必要です。",
+    "comingSoon": "近日公開",
+    "free": {
+      "name": "無料",
+      "tagline": "アカウントなしで始められる",
+      "forever": "ずっと無料",
+      "cta": "読み始める",
+      "f1": "ブラウザの声、無制限",
+      "f2": "クラウドの声 {minutes, plural, other {# 分}}（一度きり）",
+      "f3": "文のハイライトと続きから再生",
+      "f4": "テキストを貼るか文書をアップロード"
+    },
+    "plus": {
+      "name": "Plus",
+      "tagline": "日常の読書向け",
+      "cta": "Plus を選ぶ",
+      "f1": "AI の声 月 8 時間",
+      "f2": "言語・性別フィルター",
+      "f3": "無料のすべて",
+      "f4": "聞き直しは枠を使いません"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "長い本と忙しい週に",
+      "cta": "Pro を選ぶ",
+      "f1": "Plus のすべて",
+      "f2": "月 16 時間 — Plus の 2 倍",
+      "f3": "優先の合成キュー"
+    },
+    "voices": {
+      "title": "2 種類の声",
+      "subtitle": "プランで変わるのはクラウドの時間であり、リーダーの機能ではありません。",
+      "basicT": "ベーシック",
+      "basicD": "端末にもともとある声。ずっと無料、アカウント不要、制限なし。",
+      "naturalT": "ナチュラル",
+      "naturalD": "日常向けのクラウド AI。長い記事や本一冊に。"
+    },
+    "packs": {
+      "title": "月の途中で足りなくなったら",
+      "subtitle": "+10 時間パックは、Plus と Pro が共有するのと同じ AI 時間です。",
+      "hours": "AI の声 +10 時間",
+      "natural": "AI の声 +10 時間",
+      "expressive": "AI の声 +10 時間",
+      "buy": "プランに追加",
+      "rule": "有効なプランが必要 · 月の枠のあとだけ使う · 12 か月有効",
+      "needPlan": "パックには有効なプランが必要です。先に登録してください。"
+    },
+    "notes": {
+      "title": "知っておくとよいこと",
+      "n1": "月の時間は請求期間ごとにリセットされ、余りは繰り越しません。",
+      "n2": "どの言語でも、聴いた 1 時間が枠の 1 時間です。",
+      "n3": "音声書き出しは予定中で、どのプランにもまだ含まれません。",
+      "n4": "クラウドの声にはログインが必要です。キャッシュ命中は分数を使いません。"
+    }
+  },
+  "account": {
+    "title": "利用と請求",
+    "tabUsage": "利用",
+    "tabBilling": "請求",
+    "tabAdmin": "管理",
+    "adminUsers": "ユーザー",
+    "adminSiteUsed": "サイト全体の使用",
+    "adminSiteLeft": "サイト全体の残り",
+    "adminEmpty": "まだユーザーがいません。",
+    "adminColUser": "ユーザー",
+    "adminColPlan": "プラン",
+    "adminColUsed": "使用",
+    "adminColLeft": "残り",
+    "adminColJoined": "登録",
+    "adminSortAsc": "少ない順",
+    "adminSortDesc": "多い順",
+    "adminForbidden": "設定した管理メールだけがこのタブを見られます。",
+    "adminClicks": "料金ページのクリック",
+    "adminClicksEmpty": "まだクリックがありません。",
+    "adminAnonymous": "未ログイン",
+    "loading": "読み込み中…",
+    "needSignIn": "利用状況と注文を見るにはログインしてください。",
+    "signIn": "ログイン",
+    "signedInAs": "ログイン中",
+    "unavailable": "データベース未設定のため、利用状況を表示できません。",
+    "loadFailed": "利用状況を読み込めませんでした。",
+    "plan": "現在のプラン",
+    "resets": "リセット",
+    "cloud": "AI 時間",
+    "remaining": "残り",
+    "trialLeft": "クラウドお試しの残り：",
+    "packs": "追加パック",
+    "expires": "期限",
+    "orders": "注文",
+    "noOrders": "まだ注文がありません。",
+    "manage": "定期購入を管理",
+    "clips": "読書履歴",
+    "clipsEmpty": "クラウドの声で読むと、テキスト・音声・時間がここに出ます。",
+    "clipsCharged": "{time} 使用",
+    "clipsNoCharge": "時間は使っていません",
+    "clipsReplayHint": "再聴 · 追加の時間なし",
+    "clipsTotal": "合計 {time}",
+    "clipsParts": "{count} パート",
+    "clipsExpand": "全文を表示",
+    "clipsCollapse": "折りたたむ",
+    "clipsScroll": "スクロールして続きを読む",
+    "clipsPlays": "{count} 回再生",
+    "clipUnavailable": "この音声はもう使えません。",
+    "clipsPageSize": "1 ページ",
+    "clipsPage": "{page} / {pages}",
+    "clipsPrev": "前へ",
+    "clipsNext": "次へ",
+    "clipsRange": "{from}–{to} / {total}",
+    "sec": "{n}秒",
+    "minSec": "{m}分{s}秒"
+  },
+  "error": {
+    "title": "問題が起きました",
+    "description": "予期しないエラーです。もう一度お試しください。",
+    "tryAgain": "再試行",
+    "notFound": {
+      "title": "ページが見つかりません",
+      "description": "そのページはないか、移動しています。",
+      "returnHome": "ホームへ戻る"
+    }
+  },
+  "support": {
+    "contact": {
+      "title": "お問い合わせ",
+      "email": { "title": "メール", "description": "通常、営業日 1 日以内に返信します。", "button": "メールを送る" },
+      "chat": { "title": "チャット", "description": "リーダーから短い質問を。", "button": "チャットを開く" },
+      "phone": { "title": "電話", "description": "請求とアカウント向け。", "button": "時間を見る" }
+    },
+    "resources": {
+      "title": "リソース",
+      "docs": { "title": "ヘルプ", "description": "貼り付け、アップロード、聴取の方法。" },
+      "status": { "title": "稼働状況", "description": "クラウドの声と決済の可用性。" },
+      "community": { "title": "コミュニティ", "description": "声や読み方の共有。" }
+    },
+    "enterprise": {
+      "title": "チーム",
+      "subtitle": "チーム向けプランが必要ですか？",
+      "description": "何人が聴くかを教えてください。プラン選びをお手伝いします。",
+      "button": "営業に連絡"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadToMe · Voice Ligature</title>
+<style>
+  :root { --paper:#f6f5f1; --ink:#16161b; --muted:#72727a; --line:#dfddd5; --coral:#f0563a; --white:#fffdf6; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { width:min(1120px,calc(100% - 40px)); margin:auto; padding:56px 0 80px; }
+  header { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:32px; }
+  .kicker { color:var(--coral); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+  h1 { margin:7px 0 0; font-size:clamp(30px,5vw,52px); line-height:1; letter-spacing:-.045em; }
+  header p { max-width:390px; margin:0; color:var(--muted); }
+  .board { display:grid; grid-template-columns:1.7fr 1fr; grid-template-rows:360px 270px; gap:14px; }
+  .tile { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:20px; background:#fff; }
+  .hero { display:grid; place-items:center; padding:40px; }
+  .lockup { display:flex; align-items:center; gap:24px; }
+  .lockup img { width:112px; height:112px; }
+  .wordmark { font-size:clamp(38px,5.4vw,66px); font-weight:720; line-height:1; letter-spacing:-.06em; }
+  .wordmark i { color:var(--coral); font-style:normal; }
+  .note { position:absolute; left:22px; bottom:18px; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+  .app { display:grid; place-items:center; background:#e8e5dd; }
+  .app img { width:152px; filter:drop-shadow(0 18px 28px rgba(22,22,27,.18)); }
+  .mono { display:grid; place-items:center; background:var(--ink); }
+  .mono .lockup { filter:grayscale(1) invert(1); }
+  .mono .lockup img { width:78px; height:78px; }
+  .mono .wordmark { color:#000; font-size:46px; }
+  .scale { padding:28px; display:flex; flex-direction:column; justify-content:space-between; }
+  .scale h2 { margin:0; font-size:16px; letter-spacing:-.02em; }
+  .scale p { color:var(--muted); margin:4px 0 0; font-size:13px; }
+  .sizes { display:flex; align-items:end; gap:28px; }
+  .size { display:grid; gap:8px; justify-items:center; color:var(--muted); font-size:10px; }
+  .size img { display:block; }
+  .size:nth-child(1) img { width:16px; }
+  .size:nth-child(2) img { width:24px; }
+  .size:nth-child(3) img { width:32px; }
+  .size:nth-child(4) img { width:64px; }
+  .story { margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .story div { padding:22px 24px; border-right:1px solid var(--line); }
+  .story div:last-child { border:0; }
+  .story b { display:block; margin-bottom:3px; font-size:13px; }
+  .story span { color:var(--muted); font-size:12px; }
+  @media(max-width:760px) {
+    header { align-items:start; flex-direction:column; }
+    .board { grid-template-columns:1fr; grid-template-rows:300px 250px 230px 240px; }
+    .hero { padding:24px; }
+    .lockup { gap:14px; }
+    .lockup img { width:72px; height:72px; }
+    .mono .lockup img { width:58px; height:58px; }
+    .mono .wordmark { font-size:32px; }
+    .story { grid-template-columns:1fr; }
+    .story div { border-right:0; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <span class="kicker">Concept 03 · Voice Ligature</span>
+      <h1>让文字自然流向声音</h1>
+    </div>
+    <p>不是一个描述功能的图标，而是 Read 与 Me 之间发生“朗读”的瞬间：R 的末笔继续振动，形成声音与 M 的节奏。</p>
+  </header>
+
+  <section class="board">
+    <article class="tile hero">
+      <div class="lockup">
+        <img src="../public/brand/readtome-voice-ligature.svg" alt="ReadToMe Voice Ligature 标志">
+        <div class="wordmark">ReadToM<i>e</i></div>
+      </div>
+      <span class="note">Primary lockup</span>
+    </article>
+
+    <article class="tile app">
+      <img src="../public/brand/readtome-voice-ligature-app.svg" alt="ReadToMe App 图标">
+      <span class="note">App icon</span>
+    </article>
+
+    <article class="tile mono">
+      <div class="lockup">
+        <img src="../public/brand/readtome-voice-ligature.svg" alt="">
+        <div class="wordmark">ReadToMe</div>
+      </div>
+      <span class="note">One color</span>
+    </article>
+
+    <article class="tile scale">
+      <div>
+        <h2>从浏览器标签到产品界面</h2>
+        <p>圆角与笔画粗细针对小尺寸显示。</p>
+      </div>
+      <div class="sizes">
+        <span class="size"><img src="../public/brand/readtome-voice-ligature.svg" alt="">16</span>
+        <span class="size"><img src="../public/brand/readtome-voice-ligature.svg" alt="">24</span>
+        <span class="size"><img src="../public/brand/readtome-voice-ligature.svg" alt="">32</span>
+        <span class="size"><img src="../public/brand/readtome-voice-ligature.svg" alt="">64</span>
+      </div>
+      <span class="note">Optical scale test</span>
+    </article>
+  </section>
+
+  <section class="story">
+    <div><b>R · Read</b><span>稳定的字形骨架，像一段排版整齐的文字。</span></div>
+    <div><b>珊瑚节点 · To</b><span>阅读转化为声音的触发瞬间。</span></div>
+    <div><b>连续韵律 · Me</b><span>两个起伏隐藏 M，也保留自然语音的节奏。</span></div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadToMe Logo 方案对比</title>
+<style>
+  :root { --paper: #f6f5f1; --surface: #fff; --ink: #16161b; --muted: #6d6d75; --line: #e3e1da; --blue: #2f56e0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0 80px; }
+  header { max-width: 650px; margin-bottom: 38px; }
+  .eyebrow { color: var(--blue); font-size: 12px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { margin: 8px 0 8px; font-size: clamp(30px, 5vw, 48px); line-height: 1.12; letter-spacing: -.035em; }
+  header p { margin: 0; color: var(--muted); font-size: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+  .recommended::before { content: "推荐"; position: absolute; z-index: 1; top: 16px; right: 16px; color: #fff; background: var(--blue); border-radius: 999px; padding: 4px 11px; font-size: 11px; font-weight: 700; }
+  .stage { min-height: 250px; display: grid; place-items: center; padding: 42px 24px; background: radial-gradient(circle at 50% 45%, #fff 0, #faf9f5 70%); border-bottom: 1px solid var(--line); }
+  .lockup { display: flex; align-items: center; gap: 14px; }
+  .lockup img { width: 64px; height: 64px; }
+  .wordmark { font-size: 30px; font-weight: 720; letter-spacing: -.045em; }
+  .wordmark span { color: var(--blue); }
+  .sizes { position: absolute; left: 18px; bottom: 14px; display: flex; align-items: end; gap: 10px; }
+  .sizes img:nth-child(1) { width: 16px; height: 16px; }
+  .sizes img:nth-child(2) { width: 24px; height: 24px; }
+  .sizes img:nth-child(3) { width: 32px; height: 32px; }
+  .copy { padding: 22px 24px 24px; }
+  .label { color: var(--blue); font-size: 12px; font-weight: 750; letter-spacing: .08em; }
+  h2 { margin: 2px 0 5px; font-size: 19px; letter-spacing: -.02em; }
+  .copy p { margin: 0; color: var(--muted); }
+  .traits { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+  .traits span { border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; color: var(--muted); font-size: 11px; }
+  footer { margin-top: 24px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 740px) { main { padding-top: 40px; } .grid { grid-template-columns: 1fr; } .stage { min-height: 220px; } .wordmark { font-size: 25px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="eyebrow">Brand exploration · 01</span>
+    <h1>ReadToMe Logo 方向</h1>
+    <p>四个方案共用现有产品的纸张白、深墨色与钴蓝色，并针对 16–32px 的产品界面尺寸优化。</p>
+  </header>
+
+  <section class="grid">
+    <article class="card recommended">
+      <div class="stage">
+        <div class="lockup">
+          <img src="../public/brand/readtome-logo-a-page-wave.svg" alt="">
+          <div class="wordmark">ReadTo<span>Me</span></div>
+        </div>
+        <div class="sizes">
+          <img src="../public/brand/readtome-logo-a-page-wave.svg" alt="">
+          <img src="../public/brand/readtome-logo-a-page-wave.svg" alt="">
+          <img src="../public/brand/readtome-logo-a-page-wave.svg" alt="">
+        </div>
+      </div>
+      <div class="copy">
+        <span class="label">A · PAGE WAVE</span>
+        <h2>纸页声波</h2>
+        <p>文字自然过渡成声音，产品功能表达最直接，兼顾专业与亲和。</p>
+        <div class="traits"><span>功能清晰</span><span>独特</span><span>适合产品图标</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="stage">
+        <div class="lockup">
+          <img src="../public/brand/readtome-logo-b-open-book.svg" alt="">
+          <div class="wordmark">ReadTo<span>Me</span></div>
+        </div>
+        <div class="sizes">
+          <img src="../public/brand/readtome-logo-b-open-book.svg" alt="">
+          <img src="../public/brand/readtome-logo-b-open-book.svg" alt="">
+          <img src="../public/brand/readtome-logo-b-open-book.svg" alt="">
+        </div>
+      </div>
+      <div class="copy">
+        <span class="label">B · OPEN BOOK</span>
+        <h2>打开的书</h2>
+        <p>强调阅读与学习属性，中央声波像书脊，也像正在被朗读的内容。</p>
+        <div class="traits"><span>温暖</span><span>教育感</span><span>叙事性强</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="stage">
+        <div class="lockup">
+          <img src="../public/brand/readtome-logo-c-r-play.svg" alt="">
+          <div class="wordmark">ReadTo<span>Me</span></div>
+        </div>
+        <div class="sizes">
+          <img src="../public/brand/readtome-logo-c-r-play.svg" alt="">
+          <img src="../public/brand/readtome-logo-c-r-play.svg" alt="">
+          <img src="../public/brand/readtome-logo-c-r-play.svg" alt="">
+        </div>
+      </div>
+      <div class="copy">
+        <span class="label">C · R / PLAY</span>
+        <h2>R 字播放键</h2>
+        <p>把品牌首字母和播放行为合并，图形紧凑，最接近成熟软件产品标识。</p>
+        <div class="traits"><span>现代</span><span>强识别</span><span>App 图标友好</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="stage">
+        <div class="lockup">
+          <img src="../public/brand/readtome-logo-d-speech-wave.svg" alt="">
+          <div class="wordmark">ReadTo<span>Me</span></div>
+        </div>
+        <div class="sizes">
+          <img src="../public/brand/readtome-logo-d-speech-wave.svg" alt="">
+          <img src="../public/brand/readtome-logo-d-speech-wave.svg" alt="">
+          <img src="../public/brand/readtome-logo-d-speech-wave.svg" alt="">
+        </div>
+      </div>
+      <div class="copy">
+        <span class="label">D · SPEECH WAVE</span>
+        <h2>语音气泡</h2>
+        <p>更偏向“为你朗读”的陪伴感，适合强调语音助手和交流体验。</p>
+        <div class="traits"><span>亲和</span><span>语音感</span><span>国际化</span></div>
+      </div>
+    </article>
+  </section>
+
+  <footer>建议优先比较 A 与 C：A 更准确表达产品，C 更像可长期扩展的品牌符号。</footer>
+</main>
+</body>
+</html>

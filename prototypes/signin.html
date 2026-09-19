@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Read To Me</title>
+<meta name="description" content="Sign in to Read to Me to unlock premium AI voices.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-title-key="auth.signInTitle">
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="landing.html">
+      <img class="brand-mark" src="../public/brand/readtome-pulse-mark.svg" alt="" width="40" height="30">
+      <span class="brand-name">Read to me</span>
+    </a>
+    <div class="nav-links">
+      <span id="lang-switch"></span>
+    </div>
+  </div>
+</nav>
+
+<main class="signin-page">
+  <div class="signin-card">
+    <img class="brand-mark big" src="../public/brand/readtome-pulse-mark.svg" alt="Read to me">
+    <h1 data-i18n="auth.signInTitle">Sign in to Read to Me</h1>
+    <p class="signin-sub" data-i18n="auth.signInSubtitle">Sign in to unlock premium AI voices and keep your reading library across devices.</p>
+
+    <button class="btn google-btn" id="google-btn">
+      <span id="google-logo"></span>
+      <span data-i18n="auth.continueGoogle">Continue with Google</span>
+    </button>
+
+    <p class="signin-note" data-i18n="auth.signInNote">Prototype only — no real account is created. Production uses Google sign-in.</p>
+    <a class="signin-back" href="landing.html" data-i18n="auth.backHome">← Back to home</a>
+  </div>
+</main>
+
+<script src="i18n.js"></script>
+<script src="auth.js"></script>
+<script src="reader.js"></script>
+<script>
+  RTMI18n.apply();
+  RTMI18n.mountLangSwitch(document.getElementById('lang-switch'));
+  document.getElementById('google-logo').innerHTML = RTMAuth.GOOGLE_LOGO;
+
+  document.getElementById('google-btn').addEventListener('click', function () {
+    RTMAuth.signIn();
+    location.href = 'read.html';
+  });
+
+  window.addEventListener('rtm:langchange', function () { RTMI18n.apply(); });
+</script>
+</body>
+</html>

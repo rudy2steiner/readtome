@@ -1,42 +1,38 @@
 {
+  "meta": {
+    "title": "Read To Me: Turn text to speech in seconds | Free Online",
+    "description": "Transform any text into natural-sounding speech in seconds. Whether you are learning, multitasking, or making content accessible, ReadToMe converts your documents into crystal-clear audio with lifelike voices in over 50 language!",
+    "readTitle": "Text to Speech Reader — Read To Me",
+    "readDescription": "Paste an article or upload a document and listen to it read aloud, with the current sentence highlighted as it goes."
+  },
   "common": {
     "title": "Read To Me",
     "description": "Turn text to speech in seconds for free",
-    "upload": "Upload Photo",
-    "uploadUrl": "Upload from URL",
-    "add": "Add",
-    "generate": "Generate",
-    "options": "Hairstyle Options",
-    "examples": "Hairstyle Examples",
-    "generated": "Your New Hairstyles",
-    "useExample": "Try This Style",
-    "loading": "Styling your hair...",
-    "error": "Error",
-    "success": "Looking great!",
-    "exampleLoaded": "Hairstyle preset loaded",
-    "exampleError": "Failed to load hairstyle",
-    "table": {
-      "photos": "Your Photos",
-      "style": "Hairstyle",
-      "length": "Hair Length",
-      "color": "Hair Color",
-      "actions": "Actions"
-    }
+    "error": "Error"
   },
   "nav": {
     "home": "Home",
-    "gallery": "Style Gallery",
-    "blog": "Blog"
+    "reader": "Reader",
+    "features": "Features",
+    "faq": "FAQs",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "start": "Start reading",
+    "themeDark": "Switch to dark",
+    "themeLight": "Switch to light"
   },
-  "form": {
-    "hairLength": "Hair Length",
-    "hairStyle": "Hairstyle Type",
-    "hairColor": "Hair Color",
-    "faceShape": "Face Shape",
-    "gender": "Gender",
-    "numOutputs": "Style Variations",
-    "preset": "Popular Haircuts",
-    "customStyle": "Custom Style"
+  "ui": {
+    "benefits": "Benefits",
+    "features": "Capabilities",
+    "how": "How it works",
+    "faq": "Questions",
+    "noSignup": "No sign-up — just press play",
+    "factVoices": "{n} voices in your browser",
+    "factFree": "Free, with no usage limit",
+    "planned": "Planned",
+    "todayUpload": "Upload TXT, MD, HTML, PDF, DOCX, ODT, or EPUB. Old .doc files need to be saved as .docx.",
+    "todayExport": "Today: playback only. Audio export is planned.",
+    "step": "Step"
   },
   "hero": {
     "tagline": "Your Personal Text Reader",
@@ -91,7 +87,7 @@
       "upload": {
         "number": "01",
         "title": "Input Your Text",
-        "description": "Paste text"
+        "description": "Paste text, or upload TXT, MD, HTML, PDF, DOCX, and more"
       },
       "style": {
         "number": "02",
@@ -110,29 +106,6 @@
       }
     }
   },
-  "testimonials": {
-    "title": "What Users Say About Read to Me",
-    "items": [
-      {
-        "name": "Sarah Johnson",
-        "role": "Teacher",
-        "quote": "Perfect for creating accessible learning materials for my students.",
-        "image": "/testimonials/bc.jpeg"
-      },
-      {
-        "name": "James Chen",
-        "role": "Content Creator",
-        "quote": "The natural-sounding voices are perfect for my podcast and videos.",
-        "image": "/testimonials/t5.jpeg"
-      },
-      {
-        "name": "Lisa Thompson",
-        "role": "Student",
-        "quote": "Helps me learn while commuting. The multiple language support is amazing!",
-        "image": "/testimonials/t3.jpeg"
-      }
-    ]
-  },
   "faq": {
     "title": "Read To Me FAQs",
     "items": [
@@ -150,7 +123,7 @@
       },
       {
         "question": "What file formats can I upload?",
-        "answer": "We support TXT, PDF, DOC, DOCX, and other common document formats."
+        "answer": "You can paste text, or upload TXT, Markdown, HTML, RTF, CSV, PDF, DOCX, ODT, and EPUB. Older .doc files need to be saved as .docx first."
       },
       {
         "question": "Can I download the audio files?",
@@ -173,11 +146,263 @@
     "support": "Support",
     "helpCenter": "Help Center",
     "contact": "Contact",
-    "community": "Community",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "cookies": "Cookie Policy",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "engines": "Free voices: your browser · Paid voices: cloud AI",
+    "languages": "Languages:"
+  },
+  "reader": {
+    "heading": "Reader",
+    "sub": "Paste text, choose a voice, and follow along as it reads. Your text and position are remembered in this browser.",
+    "placeholder": "Paste text, or upload TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, or EPUB…",
+    "clear": "Clear text",
+    "upload": "Upload a document",
+    "uploadHint": "TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, EPUB",
+    "loadDemo": "Load demo text",
+    "demoLoaded": "Demo text loaded",
+    "smaller": "Smaller text",
+    "bigger": "Larger text",
+    "play": "Play",
+    "pause": "Pause",
+    "preparing": "Preparing voice…",
+    "stop": "Stop",
+    "speed": "Playback speed",
+    "openFull": "Open full reader →",
+    "tabPlayback": "Playback",
+    "language": "Reading language",
+    "voiceSelection": "Voice selection",
+    "filterAll": "All",
+    "filterFree": "Free",
+    "filterPro": "Premium",
+    "allLanguages": "All languages",
+    "multilingual": "Multilingual",
+    "genderAll": "All genders",
+    "genderFemale": "Female",
+    "genderMale": "Male",
+    "voiceSearch": "Search voices",
+    "groupCloud": "Cloud voices",
+    "groupNatural": "Cloud voices",
+    "groupBrowser": "Browser voices",
+    "seePlans": "See plans →",
+    "systemVoice": "System voice",
+    "note": "Free voices come from your browser and have no usage limit. Cloud voices need a plan.",
+    "words": "words",
+    "characters": "characters",
+    "noVoices": "No voices match this filter.",
+    "needText": "Add some text first — paste an article or upload a document.",
+    "needVoice": "No speech voice is available in this browser yet.",
+    "needTxt": "This file type is not supported. Use TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, or EPUB.",
+    "needFormat": "This file type is not supported. Use TXT, MD, HTML, RTF, CSV, PDF, DOCX, ODT, or EPUB.",
+    "needDocx": "Old .doc files are not supported — save as .docx and try again.",
+    "emptyFile": "No readable text in that file. Scanned PDFs are recognized in your browser — try again if it failed.",
+    "tooLarge": "That file is too large (15 MB max).",
+    "parseFailed": "Could not read that file.",
+    "readingFile": "Reading file…",
+    "ocrStart": "This PDF is a scan. Recognizing {total} pages in your browser…",
+    "ocrProgress": "Recognizing scan {page}/{total}…",
+    "loaded": "Loaded",
+    "noSpeech": "This browser has no Web Speech support — text editing still works.",
+    "premiumSignIn": "Cloud voices need a plan. Sign in first, then see Pricing.",
+    "premiumUpgrade": "Cloud voices need a plan — see Pricing.",
+    "degradeNatural": "Cloud minutes are used up.",
+    "degradeTrial": "Your one-time cloud trial is used up.",
+    "degradeCloud": "Cloud voices are unavailable right now."
+  },
+  "samples": {
+    "heroLabel": "Real clips from our cloud voices — click one to listen",
+    "cta": "Get cloud voices with Plus",
+    "ctaPrice": "from $7/mo, billed yearly",
+    "natural": "Natural",
+    "playLabel": "Play the {name} sample",
+    "playFailed": "Your browser blocked audio playback. Tap the voice again."
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "continueGoogle": "Continue with Google",
+    "signInTitle": "Sign in to Read to Me",
+    "signInSubtitle": "Sign in to unlock cloud AI voices and keep your reading library across devices.",
+    "backHome": "← Back to home",
+    "googleUnavailable": "Google sign-in is not configured on this server.",
+    "account": "Account",
+    "usage": "Usage"
+  },
+  "sample": "Welcome to Read to Me.\n\nPress play, and this text is read aloud to you — in a natural voice, at the speed you choose.\n\nBring anything you would like to hear: paste an article, upload a document, or write your own notes.\n\nAs it reads, the current sentence is highlighted, so you can follow along.\n\nTry a few voices and speeds from the player below.",
+  "pricing": {
+    "metaTitle": "Pricing — Read To Me",
+    "eyebrow": "Pricing",
+    "title": "Pay for the listening, not for the software",
+    "subtitle": "Your browser’s own voices stay free forever. Paid plans add cloud AI voices, measured in hours of listening.",
+    "yearly": "Yearly",
+    "monthly": "Monthly",
+    "save": "Save 22%",
+    "perMonth": "/ month",
+    "billedYearly": "billed as {amount} once a year",
+    "billedMonthly": "billed monthly, cancel anytime",
+    "popular": "Most popular",
+    "checkoutFailed": "Checkout is not configured yet. Sign in still works; payment needs Stripe keys.",
+    "comingSoon": "Coming soon",
+    "free": {
+      "name": "Free",
+      "tagline": "No account needed to start",
+      "forever": "Free forever",
+      "cta": "Start reading",
+      "f1": "Browser voices, unlimited",
+      "f2": "{minutes, plural, one {# minute} other {# minutes}} of cloud voices, once",
+      "f3": "Sentence highlighting and resume where you left off",
+      "f4": "Paste text or upload a document"
+    },
+    "plus": {
+      "name": "Plus",
+      "tagline": "For a regular reading habit",
+      "cta": "Choose Plus",
+      "f1": "8 hours a month of AI voices",
+      "f2": "Language and gender filters",
+      "f3": "Everything in Free",
+      "f4": "Re-listening never spends your quota"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "For long books and heavy weeks",
+      "cta": "Choose Pro",
+      "f1": "Everything in Plus",
+      "f2": "16 hours a month — twice the Plus hours",
+      "f3": "Priority synthesis queue"
+    },
+    "voices": {
+      "title": "Two kinds of voices",
+      "subtitle": "Plans differ in how much cloud speech they include, not in what the reader can do.",
+      "basicT": "Basic",
+      "basicD": "The voices already on your device. Free forever, no account, no limit.",
+      "naturalT": "Natural",
+      "naturalD": "Cloud AI voices for everyday listening — long articles and whole books."
+    },
+    "packs": {
+      "title": "Run out mid-month?",
+      "subtitle": "One +10 hour pack adds the same AI hours Plus and Pro already share.",
+      "hours": "AI voices +10 hours",
+      "natural": "AI voices +10 hours",
+      "expressive": "AI voices +10 hours",
+      "buy": "Add to plan",
+      "rule": "Requires an active plan · spent only after your monthly quota · valid for 12 months",
+      "needPlan": "Top-up packs need an active plan — subscribe first."
+    },
+    "notes": {
+      "title": "Good to know",
+      "n1": "Monthly time resets each billing period; unused time does not roll over.",
+      "n2": "One hour of listening is one hour of quota in any language.",
+      "n3": "Audio export is planned and not part of any plan yet.",
+      "n4": "Cloud voices need a signed-in account. Cache hits never spend your minutes."
+    }
+  },
+  "account": {
+    "title": "Usage & billing",
+    "tabUsage": "Usage",
+    "tabBilling": "Billing",
+    "tabAdmin": "Admin",
+    "adminUsers": "Users",
+    "adminSiteUsed": "Used across the site",
+    "adminSiteLeft": "Left across the site",
+    "adminEmpty": "No users yet.",
+    "adminColUser": "User",
+    "adminColPlan": "Plan",
+    "adminColUsed": "Used",
+    "adminColLeft": "Left",
+    "adminColJoined": "Joined",
+    "adminSortAsc": "Low to high",
+    "adminSortDesc": "High to low",
+    "adminForbidden": "This tab is only for configured admin emails.",
+    "adminClicks": "Pricing clicks",
+    "adminClicksEmpty": "No pricing clicks yet.",
+    "adminAnonymous": "signed out",
+    "loading": "Loading…",
+    "needSignIn": "Sign in to see your usage and orders.",
+    "signIn": "Sign in",
+    "signedInAs": "Signed in as",
+    "unavailable": "Usage is unavailable until the database is configured.",
+    "loadFailed": "Could not load usage.",
+    "plan": "Current plan",
+    "resets": "Resets",
+    "cloud": "AI hours",
+    "remaining": "Left",
+    "trialLeft": "Cloud trial left:",
+    "packs": "Top-up packs",
+    "expires": "expires",
+    "orders": "Orders",
+    "noOrders": "No orders yet.",
+    "manage": "Manage subscription",
+    "clips": "Reading history",
+    "clipsEmpty": "Read something with a cloud voice and it will show up here with the text, audio, and time used.",
+    "clipsCharged": "Used {time}",
+    "clipsNoCharge": "No time used",
+    "clipsReplayHint": "Replay · no extra time",
+    "clipsTotal": "{time} total",
+    "clipsParts": "{count} parts",
+    "clipsExpand": "Show full text",
+    "clipsCollapse": "Hide text",
+    "clipsScroll": "Scroll to read the rest",
+    "clipsPlays": "{count} plays",
+    "clipUnavailable": "This audio is no longer available.",
+    "clipsPageSize": "Per page",
+    "clipsPage": "{page} / {pages}",
+    "clipsPrev": "Previous",
+    "clipsNext": "Next",
+    "clipsRange": "{from}–{to} of {total}",
+    "sec": "{n}s",
+    "minSec": "{m}m {s}s"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. You can try again.",
+    "tryAgain": "Try again",
+    "notFound": {
+      "title": "Page not found",
+      "description": "That page does not exist or has been moved.",
+      "returnHome": "Back to home"
+    }
+  },
+  "support": {
+    "contact": {
+      "title": "Contact us",
+      "email": {
+        "title": "Email",
+        "description": "We usually reply within one business day.",
+        "button": "Send email"
+      },
+      "chat": {
+        "title": "Chat",
+        "description": "Ask a quick question from the reader.",
+        "button": "Open chat"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "For billing and account issues.",
+        "button": "See hours"
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "docs": {
+        "title": "Help docs",
+        "description": "How to paste, upload, and listen."
+      },
+      "status": {
+        "title": "Status",
+        "description": "Cloud voices and checkout availability."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Share voices and reading setups."
+      }
+    },
+    "enterprise": {
+      "title": "Teams",
+      "subtitle": "Need a team plan?",
+      "description": "Tell us how many people need to listen, and we will help you pick a plan.",
+      "button": "Contact sales"
+    }
   }
 }

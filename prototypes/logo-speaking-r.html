@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadToMe · Speaking R</title>
+<style>
+  :root { --paper:#f6f5f1; --cream:#fffdf6; --ink:#16161b; --muted:#74747c; --line:#e1ded6; --purple:#6c4cf1; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); background:var(--paper); font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { width:min(1120px,calc(100% - 40px)); margin:auto; padding:52px 0 76px; }
+  header { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:30px; }
+  .kicker { color:var(--purple); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+  h1 { margin:7px 0 0; font-size:clamp(34px,5vw,54px); line-height:1; letter-spacing:-.045em; }
+  header p { max-width:390px; margin:0; color:var(--muted); }
+  .board { display:grid; grid-template-columns:1.65fr 1fr; grid-template-rows:350px 270px; gap:14px; }
+  .tile { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:20px; background:var(--cream); }
+  .label { position:absolute; left:20px; bottom:17px; color:var(--muted); font-size:10px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+  .hero { display:grid; place-items:center; padding:42px; }
+  .hero img { width:min(590px,94%); }
+  .mark { display:grid; place-items:center; background:#ebe7ff; }
+  .mark img { width:160px; }
+  .mono { display:grid; place-items:center; background:var(--ink); }
+  .mono img { width:min(420px,84%); filter:brightness(0) invert(1); }
+  .product { background:#fff; }
+  .nav { height:68px; display:flex; align-items:center; padding:0 22px; border-bottom:1px solid var(--line); }
+  .nav img { width:174px; }
+  .links { margin-left:auto; display:flex; align-items:center; gap:22px; color:var(--muted); font-size:12px; }
+  .button { padding:8px 13px; color:#fff; background:var(--ink); border-radius:9px; font-weight:700; }
+  .reader { padding:30px 26px 0; }
+  .reader strong { display:block; font-size:23px; letter-spacing:-.035em; }
+  .reader p { margin:6px 0 0; color:var(--muted); }
+  .logic { display:grid; grid-template-columns:repeat(3,1fr); margin-top:20px; border-block:1px solid var(--line); }
+  .logic div { padding:20px 23px; border-right:1px solid var(--line); }
+  .logic div:last-child { border:0; }
+  .logic b { display:block; margin-bottom:3px; font-size:12px; }
+  .logic span { color:var(--muted); font-size:11px; }
+  @media(max-width:760px) {
+    header { flex-direction:column; align-items:start; }
+    .board { grid-template-columns:1fr; grid-template-rows:270px 235px 210px 245px; }
+    .links span { display:none; }
+    .nav img { width:150px; }
+    .logic { grid-template-columns:1fr; }
+    .logic div { border-right:0; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <span class="kicker">Concept 08 · Speaking R</span>
+      <h1>先读成字母，再听见声音</h1>
+    </div>
+    <p>首字母的主干与肩部保持小写 r 的结构，末端继续产生两次逐渐收弱的起伏。波形属于字形本身，不再作为外挂图标出现。</p>
+  </header>
+
+  <section class="board">
+    <article class="tile hero">
+      <img src="../public/brand/readtome-speaking-wordmark.svg" alt="readtome">
+      <span class="label">Primary wordmark</span>
+    </article>
+
+    <article class="tile mark">
+      <img src="../public/brand/readtome-speaking-r.svg" alt="ReadToMe speaking r">
+      <span class="label">Favicon / web mark</span>
+    </article>
+
+    <article class="tile mono">
+      <img src="../public/brand/readtome-speaking-wordmark.svg" alt="readtome monochrome">
+      <span class="label">One color</span>
+    </article>
+
+    <article class="tile product">
+      <div class="nav">
+        <img src="../public/brand/readtome-speaking-wordmark.svg" alt="readtome">
+        <div class="links"><span>Reader</span><span>Features</span><span>Pricing</span><b class="button">Start reading</b></div>
+      </div>
+      <div class="reader">
+        <strong>Turn reading time into listening time.</strong>
+        <p>Web 导航栏中的真实使用比例。</p>
+      </div>
+      <span class="label">In product</span>
+    </article>
+  </section>
+
+  <section class="logic">
+    <div><b>一个定制字形</b><span>识别点直接属于品牌名称。</span></div>
+    <div><b>两次衰减起伏</b><span>表达声音，但不使用标准波形图标。</span></div>
+    <div><b>Logo 与 favicon 同源</b><span>缩小时没有另一套符号。</span></div>
+  </section>
+</main>
+</body>
+</html>

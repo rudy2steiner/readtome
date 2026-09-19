@@ -14,7 +14,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Camera className="h-6 w-6" />
-          <Image className="h-8 w-auto" src="/maker.png" alt="photo maker" width={32} height={32}/>
+          <Image className="h-8 w-auto" src="/maker.png" alt="Read To Me" width={32} height={32}/>
           <span className="font-bold text-xl">{t('title')}</span>
         </Link>
         <nav>

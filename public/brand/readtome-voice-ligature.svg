@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">ReadToMe voice ligature</title>
+  <desc id="desc">A continuous letter R flows into the rhythmic arches of Me</desc>
+  <path d="M9.5 51V13.5h15c8 0 13 4.7 13 12s-5 12-13 12h-15M24.5 37.5c6 0 7.7 13.5 14 13.5s7.8-13.5 14-13.5c3 0 4.8 3.2 6 7" fill="none" stroke="#16161b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24.5" cy="37.5" r="3.8" fill="#f0563a"/>
+</svg>

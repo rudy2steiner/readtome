@@ -1,136 +1,76 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Camera } from 'lucide-react';
-import { Link } from '@/lib/navigation';
-import { Button } from '@/components/ui/button';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { Globe } from 'lucide-react';
+
+import { Link, usePathname } from '@/lib/navigation';
 import { languageConfig } from '@/lib/config/navigation';
-import Image from "next/image";
+import { isBillingEnabled } from '@/lib/config/features';
 
 export function Footer() {
   const t = useTranslations();
-  const currentYear = new Date().getFullYear();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-muted/30">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image className="h-8 w-auto" src="/maker.png" alt="photo maker" width={6} height={6}/>
-              <span className="font-bold text-xl">{t('common.title')}</span>
+    <footer className="site-footer">
+      <div className="lp-wrap">
+        <div className="footer-cols">
+          <div className="footer-brand">
+            <Link href="/" className="brand">
+              <Image
+                className="brand-mark"
+                src="/brand/readtome-pulse-mark.svg"
+                alt=""
+                width={40}
+                height={30}
+              />
+              <span className="brand-name">{t('common.title')}</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
-              {t('common.description')}
-            </p>
+            <p>{t('common.description')}</p>
           </div>
-
-          {/* Product */}
           <div>
-            <h3 className="font-semibold mb-4">{t('footer.product')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.features')}
-                  </Link>
-                </Button>
-              </li>
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.blog')}
-                  </Link>
-                </Button>
-              </li>
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.pricing')}
-                  </Link>
-                </Button>
-              </li>
-            </ul>
+            <h4>{t('footer.product')}</h4>
+            <Link href="/reader">{t('nav.reader')}</Link>
+            <Link href="/#features">{t('footer.features')}</Link>
+            {isBillingEnabled && <Link href="/pricing">{t('nav.pricing')}</Link>}
+            <Link href="/#how">{t('ui.how')}</Link>
           </div>
-
-          {/* Support */}
           <div>
-            <h3 className="font-semibold mb-4">{t('footer.support')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.helpCenter')}
-                  </Link>
-                </Button>
-              </li>
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.contact')}
-                  </Link>
-                </Button>
-              </li>
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.community')}
-                  </Link>
-                </Button>
-              </li>
-            </ul>
+            <h4>{t('footer.support')}</h4>
+            <Link href="/#faq">{t('nav.faq')}</Link>
+            <Link href="/contact">{t('footer.contact')}</Link>
+            <Link href="/help">{t('footer.helpCenter')}</Link>
           </div>
-          
-          {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-4">{t('footer.legal')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.privacy')}
-                  </Link>
-                </Button>
-              </li>
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.terms')}
-                  </Link>
-                </Button>
-              </li>
-              <li>
-                <Button variant="link" className="h-auto p-0" asChild>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
-                    {t('footer.cookies')}
-                  </Link>
-                </Button>
-              </li>
-            </ul>
+            <h4>{t('footer.legal')}</h4>
+            <Link href="/privacy">{t('footer.privacy')}</Link>
+            <Link href="/terms">{t('footer.terms')}</Link>
+            <Link href="/cookies">{t('footer.cookies')}</Link>
           </div>
         </div>
-        
-        {/* Language Selector & Copyright */}
-        <div className="border-t mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex gap-4">
-              {languageConfig.map((lang) => (
-                <Button key={lang.code} variant="link" className="h-auto p-0" asChild>
-                  <Link
-                    href="/"
-                    locale={lang.code}
-                    className="text-sm text-muted-foreground hover:text-primary"
-                  >
-                    {lang.nativeName}
-                  </Link>
-                </Button>
-              ))}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              © {currentYear} {t('common.title')}. {t('footer.rights')}
-            </div>
-          </div>
+        <div className="footer-langs">
+          <Globe className="footer-langs-icon" aria-hidden />
+          <span className="footer-langs-label">{t('footer.languages')}</span>
+          {languageConfig.map((lang) =>
+            locale === lang.code ? (
+              <span key={lang.code} className="footer-lang is-active" aria-current="page">
+                {lang.nativeName}
+              </span>
+            ) : (
+              <Link key={lang.code} href={pathname} locale={lang.code} className="footer-lang">
+                {lang.nativeName}
+              </Link>
+            ),
+          )}
+        </div>
+        <div className="footer-base">
+          <span>
+            © {year} {t('common.title')} — {t('footer.rights')}
+          </span>
+          <span>{t('footer.engines')}</span>
         </div>
       </div>
     </footer>

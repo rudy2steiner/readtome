@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadToMe · Waveform R</title>
+<style>
+  :root { --paper:#f6f5f1; --cream:#fffdf6; --ink:#16161b; --muted:#74747c; --line:#e1ded6; --purple:#6c4cf1; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); background:var(--paper); font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { width:min(1120px,calc(100% - 40px)); margin:auto; padding:52px 0 76px; }
+  header { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:30px; }
+  .kicker { color:var(--purple); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+  h1 { margin:7px 0 0; font-size:clamp(34px,5vw,54px); line-height:1; letter-spacing:-.045em; }
+  header p { max-width:390px; margin:0; color:var(--muted); }
+  .board { display:grid; grid-template-columns:1.65fr 1fr; grid-template-rows:350px 270px; gap:14px; }
+  .tile { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:20px; background:var(--cream); }
+  .label { position:absolute; left:20px; bottom:17px; color:var(--muted); font-size:10px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+  .hero { display:grid; place-items:center; padding:42px; }
+  .hero img { width:min(620px,94%); }
+  .mark { display:grid; place-items:center; background:#ebe7ff; }
+  .mark img { width:156px; }
+  .mono { display:grid; place-items:center; background:var(--ink); }
+  .mono img { width:min(430px,84%); filter:brightness(0) invert(1); }
+  .scale { display:flex; flex-direction:column; justify-content:space-between; padding:28px; }
+  .scale h2 { margin:0; font-size:16px; letter-spacing:-.02em; }
+  .scale p { margin:4px 0 0; color:var(--muted); font-size:12px; }
+  .sizes { display:flex; align-items:end; gap:26px; }
+  .size { display:grid; justify-items:center; gap:8px; color:var(--muted); font-size:10px; }
+  .size:nth-child(1) img { width:16px; }
+  .size:nth-child(2) img { width:24px; }
+  .size:nth-child(3) img { width:32px; }
+  .size:nth-child(4) img { width:64px; }
+  .logic { display:grid; grid-template-columns:repeat(3,1fr); margin-top:20px; border-block:1px solid var(--line); }
+  .logic div { padding:20px 23px; border-right:1px solid var(--line); }
+  .logic div:last-child { border:0; }
+  .logic b { display:block; margin-bottom:3px; font-size:12px; }
+  .logic span { color:var(--muted); font-size:11px; }
+  @media(max-width:760px) {
+    header { flex-direction:column; align-items:start; }
+    .board { grid-template-columns:1fr; grid-template-rows:270px 235px 210px 245px; }
+    .logic { grid-template-columns:1fr; }
+    .logic div { border-right:0; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <span class="kicker">Concept 09 · Waveform R</span>
+      <h1>字母的轮廓，就是声音的包络</h1>
+    </div>
+    <p>先建立完整的大写 R，再以七根不同高度的音频柱填充。这里没有“字母旁边的声波”：拿走波形，R 本身也会消失。</p>
+  </header>
+
+  <section class="board">
+    <article class="tile hero">
+      <img src="../public/brand/readtome-wave-wordmark.svg" alt="ReadToMe">
+      <span class="label">Primary wordmark</span>
+    </article>
+
+    <article class="tile mark">
+      <img src="../public/brand/readtome-wave-r.svg" alt="ReadToMe waveform R">
+      <span class="label">Favicon / web mark</span>
+    </article>
+
+    <article class="tile mono">
+      <img src="../public/brand/readtome-wave-wordmark.svg" alt="ReadToMe monochrome">
+      <span class="label">One color</span>
+    </article>
+
+    <article class="tile scale">
+      <div>
+        <h2>小尺寸辨识度</h2>
+        <p>竖向波形柱在缩小时仍保留 R 的外轮廓。</p>
+      </div>
+      <div class="sizes">
+        <span class="size"><img src="../public/brand/readtome-wave-r.svg" alt="">16</span>
+        <span class="size"><img src="../public/brand/readtome-wave-r.svg" alt="">24</span>
+        <span class="size"><img src="../public/brand/readtome-wave-r.svg" alt="">32</span>
+        <span class="size"><img src="../public/brand/readtome-wave-r.svg" alt="">64</span>
+      </div>
+      <span class="label">Optical scale</span>
+    </article>
+  </section>
+
+  <section class="logic">
+    <div><b>R 的识别</b><span>完整外轮廓保证品牌首字母成立。</span></div>
+    <div><b>波形的识别</b><span>七根独立音频柱构成内部节奏。</span></div>
+    <div><b>同一个资产</b><span>字标首字母与 favicon 完全一致。</span></div>
+  </section>
+</main>
+</body>
+</html>

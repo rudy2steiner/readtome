@@ -1,6 +1,6 @@
 {
   "name": "read-to-me",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,10 +9,14 @@
     "lint": "next lint",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "deploy:dev": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --env dev",
+    "secrets": "node scripts/secret-bulk.mjs",
+    "secrets:dev": "node scripts/secret-bulk.mjs --env dev",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "db:migrate:local": "wrangler d1 execute readtome --local --file=./drizzle/0001_init.sql && wrangler d1 execute readtome --local --file=./drizzle/0002_drop_trials.sql && wrangler d1 execute readtome --local --file=./drizzle/0003_listens.sql && wrangler d1 execute readtome --local --file=./drizzle/0004_listen_parts.sql && wrangler d1 execute readtome --local --file=./drizzle/0005_pricing_clicks.sql",
+    "db:migrate": "wrangler d1 execute readtome --remote --file=./drizzle/0001_init.sql && wrangler d1 execute readtome --remote --file=./drizzle/0002_drop_trials.sql && wrangler d1 execute readtome --remote --file=./drizzle/0003_listens.sql && wrangler d1 execute readtome --remote --file=./drizzle/0004_listen_parts.sql && wrangler d1 execute readtome --remote --file=./drizzle/0005_pricing_clicks.sql"
   },
   "dependencies": {
-    "@gradio/client": "^1.8.0",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -29,18 +33,24 @@
     "@tailwindcss/typography": "^0.5.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "drizzle-orm": "^0.45.2",
     "gray-matter": "^4.0.3",
+    "jszip": "^3.10.2",
     "lucide-react": "^0.344.0",
+    "mammoth": "^1.12.3",
     "next": "^14.2.35",
+    "next-auth": "^5.0.0-beta.32",
     "next-intl": "^3.9.1",
+    "pdfjs-dist": "^6.3.289",
     "react": "^18",
     "react-dom": "^18",
-    "react-dropzone": "^14.2.3",
     "reading-time": "^1.5.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "stripe": "^22.6.2",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
+    "tesseract.js": "^7.0.0",
     "zustand": "^4.5.1"
   },
   "devDependencies": {
@@ -49,6 +59,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^8",
     "eslint-config-next": "^14.2.35",
     "postcss": "^8",

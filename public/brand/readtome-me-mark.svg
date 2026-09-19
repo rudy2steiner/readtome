@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">ReadToMe me mark</title>
+  <desc id="desc">A friendly me exclamation mark for compact brand placements</desc>
+  <rect x="2" y="2" width="76" height="76" rx="22" fill="#fff3b8" stroke="#16161b" stroke-width="3"/>
+  <text x="10" y="51" fill="#16161b" font-family="ui-rounded, 'SF Pro Rounded', 'Arial Rounded MT Bold', sans-serif" font-size="39" font-weight="850" letter-spacing="-4">me</text>
+  <rect x="65" y="20" width="4.5" height="24" rx="2.25" fill="#f0563a" transform="rotate(4 67.25 32)"/>
+  <circle cx="68" cy="52" r="3.5" fill="#f0563a"/>
+  <path d="M25 61c8 5 18 5 26 0" fill="none" stroke="#16161b" stroke-width="3" stroke-linecap="round"/>
+</svg>

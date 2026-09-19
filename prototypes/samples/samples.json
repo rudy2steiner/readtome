@@ -1,0 +1,32 @@
+{
+  "copy": {
+    "en": "This is a real clip, not a mock-up. Paste an article, pick a voice, and Read to Me turns it into speech you can listen to anywhere.",
+    "zh": "这是一段真实合成的音频，不是演示占位。粘贴一篇文章，选一个音色，「为我朗读」就会把它念给你听。"
+  },
+  "voices": [
+    {
+      "name": "Eve",
+      "tier": "natural",
+      "clips": {
+        "en": "natural-eve-en.mp3",
+        "zh": "natural-eve-zh.mp3"
+      }
+    },
+    {
+      "name": "Leo",
+      "tier": "natural",
+      "clips": {
+        "en": "natural-leo-en.mp3",
+        "zh": "natural-leo-zh.mp3"
+      }
+    },
+    {
+      "name": "Rex",
+      "tier": "natural",
+      "clips": {
+        "en": "natural-rex-en.mp3",
+        "zh": "natural-rex-zh.mp3"
+      }
+    }
+  ]
+}

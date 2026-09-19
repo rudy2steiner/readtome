@@ -25,18 +25,13 @@ export default function ContactPage({ params: { locale } }: Props) {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <div className="space-y-2">
-              <p>Email: support@read-to-me.org</p>
+              <p>
+                Email:{' '}
+                <a href="mailto:support@read-to-me.org" className="text-primary underline underline-offset-2">
+                  support@read-to-me.org
+                </a>
+              </p>
               <p>Hours: Monday - Friday, 9:00 AM - 5:00 PM EST</p>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Office Location</h2>
-            <div className="space-y-2">
-              <p>PhotoMaker AI</p>
-              <p>123 AI Boulevard</p>
-              <p>Tech City, TC 12345</p>
-              <p>United States</p>
             </div>
           </section>
         </div>

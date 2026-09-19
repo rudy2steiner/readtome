@@ -4,11 +4,55 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-03-25",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
   "observability": {
     "enabled": true
+  },
+  "vars": {
+    "AUTH_TRUST_HOST": "true"
+  },
+  // Content-addressed store for synthesized audio. Cache hits cost nothing, so they are also
+  // the only way a re-listen can start instantly instead of waiting on the supplier again.
+  "r2_buckets": [
+    {
+      "binding": "AUDIO_CACHE",
+      "bucket_name": "readtome"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "readtome",
+      "database_id": "07fc56e5-99a0-4ca3-9a02-d1652dc82a10"
+    }
+  ],
+  "env": {
+    // Staging Worker on workers.dev. Bindings are not inherited — repeat them here.
+    "dev": {
+      "name": "read-to-me-dev",
+      "workers_dev": true,
+      "preview_urls": true,
+      "vars": {
+        "AUTH_TRUST_HOST": "true"
+      },
+      "r2_buckets": [
+        {
+          "binding": "AUDIO_CACHE",
+          "bucket_name": "readtome"
+        }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "readtome",
+          "database_id": "07fc56e5-99a0-4ca3-9a02-d1652dc82a10"
+        }
+      ]
+    }
   }
 }

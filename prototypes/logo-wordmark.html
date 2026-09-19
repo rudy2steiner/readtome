@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadToMe · Editorial Voice</title>
+<style>
+  :root { --paper:#f6f5f1; --white:#fffdf8; --ink:#16161b; --muted:#77777f; --line:#dfddd5; --coral:#f0563a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:14px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { width:min(1120px,calc(100% - 40px)); margin:auto; padding:56px 0 76px; }
+  header { max-width:700px; margin-bottom:30px; }
+  .kicker { color:var(--coral); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+  h1 { margin:8px 0 8px; font-size:clamp(31px,5vw,50px); line-height:1.05; letter-spacing:-.04em; }
+  header p { color:var(--muted); margin:0; font-size:15px; }
+  .board { display:grid; grid-template-columns:1.65fr 1fr; grid-template-rows:380px 260px; gap:14px; }
+  .tile { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:20px; background:var(--white); }
+  .label { position:absolute; left:22px; bottom:18px; color:var(--muted); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+  .primary { display:grid; place-items:center; padding:40px; }
+  .wordmark { display:inline-flex; align-items:baseline; color:var(--ink); white-space:nowrap; }
+  .wordmark .read { font:600 1em/.8 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; letter-spacing:-.075em; }
+  .wordmark .voice { margin-left:.045em; font:720 .82em/.8 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; letter-spacing:-.078em; }
+  .wordmark .period { width:.105em; height:.105em; margin-left:.075em; border-radius:50%; background:var(--coral); transform:translateY(-.04em); }
+  .primary .wordmark { font-size:clamp(62px,9vw,112px); }
+  .principle { position:absolute; top:20px; right:22px; max-width:165px; color:var(--muted); font-size:11px; text-align:right; }
+  .nav-demo { background:var(--white); }
+  .nav { height:66px; padding:0 22px; display:flex; align-items:center; border-bottom:1px solid var(--line); }
+  .nav .wordmark { font-size:27px; }
+  .links { margin-left:auto; display:flex; gap:24px; color:var(--muted); font-size:12px; }
+  .hero-copy { padding:45px 28px 0; }
+  .hero-copy strong { display:block; max-width:360px; font:600 32px/1.12 "Iowan Old Style",Georgia,serif; letter-spacing:-.035em; }
+  .hero-copy p { margin:10px 0 0; color:var(--muted); }
+  .reverse { display:grid; place-items:center; background:var(--ink); }
+  .reverse .wordmark { color:var(--white); font-size:62px; }
+  .reverse .label { color:#8f8f96; }
+  .detail { display:grid; grid-template-columns:1fr 1fr; }
+  .detail-copy { padding:28px; border-right:1px solid var(--line); }
+  .detail-copy h2 { margin:0 0 7px; font-size:17px; letter-spacing:-.02em; }
+  .detail-copy p { margin:0; color:var(--muted); font-size:12px; }
+  .small-tests { display:flex; align-items:center; justify-content:center; gap:28px; padding:24px; }
+  .small-tests .wordmark:nth-child(1) { font-size:18px; }
+  .small-tests .wordmark:nth-child(2) { font-size:24px; }
+  .small-tests .wordmark:nth-child(3) { font-size:34px; }
+  .logic { display:grid; grid-template-columns:repeat(3,1fr); margin-top:20px; border-block:1px solid var(--line); }
+  .logic div { padding:20px 24px; border-right:1px solid var(--line); }
+  .logic div:last-child { border:0; }
+  .logic b { display:block; font-size:12px; margin-bottom:3px; }
+  .logic span { color:var(--muted); font-size:11px; }
+  @media(max-width:760px) {
+    .board { grid-template-columns:1fr; grid-template-rows:280px 260px 220px 250px; }
+    .primary .wordmark { font-size:58px; }
+    .links { display:none; }
+    .logic { grid-template-columns:1fr; }
+    .logic div { border-right:0; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="kicker">Concept 04 · Editorial Voice</span>
+    <h1>不再解释功能，只留下品牌气质</h1>
+    <p>“Read”保留纸张与阅读的编辑感，“ToMe”切换为现代无衬线体。字体本身完成从文字到声音的转换，珊瑚句点代表一句话被真正说完。</p>
+  </header>
+
+  <section class="board">
+    <article class="tile primary">
+      <div class="wordmark"><span class="read">Read</span><span class="voice">ToMe</span><i class="period"></i></div>
+      <span class="principle">one name<br>two typographic voices</span>
+      <span class="label">Primary wordmark</span>
+    </article>
+
+    <article class="tile nav-demo">
+      <div class="nav">
+        <div class="wordmark"><span class="read">Read</span><span class="voice">ToMe</span><i class="period"></i></div>
+        <div class="links"><span>Reader</span><span>Pricing</span><span>Sign in</span></div>
+      </div>
+      <div class="hero-copy">
+        <strong>Give every word<br>a natural voice.</strong>
+        <p>产品导航中的真实比例</p>
+      </div>
+      <span class="label">In product</span>
+    </article>
+
+    <article class="tile reverse">
+      <div class="wordmark"><span class="read">Read</span><span class="voice">ToMe</span><i class="period"></i></div>
+      <span class="label">Reversed</span>
+    </article>
+
+    <article class="tile detail">
+      <div class="detail-copy">
+        <h2>没有独立图标</h2>
+        <p>避免为了 App 图标而制造一个与品牌无关的符号。小尺寸场景直接使用完整名称，优先积累名字认知。</p>
+      </div>
+      <div class="small-tests">
+        <div class="wordmark"><span class="read">Read</span><span class="voice">ToMe</span><i class="period"></i></div>
+        <div class="wordmark"><span class="read">Read</span><span class="voice">ToMe</span><i class="period"></i></div>
+        <div class="wordmark"><span class="read">Read</span><span class="voice">ToMe</span><i class="period"></i></div>
+      </div>
+      <span class="label">Scale test</span>
+    </article>
+  </section>
+
+  <section class="logic">
+    <div><b>READ · EDITORIAL</b><span>阅读、内容、可信赖</span></div>
+    <div><b>TO ME · DIGITAL</b><span>转换、速度、产品能力</span></div>
+    <div><b>PERIOD · HUMAN</b><span>一句话落地为真实声音</span></div>
+  </section>
+</main>
+</body>
+</html>

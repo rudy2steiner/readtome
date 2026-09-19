@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 84" role="img" aria-labelledby="title desc">
+  <title id="title">Read to me</title>
+  <desc id="desc">Custom rounded wordmark drawn from one stroke alphabet</desc>
+  <g fill="none" stroke="#16161b" stroke-width="8.2" stroke-linecap="round" stroke-linejoin="round">
+    <g>
+      <path d="M14 70V32m0 10c6-10 16-11 22-3"/>
+      <path d="M62 51h22c0-11-8-21-20-21-13 0-21 10-21 21s8 21 21 21c8 0 15-5 18-12"/>
+      <path d="M124 70V40c0-16-24-18-24 2 0 16 8 28 24 28"/>
+      <path d="M170 70V16m0 24c0-16-24-18-24 2 0 16 8 28 24 28"/>
+    </g>
+    <g>
+      <path d="M210 70V22m-10 16h20"/>
+      <circle cx="254" cy="51" r="20"/>
+    </g>
+    <g>
+      <path d="M302 70V36c6-10 16-10 21 0v34m0-34c6-10 16-10 21 0v34"/>
+      <path d="M368 51h22c0-11-8-21-20-21-13 0-21 10-21 21s8 21 21 21c8 0 15-5 18-12"/>
+    </g>
+  </g>
+</svg>

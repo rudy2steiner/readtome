@@ -1,31 +1,50 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Sparkles } from 'lucide-react';
+
+import { Reader } from '@/components/reader/Reader';
+import { VoiceSamples } from '@/components/reader/VoiceSamples';
+import { useBrowserVoices } from '@/components/reader/use-browser-voices';
+import { isBillingEnabled } from '@/lib/config/features';
+import { CheckTick } from './icons';
 
 export function Hero() {
   const t = useTranslations();
+  const voices = useBrowserVoices();
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="text-left">
-            <div className="inline-flex items-center px-3 py-1 mb-6 rounded-full bg-muted/80 text-sm">
-              <Sparkles className="h-4 w-4 mr-2" />
-              {t('hero.tagline')}
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {t('hero.title')}
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8">
-              {t('hero.description')}
-            </p>
+    <section className="lp-hero" id="hero">
+      <div className="lp-hero-glow" aria-hidden />
+      <div className="lp-wrap">
+        <div className="lp-hero-head">
+          <div className="lp-tagline">
+            <span className="lp-tagline-dot" />
+            <span>{t('hero.tagline')}</span>
           </div>
-          <div className="relative w-full h-[500px]">
+          <h1>{t('hero.title')}</h1>
+          <p className="lp-hero-sub">{t('hero.description')}</p>
 
-          </div>
+          <ul className="lp-facts">
+            <li>
+              <CheckTick />
+              <span>{t('ui.factFree')}</span>
+            </li>
+            {voices.length > 0 && (
+              <li>
+                <CheckTick />
+                <span>{t('ui.factVoices', { n: voices.length })}</span>
+              </li>
+            )}
+            <li>
+              <CheckTick />
+              <span>{t('ui.noSignup')}</span>
+            </li>
+          </ul>
         </div>
+
+        {isBillingEnabled && <VoiceSamples />}
+
+        <Reader compact />
       </div>
     </section>
   );

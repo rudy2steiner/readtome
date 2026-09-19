@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read to me · Pulse mark</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .board-page { padding: 52px 0 80px; }
+  .kicker { color: #0057FF; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .board-page h1 { margin: 8px 0 10px; font-size: clamp(30px, 4vw, 46px); letter-spacing: -.04em; }
+  .lead { max-width: 540px; color: var(--muted); margin: 0 0 28px; }
+  .board { display: grid; grid-template-columns: 1.7fr 1fr; grid-template-rows: 320px 250px; gap: 14px; }
+  .tile { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+  .label { position: absolute; left: 20px; bottom: 16px; color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+  .hero, .mark, .dark { display: grid; place-items: center; }
+  .hero img { width: min(420px, 78%); }
+  .mark { background: #f4f6ff; }
+  .mark img { width: 92px; }
+  .dark { background: #0b1220; }
+  .dark img { width: min(380px, 78%); }
+  .in-nav { background: #fff; }
+  .in-nav .nav { position: static; }
+  .brand-lock { display: flex; align-items: center; gap: 10px; font-weight: 750; letter-spacing: -.03em; }
+  .brand-lock img { height: 28px; width: auto; }
+  .sizes { display: flex; align-items: end; gap: 22px; margin-top: 22px; padding: 20px 0 0; border-top: 1px solid var(--line); }
+  .size { display: grid; justify-items: center; gap: 8px; color: var(--muted); font-size: 11px; }
+  .size:nth-child(1) img { width: 16px; }
+  .size:nth-child(2) img { width: 24px; }
+  .size:nth-child(3) img { width: 36px; }
+  .size:nth-child(4) img { width: 56px; }
+  @media (max-width: 760px) {
+    .board { grid-template-columns: 1fr; grid-template-rows: none; }
+  }
+</style>
+</head>
+<body>
+<main class="board-page">
+  <div class="container">
+    <span class="kicker">Pulse mark</span>
+    <h1>按声波标志做的 Read to me</h1>
+    <p class="lead">五根圆头竖条，中间最高、两边对称。蓝色沿用参考稿。导航里是标志 + 站点名，中英文都会跟着语言走。</p>
+
+    <section class="board">
+      <article class="tile hero">
+        <img src="../public/brand/readtome-pulse-wordmark.svg" alt="Read to me">
+        <span class="label">Wordmark</span>
+      </article>
+      <article class="tile mark">
+        <img src="../public/brand/readtome-pulse-mark.svg" alt="Read to me mark">
+        <span class="label">Mark / favicon</span>
+      </article>
+      <article class="tile dark">
+        <img src="../public/brand/readtome-pulse-mark.svg" alt="Read to me mark on dark">
+        <span class="label">On dark</span>
+      </article>
+      <article class="tile in-nav">
+        <div class="nav">
+          <div class="container nav-inner">
+            <a class="brand-lock" href="landing.html">
+              <img src="../public/brand/readtome-pulse-mark.svg" alt="">
+              Read to me
+            </a>
+            <div class="nav-links">
+              <a href="landing.html">Home</a>
+              <a href="read.html">Reader</a>
+              <a class="btn btn-primary btn-sm nav-cta" href="read.html">Start reading</a>
+            </div>
+          </div>
+        </div>
+        <span class="label">In product</span>
+      </article>
+    </section>
+
+    <div class="sizes">
+      <div class="size"><img src="../public/brand/readtome-pulse-mark.svg" alt="">16</div>
+      <div class="size"><img src="../public/brand/readtome-pulse-mark.svg" alt="">24</div>
+      <div class="size"><img src="../public/brand/readtome-pulse-mark.svg" alt="">36</div>
+      <div class="size"><img src="../public/brand/readtome-pulse-mark.svg" alt="">56</div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

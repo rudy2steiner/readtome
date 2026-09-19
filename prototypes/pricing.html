@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing — Read To Me</title>
+<meta name="description" content="Read to Me pricing: browser voices free forever, plus cloud AI voices measured in hours of listening.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-title-key="pricing.metaTitle">
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4Z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M5 21v-7M5 10V3M12 21v-10M12 7V3M19 21v-4M19 13V3"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="9" r="2"/><circle cx="19" cy="15" r="2"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="landing.html">
+      <img class="brand-mark" src="../public/brand/readtome-pulse-mark.svg" alt="" width="40" height="30">
+      <span class="brand-name">Read to me</span>
+    </a>
+    <div class="nav-links">
+      <a href="landing.html" data-i18n="nav.home">Home</a>
+      <a href="read.html" data-i18n="nav.reader">Reader</a>
+      <a href="pricing.html" class="active" data-i18n="nav.pricing">Pricing</a>
+      <span class="nav-div"></span>
+      <span id="lang-switch"></span>
+      <span id="auth-slot"></span>
+      <a class="btn btn-primary btn-sm nav-cta" href="read.html" data-i18n="nav.start">Start reading</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ plans ============ -->
+<section class="band band-first" id="plans">
+  <div class="container">
+    <header class="band-head">
+      <span class="eyebrow" data-i18n="pricing.eyebrow">Pricing</span>
+      <h2 data-i18n="pricing.title">Pay for the listening, not for the software</h2>
+      <p class="band-sub" data-i18n="pricing.subtitle">
+        Your browser’s own voices stay free forever. Paid plans add cloud AI voices, measured in hours of listening.
+      </p>
+    </header>
+
+    <div class="cycle" role="group">
+      <button class="cycle-btn is-on" data-cycle="yearly">
+        <span data-i18n="pricing.yearly">Yearly</span>
+        <span class="cycle-save" data-i18n="pricing.save">Save 22%</span>
+      </button>
+      <button class="cycle-btn" data-cycle="monthly" data-i18n="pricing.monthly">Monthly</button>
+    </div>
+
+    <div class="plan-grid">
+      <article class="plan">
+        <h3 class="plan-name" data-i18n="pricing.free.name">Free</h3>
+        <p class="plan-tag" data-i18n="pricing.free.tagline">No account needed to start</p>
+        <div class="price"><span class="price-cur">$</span><span class="price-num">0</span></div>
+        <p class="price-note" data-i18n="pricing.free.forever">Free forever</p>
+        <a class="btn btn-ghost plan-cta" href="read.html" data-i18n="pricing.free.cta">Start reading</a>
+        <ul class="plan-feats">
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.free.f1">Browser voices, unlimited</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.free.f2">10 minutes of cloud voices, once</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.free.f3">Sentence highlighting and resume where you left off</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.free.f4">Paste text or upload .txt</span></li>
+        </ul>
+      </article>
+
+      <article class="plan is-featured" data-yearly="7" data-monthly="9" data-yearly-total="$84">
+        <span class="plan-flag" data-i18n="pricing.popular">Most popular</span>
+        <h3 class="plan-name" data-i18n="pricing.plus.name">Plus</h3>
+        <p class="plan-tag" data-i18n="pricing.plus.tagline">For a regular reading habit</p>
+        <div class="price"><span class="price-cur">$</span><span class="price-num">7</span><span class="price-per" data-i18n="pricing.perMonth">/ month</span></div>
+        <p class="price-note"></p>
+        <a class="btn btn-primary plan-cta" href="signin.html" data-i18n="pricing.plus.cta">Choose Plus</a>
+        <ul class="plan-feats">
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.plus.f1">8 hours a month of AI voices</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.plus.f2">Expressive uses 3 minutes of quota per minute</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.plus.f3">Everything in Free</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.plus.f4">Re-listening never spends your quota</span></li>
+        </ul>
+      </article>
+
+      <article class="plan" data-yearly="15" data-monthly="19" data-yearly-total="$180">
+        <h3 class="plan-name" data-i18n="pricing.pro.name">Pro</h3>
+        <p class="plan-tag" data-i18n="pricing.pro.tagline">For long books and heavy weeks</p>
+        <div class="price"><span class="price-cur">$</span><span class="price-num">15</span><span class="price-per" data-i18n="pricing.perMonth">/ month</span></div>
+        <p class="price-note"></p>
+        <a class="btn btn-ghost plan-cta" href="signin.html" data-i18n="pricing.pro.cta">Choose Pro</a>
+        <ul class="plan-feats">
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f1">16 hours a month of AI voices</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f2">Expressive uses 3 minutes of quota per minute</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f3">Priority synthesis queue</span></li>
+          <li><svg class="tick"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f4">Top-up packs when you run out</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ what the three voice classes are ============ -->
+<section class="band alt" id="voice-classes">
+  <div class="container">
+    <header class="band-head">
+      <h2 data-i18n="pricing.voices.title">Three kinds of voices</h2>
+      <p class="band-sub" data-i18n="pricing.voices.subtitle">
+        Plans differ in how much cloud speech they include, not in what the reader can do.
+      </p>
+    </header>
+    <div class="grid-3">
+      <article class="card">
+        <span class="ico"><svg><use href="#i-mic"/></svg></span>
+        <h3 data-i18n="pricing.voices.basicT">Basic</h3>
+        <p data-i18n="pricing.voices.basicD">The voices already on your device. Free forever, no account, no limit.</p>
+      </article>
+      <article class="card">
+        <span class="ico"><svg><use href="#i-bolt"/></svg></span>
+        <h3 data-i18n="pricing.voices.naturalT">Natural</h3>
+        <p data-i18n="pricing.voices.naturalD">Cloud AI voices for everyday listening — long articles and whole books.</p>
+      </article>
+      <article class="card">
+        <span class="ico"><svg><use href="#i-sliders"/></svg></span>
+        <h3 data-i18n="pricing.voices.expressiveT">Expressive</h3>
+        <p data-i18n="pricing.voices.expressiveD">Emotion and pitch control. Uses 3 minutes of AI hours for every minute you hear.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ top-up packs ============ -->
+<section class="band" id="packs">
+  <div class="container">
+    <header class="band-head">
+      <h2 data-i18n="pricing.packs.title">Run out mid-month?</h2>
+      <p class="band-sub" data-i18n="pricing.packs.subtitle">
+        One +10 hour pack adds the same AI hours Plus and Pro already share.
+      </p>
+    </header>
+    <div class="pack-grid pack-grid-one">
+      <article class="pack">
+        <div>
+          <h3 data-i18n="pricing.packs.hours">AI voices +10 hours</h3>
+          <p class="pack-rule" data-i18n="pricing.packs.rule">Requires an active plan · spent only after your monthly quota · valid for 12 months</p>
+        </div>
+        <div class="pack-buy">
+          <span class="pack-price">$15</span>
+          <button class="btn btn-ghost btn-sm pack-btn" data-i18n="pricing.packs.buy">Add to plan</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ caveats ============ -->
+<section class="band alt" id="notes">
+  <div class="container">
+    <div class="notes-panel">
+      <h3 data-i18n="pricing.notes.title">Good to know</h3>
+      <ul class="notes-list">
+        <li data-i18n="pricing.notes.n1">Monthly time resets each billing period; unused time does not roll over.</li>
+        <li data-i18n="pricing.notes.n2">An hour of Natural is one hour; Expressive uses 3×. Listening time is the same in any language.</li>
+        <li data-i18n="pricing.notes.n3">Audio export is planned and not part of any plan yet.</li>
+        <li data-i18n="pricing.notes.n4">This page is a prototype. No payment is taken and no plan is created.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a class="brand" href="landing.html">
+          <img class="brand-mark" src="../public/brand/readtome-pulse-mark.svg" alt="" width="40" height="30">
+          <span class="brand-name">Read to me</span>
+        </a>
+        <p data-i18n="common.description">Turn text to speech in seconds for free</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.product">Product</h4>
+        <a href="read.html" data-i18n="nav.reader">Reader</a>
+        <a href="landing.html#features" data-i18n="footer.features">Features</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.support">Support</h4>
+        <a href="landing.html#faq" data-i18n="nav.faq">FAQs</a>
+        <a href="signin.html" data-i18n="auth.signIn">Sign in</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span data-i18n="common.title">Read To Me</span> — <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span data-i18n="footer.engines">Free voices: Web Speech · Premium (planned): Atlas Cloud MiniMax Speech 2.6 Turbo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js?v=cloud-pool"></script>
+<script src="auth.js"></script>
+<script src="reader.js"></script>
+<script>
+  var cycle = 'yearly';
+
+  function renderPrices() {
+    document.querySelectorAll('.plan[data-yearly]').forEach(function (card) {
+      var amount = card.getAttribute('data-' + cycle);
+      card.querySelector('.price-num').textContent = amount;
+
+      var note = cycle === 'yearly'
+        ? RTMI18n.t('pricing.billedYearly').replace('{amount}', card.getAttribute('data-yearly-total'))
+        : RTMI18n.t('pricing.billedMonthly');
+      card.querySelector('.price-note').textContent = note;
+    });
+  }
+
+  function boot() {
+    RTMI18n.apply();
+    renderPrices();
+  }
+
+  document.querySelectorAll('.cycle-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      cycle = btn.getAttribute('data-cycle');
+      document.querySelectorAll('.cycle-btn').forEach(function (b) { b.classList.toggle('is-on', b === btn); });
+      renderPrices();
+    });
+  });
+
+  /* Packs are plan-gated: a visitor without an active paid plan is sent to subscribe instead. */
+  document.querySelectorAll('.pack-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var session = RTMAuth.getSession();
+      if (!session || session.plan === 'free') {
+        RTM.toast(RTMI18n.t('pricing.packs.needPlan'));
+        return;
+      }
+      RTM.toast(RTMI18n.t('pricing.notes.n4'));
+    });
+  });
+
+  boot();
+  RTMI18n.mountLangSwitch(document.getElementById('lang-switch'));
+  RTMAuth.mountAuth(document.getElementById('auth-slot'));
+  window.addEventListener('rtm:langchange', boot);
+</script>
+</body>
+</html>

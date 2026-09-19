@@ -2,29 +2,35 @@
 
 import { useTranslations } from 'next-intl';
 
+const STEPS: { key: 'upload' | 'style' | 'generate' | 'download'; planned?: boolean }[] = [
+  { key: 'upload' },
+  { key: 'style' },
+  { key: 'generate' },
+  { key: 'download', planned: true },
+];
+
 export function HowItWorks() {
-  const t = useTranslations('howItWorks');
-  const steps = ['upload', 'style', 'generate', 'download'];
+  const t = useTranslations();
 
   return (
-    <section className="py-12 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">{t('title')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step) => (
-            <div key={step} className="relative">
-              <div className="text-4xl font-bold text-primary/20 mb-4">
-                {t(`steps.${step}.number`)}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                {t(`steps.${step}.title`)}
+    <section className="lp-band" id="how">
+      <div className="lp-wrap">
+        <header className="lp-band-head">
+          <span className="lp-eyebrow">{t('ui.how')}</span>
+          <h2>{t('howItWorks.title')}</h2>
+        </header>
+        <ol className="lp-steps">
+          {STEPS.map((step) => (
+            <li key={step.key} className="lp-step">
+              <span className="lp-step-num">{t(`howItWorks.steps.${step.key}.number`)}</span>
+              <h3>
+                <span>{t(`howItWorks.steps.${step.key}.title`)}</span>
+                {step.planned && <span className="lp-badge">{t('ui.planned')}</span>}
               </h3>
-              <p className="text-muted-foreground">
-                {t(`steps.${step}.description`)}
-              </p>
-            </div>
+              <p>{t(`howItWorks.steps.${step.key}.description`)}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
