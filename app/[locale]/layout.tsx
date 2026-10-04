@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Toaster } from '@/components/ui/toaster';
@@ -12,8 +11,6 @@ import { ThemeProvider } from '@/lib/theme/theme';
 import { Metadata } from 'next';
 import '../globals.css';
 import '../landing.css';
-
-const inter = Inter({ subsets: ['latin', 'latin-ext'] });
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -62,7 +59,7 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
         <script defer data-domain="read-to-me.org" src="https://app.pageview.app/js/script.js"></script>
       </head>
-      <body className={inter.className}>
+      <body className="font-sans antialiased">
         <I18nProvider locale={locale} messages={messages} timeZone="UTC">
           <AuthSessionProvider>
             <ThemeProvider>

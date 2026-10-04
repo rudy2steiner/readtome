@@ -46,11 +46,11 @@ export function Navigation() {
             className="brand-mark"
             src="/brand/readtome-pulse-mark.svg"
             alt=""
-            width={40}
-            height={30}
+            width={38}
+            height={28}
             priority
           />
-          <span className="brand-name">{t('common.title')}</span>
+          <span className="brand-name">read to me</span>
         </Link>
 
         <div className="site-nav-links">

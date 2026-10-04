@@ -1,11 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96" role="img" aria-labelledby="title desc">
-  <title id="title">Read to me</title>
-  <desc id="desc">Five rounded bars in a symmetric voice waveform</desc>
-  <g fill="#0057FF">
-    <rect x="5" y="36" width="14" height="24" rx="7"/>
-    <rect x="31" y="23" width="14" height="50" rx="7"/>
-    <rect x="57" y="12" width="14" height="72" rx="7"/>
-    <rect x="83" y="23" width="14" height="50" rx="7"/>
-    <rect x="109" y="36" width="14" height="24" rx="7"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="400" viewBox="0 0 53.6 40" role="img" aria-label="Read to me logo">
+  <rect x="0.000" y="34" width="3.8" height="6" fill="#60A5FA"/>
+  <rect x="7.300" y="28" width="3.8" height="12" fill="#60A5FA"/>
+  <rect x="14.600" y="11" width="5" height="29" fill="#2563EB"/>
+  <rect x="23.100" y="19" width="5" height="21" fill="#2563EB"/>
+  <rect x="31.600" y="1" width="5" height="39" fill="#2563EB"/>
+  <rect x="40.100" y="8" width="5" height="32" fill="#2563EB"/>
+  <rect x="48.600" y="14" width="5" height="26" fill="#60A5FA"/>
 </svg>

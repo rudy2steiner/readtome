@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <g fill="#0057FF">
-    <rect x="2" y="12.5" width="4" height="7" rx="2"/>
-    <rect x="8" y="8.5" width="4" height="15" rx="2"/>
-    <rect x="14" y="5" width="4" height="22" rx="2"/>
-    <rect x="20" y="8.5" width="4" height="15" rx="2"/>
-    <rect x="26" y="12.5" width="4" height="7" rx="2"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="400" viewBox="0 0 53.6 40" role="img" aria-label="Read to me logo">
+  <rect x="0.000" y="34" width="3.8" height="6" fill="#60A5FA"/>
+  <rect x="7.300" y="28" width="3.8" height="12" fill="#60A5FA"/>
+  <rect x="14.600" y="11" width="5" height="29" fill="#2563EB"/>
+  <rect x="23.100" y="19" width="5" height="21" fill="#2563EB"/>
+  <rect x="31.600" y="1" width="5" height="39" fill="#2563EB"/>
+  <rect x="40.100" y="8" width="5" height="32" fill="#2563EB"/>
+  <rect x="48.600" y="14" width="5" height="26" fill="#60A5FA"/>
 </svg>

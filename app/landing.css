@@ -177,10 +177,12 @@ html[lang='zh'] .lp-badge {
 }
 
 .brand-name {
-  font-size: 1.05rem;
-  font-weight: 750;
-  letter-spacing: -0.035em;
+  font-family: Arial, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   line-height: 1;
+  text-transform: lowercase;
 }
 
 .brand-wordmark {
